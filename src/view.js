@@ -33,3 +33,7 @@ export const renderItems = (data) => {
   });
   return ul;
 };
+
+//Vista de 404 error (escribir codigo abajo)
+
+//Vista de tarjetas individuales con descripcion completa del personaje + chat 
