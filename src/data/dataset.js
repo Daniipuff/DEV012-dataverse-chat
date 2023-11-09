@@ -7,6 +7,7 @@ export default [
     "shortDescription": "Padre de familia y trabajador en la planta nuclear de Springfield.",
     "description": "Un hombre con una personalidad única y una vida llena de situaciones cómicas.",
     "imageUrl": "https://www.diariodelsur.com.mx/doble-via/4zje3-homero-mexicano.jpg/alternates/LANDSCAPE_768/Homero%20Mexicano.jpg",
+    "imageUrl2": "",
     "edad": "34 años",
     "facts": {
       "yearOfBirth": 1956,
