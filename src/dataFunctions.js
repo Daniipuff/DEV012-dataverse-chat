@@ -1,4 +1,27 @@
-export function filterData(data, filterBy) {
+export function soloUnFiltro(data,apellidos,orden,parrafoG) {//checa si hemos seleccionado un algo o algo vacio
+  let datosFiltrados = data;
+
+  if (apellidos !== 'nada') {
+    // si se  selecciona un campo del filtro
+    datosFiltrados = filterData(datosFiltrados, apellidos);// lo guarda en esta variable 
+    //Facts cambian segun filtro
+    const informacion_Genero = generoFacts(datosFiltrados);
+    parrafoG.innerHTML = "Fact: " + "En esta familia hay " + "hombres: " + informacion_Genero.hombres + " , " + " mujeres: " + informacion_Genero.mujeres
+
+    if (orden !== 'nada') {
+      // Se ha seleccionado un campo de ordenamiento
+      const filtroApellido = filterData(data, apellidos);
+      datosFiltrados = sortData(filtroApellido, 'name', orden);// lo guarda en esta variable 
+    }
+  } else if (orden !== 'nada') {
+    // No se ha seleccionado un campo de filtrado, pero se ha seleccionado un campo de ordenamiento
+    datosFiltrados = sortData(data, 'name', orden);// lo guarda en esta variable 
+    
+  } return datosFiltrados;
+  
+};
+
+export const filterData = (data, filterBy) => {
   const apellidosFamilias = data.filter(filtro1 => filtro1.lastname === filterBy);
   return apellidosFamilias;
 }

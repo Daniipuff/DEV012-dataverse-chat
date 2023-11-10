@@ -233,7 +233,7 @@ footer {
     position: absolute;
     margin-top: 5px;
     top: 5px;
-    right: 100px;
+    right: px;
   }
   #check:checked~.contenedor1 {
     right: 0;
