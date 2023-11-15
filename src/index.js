@@ -1,20 +1,25 @@
-import {Home} from './views/Home.js'; 
-import { setRoutes, newRootElementValue,onURLChange } from './router.js';//necesitamos exportar el componente para interactuar con la rutas
+import { Error } from './views/Error.js';
+import { Home } from './views/Home.js';
+import { setRoutes, setRootElement, onURLChange } from './router.js';
 
-const routes = {//Se definen lo que esta en el router 
-    "/": Home,
-    "/home": Home,
-    "/error": 'some', 
-  
-}
+const routes = {
+  "/": Home,
+  "/error": Error,
+
+};
 
 const viewContainer = document.getElementById('root');
-setRoutes(routes);//toma la ruta y llevarla a router.js y lo define como un objeto 
-newRootElementValue(viewContainer);
 
-document.addEventListener("DOMContentLoaded", (event) => {
+setRoutes(routes);
+setRootElement(viewContainer);
+
+document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
-  onURLChange(event.target.location.pathname);
+  onURLChange(window.location.pathname);
+  const homeContent = Home();//nos da el contenido de home
+  if (homeContent instanceof Node) {
+    viewContainer.appendChild(homeContent);
+  }
 });
 /*
 TODO:
