@@ -1,5 +1,5 @@
 import { renderItems } from './view.js';
-import { computeStats,soloUnFiltro } from './dataFunctions.js';
+import { computeStats,soloUnFiltro } from './lib/dataFunctions.js';
 import data from './data/dataset.js';
 
 const dataview = document.getElementById('root');

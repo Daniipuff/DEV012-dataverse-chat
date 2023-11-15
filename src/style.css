@@ -100,6 +100,22 @@ option {
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+#chat {
+  display: flex;
+  background-color: rgb(34, 77, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 5px;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  margin-left: 70px;
+  font-family: "Itim";
+  font-size: x-large;
+  position: relative;
+
+}
 #check {
   display: none;
 }
@@ -120,8 +136,10 @@ option {
   font-family: "Itim";
   font-size: x-large;
   position: relative;
-  top: 180px; /*270px*/
+  top: 270px; /*270px*/
 }
+
+
 .foco {
   position: relative;
   top: 132px; /*215px*/

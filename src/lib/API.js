@@ -1,0 +1,1 @@
+//Aqui vamos a tener todo lo necesario para consumir la API de CHAT gpt 
