@@ -33,10 +33,10 @@ const renderView = (pathname, props = {}) => {
   // find the correct view in ROUTES for the pathname
   if (ROUTES[pathname] && typeof ROUTES[pathname] === 'function') {
     const template = ROUTES[pathname](props); 
-      if (template instanceof Node) { // Corregir aquí: cambiar appenchild a appendChild
+      if (template instanceof Node) { 
         root.appendChild(template);
       } else {
-        root.appendChild(ROUTES['/error'](props));// Corregir aquí: cambiar appenchild a appendChild
+        root.appendChild(ROUTES['/error'](props));
       }
     } else {
       root.appendChild(ROUTES['/error'](props));//Si no se encuentra la ruta, renderiza la vista de error

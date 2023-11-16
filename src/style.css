@@ -61,7 +61,7 @@ h2 {
   font-size: larger;
   font-family: "Indie Flower";
 }
-.contenedor1 {
+.menu{
   width: 90%;
   height: 8vh;
   display: flex;
@@ -138,8 +138,6 @@ option {
   position: relative;
   top: 270px; /*270px*/
 }
-
-
 .foco {
   position: relative;
   top: 132px; /*215px*/
@@ -153,7 +151,7 @@ option {
   font-size: x-large;
   margin-top: 30px;/*100px*/
 }
-.tarjetas {
+#contenedor {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -185,6 +183,24 @@ ul {
   width: 100%;
   height: 180px;
   border-radius: 15px;
+}
+dt {
+  display:flex;
+  justify-content: center;
+  margin-left: 20px;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 14px;
+  
+}
+
+dd {
+  display:flex;
+  justify-content: center;
+  margin-left: 40px;
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
 }
 footer {
   width: 100%;
@@ -304,7 +320,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .tarjetas {
+  #contenedor {
     width: 100vw;
     max-width: 1000px;
     min-width: 320px;
@@ -313,7 +329,7 @@ footer {
     top: 100px; /*200px*/
     left: 50px;
   }
-  .tarjetas img {
+  #contenedor img {
     width: 100%;
     height: 150px;
   }

@@ -1,10 +1,13 @@
-export const Footer = () => {
-    const footerComponent = `
-      <footer>
+export const footer = () => {
+    let footerComponent = document.createElement('p');
+    footerComponent.setAttribute('class', 'footer');
+    footerComponent.innerHTML = 
+     `
+      
         Autoras: Paulina Cabrera & Daniela Bustamante
-      </footer>
+      
     `;
-  
+    
     return footerComponent;
   };
   
