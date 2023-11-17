@@ -10,7 +10,7 @@ const routes = {
 };
 
 // Elemento contenedor de las vistas
-/*const viewContainer = document.getElementById('root');*/
+const viewContainer = document.getElementById('contenedor');
 
 // Configuración de las rutas y el elemento raíz
 setRoutes(routes);
@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     viewContainer.appendChild(homeContent);
   }
 });
-
 /*
 TODO:
 1.- Definir rutas en router.

@@ -32,19 +32,19 @@ const renderView = (pathname, props = {}) => {
     root.innerHTML = '';
   // find the correct view in ROUTES for the pathname
   if (ROUTES[pathname] && typeof ROUTES[pathname] === 'function') {
-    const template = ROUTES[pathname](props); 
-      if (template instanceof Node) { 
-        root.appendChild(template);
-      } else {
-        root.appendChild(ROUTES['/error'](props));
-      }
+    const template = ROUTES[pathname](props);
+    if (template instanceof Node) {
+      root.appendChild(template);
     } else {
-      root.appendChild(ROUTES['/error'](props));//Si no se encuentra la ruta, renderiza la vista de error
+      root.appendChild(ROUTES['/error'](props));
+    }
+  } else {
+    root.appendChild(ROUTES['/error'](props));
+  }//Si no se encuentra la ruta, renderiza la vista de error
   // in case not found render the error view
   // render the correct view passing the value of props
   // add the view element to the DOM root element
-   }
-  }
+}
 };
 
 
