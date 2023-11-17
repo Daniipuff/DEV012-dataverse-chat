@@ -101,21 +101,16 @@ option {
   cursor: pointer;
 }
 #chat {
-  display: flex;
-  background-color: rgb(34, 77, 0);
+  background-color: #254805;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  padding: 5px 5px;
-  cursor: pointer;
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-  margin-left: 70px;
-  font-family: "Itim";
-  font-size: x-large;
-  position: relative;
-
+  margin: 0px 0px 0px 10px;
 }
+
 #check {
   display: none;
 }
@@ -136,11 +131,11 @@ option {
   font-family: "Itim";
   font-size: x-large;
   position: relative;
-  top: 270px; /*270px*/
+  top: 30px; /*270px*/
 }
 .foco {
   position: relative;
-  top: 132px; /*215px*/
+  top: -20px; /*215px*/
 }
 #genero {
   display: flex;
@@ -191,7 +186,6 @@ dt {
   margin: 0;
   margin-top: 5px;
   font-size: 14px;
-  
 }
 
 dd {
@@ -202,7 +196,7 @@ dd {
   margin: 0;
   padding: 10px;
 }
-footer {
+.footer {
   width: 100%;
   background-color: #7B3D87;
   color: #fff;
