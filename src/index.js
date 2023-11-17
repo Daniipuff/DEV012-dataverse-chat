@@ -6,6 +6,7 @@ import { setRoutes, setRootElement, onURLChange } from './router.js';
 // Definición de rutas
 const routes = {
   "/": Home,
+  "/home": Home,
   "/error": Error,
 };
 
