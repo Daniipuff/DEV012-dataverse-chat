@@ -10,26 +10,24 @@ const routes = {
 };
 
 // Elemento contenedor de las vistas
-/*const viewContainer = document.getElementById('root');*/
+
+const y = document.querySelector('#root');
+console.log(y);
+
 
 // Configuración de las rutas y el elemento raíz
 setRoutes(routes);
-setRootElement(viewContainer);
+setRootElement(y);
 
 // Evento que se dispara cuando el DOM está completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
 
-  // Cambia la URL según la ruta actual
-  onURLChange(window.location.pathname);
-
-  // Obtén el contenido de la página de inicio
-  const homeContent = Home();
+  onURLChange(window.location.pathname); // Cambia la URL según la ruta actual
+  const homeContent = Home();   // Obtén el contenido de la página de inicio
 
   // Asegúrate de que el contenido sea un nodo antes de agregarlo al contenedor
-  if (homeContent instanceof Node) {
-    viewContainer.appendChild(homeContent);
-  }
+  if (homeContent instanceof Node) {}
 });
 
 /*
