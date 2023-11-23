@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@600&family=Itim&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -228,6 +230,7 @@ dd {
 }
 
 
+
 /*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. ESTO EVITA QUE SE ROMPA EL CODIGO*/
 @media (min-width: 280px) and (max-width: 350px) {
   * {
@@ -236,34 +239,42 @@ dd {
   }
 
   body {
-   
     height: 80vh;
     display: flex;
     flex-direction: column;
-  
     font-family: "Indie Flower";
+    background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+  }
+  
+  #root {
+    display: flex;
+    justify-content: center; 
   }
   
   .frontis {
-    background-image: url("https://images3.alphacoders.com/591/591067.jpg") ;
+    background-image: url("https://images3.alphacoders.com/591/591067.jpg");
     background-size: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: overlay;
   }
+
   .header {
     display: flex;
     content: space-between;
+    margin-top: 0;
   } 
   
   .imagenTitulo {
     width: 140px;
     height: 140px;
   }
+
   .imagenFamilia {
     width: 100px;
     height: 110px;
-    margin-left: 40px;
+    margin-left: 20px;
   }
+
   main {
     background-color: #4A9F2D;
     display: flex;
@@ -285,18 +296,23 @@ dd {
     position: relative;
     top: 270px;
   }
+
   .foco {
     display: none;
   }
+
   #chat {
     display: none;
   }
+
   #resultados2 {
     display: block;
   }
+
   #resultados {
     display: none;
   }
+
   #chatt {
     background-color: #254805;
     border-radius: 10px;
@@ -312,6 +328,7 @@ dd {
   .ocultar {
     display: block;
   }
+
   .mostrar {
     display: absolute;
     justify-items: end;
@@ -320,6 +337,7 @@ dd {
     top:5px;
     padding: 0;
   }
+
   .menu {
     position: absolute;
     width: 50%;
@@ -333,20 +351,24 @@ dd {
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px 90px;
   }
+
   .menu label {
     display: block;
   }
+
   .ocultar {
     position: absolute;
     top: 10px;
-  
   }
+
   #check:checked~.menu {
     right: 0;
   }
+
   h2 {
     display: none;
   }
+
   #genero {
     display: flex;
     justify-content: center;
@@ -356,12 +378,12 @@ dd {
     font-size: x-large;
     margin-top: 200px;
   }
+
   #check {
     visibility: hidden;
   }
   
   ul {
-    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -377,10 +399,12 @@ dd {
     margin: auto;
     position: relative;
   }
+
   #contenedor img {
     width: 100%;
     height: 150px;
   }
+
   .listas {
     display: flex;
     justify-content: center;
@@ -393,11 +417,7 @@ dd {
     font-size: x-large;
     font-weight: 900;
   }
-  
-  #root {
-    display: flex;
-    justify-content: center; 
-  }
+
   .footer {
     width: auto ;
     background-color: #7B3D87;
@@ -416,12 +436,11 @@ dd {
   }
 
   body {
-   
     height: 80vh;
     display: flex;
     flex-direction: column;
-  
     font-family: "Indie Flower";
+    background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
   }
   
   .frontis {
@@ -430,20 +449,24 @@ dd {
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: overlay;
   }
+
   .header {
     display: flex;
     content: space-between;
+    margin-top: 0;
   } 
   
   .imagenTitulo {
     width: 140px;
     height: 140px;
   }
+
   .imagenFamilia {
     width: 100px;
     height: 110px;
     margin-left: 40px;
   }
+
   main {
     background-color: #4A9F2D;
     display: flex;
@@ -465,18 +488,23 @@ dd {
     position: relative;
     top: 270px;
   }
+
   .foco {
     display: none;
   }
+
   #chat {
     display: none;
   }
+
   #resultados2 {
     display: block;
   }
+
   #resultados {
     display: none;
   }
+
   #chatt {
     background-color: #254805;
     border-radius: 10px;
@@ -492,6 +520,7 @@ dd {
   .ocultar {
     display: block;
   }
+
   .mostrar {
     display: absolute;
     justify-items: end;
@@ -500,6 +529,7 @@ dd {
     top:5px;
     padding: 0;
   }
+
   .menu {
     position: absolute;
     width: 50%;
@@ -513,20 +543,24 @@ dd {
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px 90px;
   }
+
   .menu label {
     display: block;
   }
+
   .ocultar {
     position: absolute;
     top: 10px;
-  
   }
+
   #check:checked~.menu {
     right: 0;
   }
+
   h2 {
     display: none;
   }
+
   #genero {
     display: flex;
     justify-content: center;
@@ -536,6 +570,7 @@ dd {
     font-size: x-large;
     margin-top: 200px;
   }
+
   #check {
     visibility: hidden;
   }
@@ -557,10 +592,12 @@ dd {
     margin: auto;
     position: relative;
   }
+
   #contenedor img {
     width: 100%;
     height: 150px;
   }
+
   .listas {
     display: flex;
     justify-content: center;
@@ -578,6 +615,7 @@ dd {
     display: flex;
     justify-content: center; 
   }
+
   .footer {
     width: auto ;
     background-color: #7B3D87;
@@ -593,3 +631,38 @@ dd {
 @media (min-width: 600px) and (max-width: 750px) {}
 @media (min-width: 750px) and (max-width: 850px) {}
 @media (min-width: 850px) and (max-width: 3543px) {}
+
+ 
+#error404 {
+  background-color: #95DD78;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.doh {
+  display: flex;
+  font-family: Be Vietnam Pro;
+  color: #ffffff;
+  font-size: 100px;
+  margin-top: 60px;
+  margin-left: 40px;
+  padding: auto;
+}
+.p{
+  display: flex;
+  font-family: Be Vietnam Pro;
+  color: #ffffff;
+  margin-top: 150px;
+  margin-left: 40px;
+}
+.donut {
+  display: flex;
+  justify-content: left ;
+  width: 400px; /*564*/
+  height: 550px; /*846*/
+}
