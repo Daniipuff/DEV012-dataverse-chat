@@ -54,6 +54,7 @@ export const Home = () => {
   const parrafo_genero = homeView.querySelector("#genero");
   const parrafo_estadistica = homeView.querySelector("#facts");
   const encabezado = homeView.querySelector('.frontis');
+  const li = document.querySelector('.listas');
 
   //Adjuntamos el de los personajes en home.js
   const elHeader = header();
@@ -92,6 +93,10 @@ const arregloDeFiltros = soloUnFiltro(data,claveSeleccionada,ordenSeleccionado,p
   parrafo_estadistica.addEventListener('click', function () {
     const informacion_eades = computeStats(data);
     parrafo_estadistica.innerHTML = `¿Sabías qué...? ${informacion_eades.menoresDe30} de los personajes son menores de 30 años y ${informacion_eades.mayoresDe30} de ellos son mayores de 30 años...!!!`;
+  });
+
+  li.addEventListener('click', function () {
+    const personajes = data.name;
   });
 
   return homeView;
