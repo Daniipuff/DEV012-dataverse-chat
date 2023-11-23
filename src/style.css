@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
@@ -16,19 +17,18 @@ body {
   background-blend-mode: overlay;
   font-family: "Indie Flower";
 }
-header {
+.header {
   width: 100%;
   height: 25vh;
-  margin-top: 30px;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
-h1 {
+.h1 {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  margin-top: 100px;
 }
 .imagenTitulo {
   width: 280px;
@@ -39,10 +39,10 @@ h1 {
   height: 210px;
 }
 main {
+  margin-top: 70px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0%;
 }
 h2 {
   width: 80%;
@@ -101,25 +101,28 @@ option {
   cursor: pointer;
 }
 #chat {
-  display: flex;
-  background-color: rgb(34, 77, 0);
+  background-color: #254805;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  padding: 5px 5px;
-  cursor: pointer;
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-  margin-left: 70px;
-  font-family: "Itim";
-  font-size: x-large;
-  position: relative;
-
+  margin: 0px 0px 0px 10px;
+}
+#chatt {
+  display:none;
 }
 #check {
   display: none;
 }
 .mostrar {
+  display: none;
+}
+#resultados {
+  padding: 0;
+}
+#resultados2 {
   display: none;
 }
 #facts {
@@ -136,11 +139,11 @@ option {
   font-family: "Itim";
   font-size: x-large;
   position: relative;
-  top: 270px; /*270px*/
+  top: 30px;
 }
 .foco {
   position: relative;
-  top: 132px; /*215px*/
+  top: -20px;
 }
 #genero {
   display: flex;
@@ -191,9 +194,7 @@ dt {
   margin: 0;
   margin-top: 5px;
   font-size: 14px;
-  
 }
-
 dd {
   display:flex;
   justify-content: center;
@@ -207,11 +208,8 @@ dd {
   background-color: #7B3D87;
   color: #fff;
   text-align: center;
-  width: 100%;
-  bottom: 0;
-  width: 100%;
-  color: #fff;
-  padding: 10px;
+  position: relative;
+  top: 100px;
 }
 .mostrar,
 .ocultar {
@@ -219,60 +217,122 @@ dd {
   cursor: pointer;
   display: none;
 }
-.contenedor1 {
+.menu {
   order: 1;
 }
 #check {
   display: none;
 }
-@media (max-width: 450px) {
+#error404{
+  color: blue;    
+}
+/*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. EVITA QUE SE ROMPA EL CODIGO*/
+@media (min-width: 280px) and (max-width: 350px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
   body {
-    width: 80%; /*100%*/
     height: 80vh;
     display: flex;
     flex-direction: column;
-    background-image: url("https://images3.alphacoders.com/591/591067.jpg");
+    font-family: "Indie Flower";
+    background-image: url("https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg");
+  }
+  .frontis {
+    background-image: url("https://images3.alphacoders.com/591/591067.jpg") ;
+    background-size: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: overlay;
-    font-family: "Indie Flower";
+  }
+  .header {
+    display: flex;
+    content: space-between;
+  }
+  .imagenTitulo {
+    width: 140px;
+    height: 140px;
   }
   .imagenFamilia {
+    width: 100px;
+    height: 110px;
+    margin-left: 40px;
+  }
+  main {
+    background-color: #4A9F2D;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0;
+  }
+  #facts {
+    background-color: rgb(34, 77, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 270px;
+  }
+  .foco {
     display: none;
+  }
+  #chat {
+    display: none;
+  }
+  #resultados2 {
+    display: block;
+  }
+  #resultados {
+    display: none;
+  }
+  #chatt {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 0px 0px 0px 10px;
   }
   .mostrar,
   .ocultar {
     display: block;
   }
   .mostrar {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 50px;
+    display: absolute;
+    justify-items: end;
+    font-size: 30px;
     cursor: pointer;
+    top:5px;
+    padding: 0;
   }
-  .contenedor1 {
-    position: fixed;
+  .menu {
+    position: absolute;
     width: 50%;
     height: 100vh;
     background: #86CA68;
-    right: -100%;
-    top: 0;
     text-align: center;
     z-index: 100;
-    transition: 0.8s;
+    right: 100%;
+    transition: none;
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 90px;
   }
-  .contenedor1 label {
+  .menu label {
     display: block;
   }
   .ocultar {
     position: absolute;
-    margin-top: 5px;
-    top: 5px;
-    right: px;
+    top: 10px;
   }
-  #check:checked~.contenedor1 {
+  #check:checked~.menu {
     right: 0;
   }
   h2 {
@@ -290,6 +350,89 @@ dd {
   #check {
     visibility: hidden;
   }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #contenedor {
+    width: 100vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+    position: relative;
+  }
+  #contenedor img {
+    width: 100%;
+    height: 150px;
+  }
+  .listas {
+    display: flex;
+    justify-content: center;
+    margin-left: 23px;
+  }
+  label {
+    color: #254805;
+    font-family: "Indie Flower";
+    font-size: x-large;
+    font-weight: 900;
+  }
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+  .footer {
+    width: auto ;
+    background-color: #7B3D87;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    padding: 8px;
+  }
+}
+@media (min-width: 350px) and (max-width: 600px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Indie Flower";
+    background-image: url("https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg");
+  }
+  .frontis {
+    background-image: url("https://images3.alphacoders.com/591/591067.jpg") ;
+    background-size: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+  }
+  .header {
+    display: flex;
+    content: space-between;
+  }
+  .imagenTitulo {
+    width: 140px;
+    height: 140px;
+  }
+  .imagenFamilia {
+    width: 100px;
+    height: 110px;
+    margin-left: 40px;
+  }
+  main {
+    background-color: #4A9F2D;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0;
+  }
   #facts {
     background-color: rgb(34, 77, 0);
     color: rgb(255, 255, 255);
@@ -302,26 +445,85 @@ dd {
     position: relative;
     top: 270px;
   }
-
-  .listas {
+  .foco {
+    display: none;
+  }
+  #chat {
+    display: none;
+  }
+  #resultados2 {
+    display: block;
+  }
+  #resultados {
+    display: none;
+  }
+  #chatt {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 0px 0px 0px 10px;
+  }
+  .mostrar,
+  .ocultar {
+    display: block;
+  }
+  .mostrar {
+    display: absolute;
+    justify-items: end;
+    font-size: 30px;
+    cursor: pointer;
+    top:5px;
+    padding: 0;
+  }
+  .menu {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background: #86CA68;
+    text-align: center;
+    z-index: 100;
+    right: 100%;
+    transition: none;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 90px;
+  }
+  .menu label {
+    display: block;
+  }
+  .ocultar {
+    position: absolute;
+    top: 10px;
+  }
+  #check:checked~.menu {
+    right: 0;
+  }
+  h2 {
+    display: none;
+  }
+  #genero {
     display: flex;
-    width: calc(30% - 10px);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("https://static.vecteezy.com/system/resources/previews/004/948/426/non_2x/cartoon-comic-cloud-copy-space-background-on-blue-free-vector.jpg");
-    margin-right: 150px; 
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 200px;
-    border-radius: 20px;
-    border: 5px solid #014B9B;
-    font-family: "Gluten";
-    font-size: 100%;
+    justify-content: center;
+    font-family: "Indie Flower";
+    line-height: 1.5;
     font-weight: 700;
-    list-style-type: none;
-    height: 300px;
-    width: 180px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: x-large;
+    margin-top: 200px;
+  }
+  #check {
+    visibility: hidden;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
   }
   #contenedor {
     width: 100vw;
@@ -329,16 +531,15 @@ dd {
     min-width: 320px;
     margin: auto;
     position: relative;
-    top: 100px; /*200px*/
-    left: 50px;
   }
   #contenedor img {
     width: 100%;
     height: 150px;
   }
-  .imagenTitulo {
-    width: 300px;
-    height: 150px;
+  .listas {
+    display: flex;
+    justify-content: center;
+    margin-left: 23px;
   }
   label {
     color: #254805;
@@ -346,18 +547,24 @@ dd {
     font-size: x-large;
     font-weight: 900;
   }
-  footer {
-    width: 100%;
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+  .footer {
+    width: auto ;
     background-color: #7B3D87;
     color: #fff;
     text-align: center;
+    font-size: 12px;
     position: relative;
-    top: 2000px;
+    padding: 8px;
   }
-  #root {
-    display: flex;
-    justify-content: center;    /*align-items: center;*/
-    height: 1150vh;
-    width: 120%;    /* Ajusta la altura según tus necesidades */
+}
+@media (min-width: 600px) and (max-width: 750px) {}
+@media (min-width: 750px) and (max-width: 850px) {}
+@media (min-width: 850px) and (max-width: 3543px) {
+  #root{
+    background: linear-gradient(#2275C1, #6BB1B6, #C7FFA2);
   }
 }

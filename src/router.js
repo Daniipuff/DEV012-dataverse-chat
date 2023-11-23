@@ -25,26 +25,32 @@ const queryStringToObject = (queryString) => {//Esta funcion es opcional
   // return the object
 }
 
+// RENDERVIEW función que se encarga de limpiar el contenido actual 
+// del elemento raíz, buscar la vista correspondiente a la ruta proporcionada
+// en ROUTES, y renderizar esa vista en el DOM. Si la ruta no se encuentra, 
+// se renderiza la vista de error.
+
 const renderView = (pathname, props = {}) => {
-  // clear the root element
+  //Limpiar el elemento raíz (root):
   const root = document.getElementById('root');
   if (root) {
     root.innerHTML = '';
-  // find the correct view in ROUTES for the pathname
+  //Buscar la vista correcta en ROUTES:
   if (ROUTES[pathname] && typeof ROUTES[pathname] === 'function') {
-    const template = ROUTES[pathname](props);
-    if (template instanceof Node) {
-      root.appendChild(template);
+  //Renderizar la vista correcta:
+    const template = ROUTES[pathname](props); 
+  //Agregar la vista al DOM:
+      if (template instanceof Node) { 
+        root.appendChild(template);
+      } else {
+  //Manejar rutas no encontradas:
+        root.appendChild(ROUTES['/error'](props));
+      }
     } else {
       root.appendChild(ROUTES['/error'](props));
-    }
-  } else {
-    root.appendChild(ROUTES['/error'](props));
-  }//Si no se encuentra la ruta, renderiza la vista de error
-  // in case not found render the error view
-  // render the correct view passing the value of props
-  // add the view element to the DOM root element
-}
+
+   }
+  }
 };
 
 

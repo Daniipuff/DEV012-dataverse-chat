@@ -1,6 +1,7 @@
 export const renderItems = (data) => {
-    // Aquí comienza tu código y puedes retornar lo que tu necesites
-    const ul = document.createElement('ul');//creamos el ul fuera del for para que se cree una sola vez
+   //creamos el ul fuera del for para que se cree una sola vez
+    const ul = document.createElement('ul');
+    
     data.forEach(item => {
       const lista = document.createElement('li');
       lista.classList.add("listas");
@@ -33,8 +34,3 @@ export const renderItems = (data) => {
     });
     return ul;
   };
-  
-  
-  //Vista de 404 error (escribir codigo abajo)
-  
-  //Vista de tarjetas individuales con descripcion completa del personaje + chat 

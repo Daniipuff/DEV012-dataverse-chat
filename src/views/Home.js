@@ -1,5 +1,7 @@
+// Importación de funciones y módulos
 import { soloUnFiltro, computeStats } from "../lib/dataFunctions.js";
 import { renderItems } from "../Componentes/ListItems.js";
+import { header } from "../Componentes/Header.js";
 import { footer } from "../Componentes/Footer.js";
 import data from "../data/dataset.js";
 // Definición del componente Home
@@ -8,12 +10,8 @@ export const Home = () => {
   // Plantilla HTML del componente Home
   let homeView = document.createElement("div");
   homeView.innerHTML = `
-      <div>
-        <h1><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/The_Simpsons_yellow_logo.svg" class="imagenTitulo"/>
-          <img src="https://i.pinimg.com/originals/78/7e/10/787e1079c5d6c4232700673de8649034.png"
-            class="imagenFamilia"/></h1>
-      </div>
-      <main>
+        <section class="frontis"></section>
+        <main>
         <input type="checkbox" id="check">
         <label for="check" class="mostrar">&#8801</label>
         <div class="menu">
@@ -40,7 +38,9 @@ export const Home = () => {
           <div id="resultados">
           <button type="facts_1 " id="facts">Facts</button>
           <img src="https://play-lh.googleusercontent.com/tNr21lrG_29rtMZDz_SD4XtZwNIsRDhbIjGBvu1cPe5UjSNCD--pBMLzfp_q8BFlGtw=w600-h300-pc0xffffff-pd"
-          height="50" width="80" class="basurita">
+          height="50" width="80" class="foco">
+              <div id="resultados2">
+              <button type="chat_panel " id="chatt">Chat</button>
           </div>
     </main>
     <div id="genero"></div>
@@ -52,9 +52,14 @@ export const Home = () => {
   const ordena = homeView.querySelector('select[data-testid="select-sort"]');
   const parrafo_genero = homeView.querySelector("#genero");
   const parrafo_estadistica = homeView.querySelector("#facts");
-  //homeView.appendChild(homeView);
+  const encabezado = homeView.querySelector('.frontis');
+  //Adjuntamos el de los personajes en home.js
+  const elHeader = header();
+  encabezado.appendChild(elHeader);
+  //Adjuntamos el "<footer>" en home.js
   const footerComponent = footer();
   homeView.appendChild(footerComponent);
+  //Adjuntamos las tarjetas de los personajes en home.js
   const datalist = renderItems(data);
   dataview.appendChild(datalist);
 familia.addEventListener("change", filtros);
@@ -79,6 +84,5 @@ const arregloDeFiltros = soloUnFiltro(data,claveSeleccionada,ordenSeleccionado,p
     const informacion_eades = computeStats(data);
     parrafo_estadistica.innerHTML = `¿Sabías qué...? ${informacion_eades.menoresDe30} de los personajes son menores de 30 años y ${informacion_eades.mayoresDe30} de ellos son mayores de 30 años...!!!`;
   });
-  //bigContenedor.appendChild(homeView);
   return homeView;
 };
