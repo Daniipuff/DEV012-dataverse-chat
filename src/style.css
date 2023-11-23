@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@600&family=Itim&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap');
 
+/*VISTA DE HOME.JS*/
 * {
   padding: 0;
   margin: 0;
@@ -627,22 +628,23 @@ dd {
   }
 }
 
-
 @media (min-width: 600px) and (max-width: 750px) {}
 @media (min-width: 750px) and (max-width: 850px) {}
 @media (min-width: 850px) and (max-width: 3543px) {}
 
- 
+/*VISTA DE ERROR.JS*/ 
 #error404 {
   background-color: #95DD78;
+  width: 97%; 
+  height: 540px;
   display: flex;
-  justify-content: center;
   position: relative;
   display: flex;
-  flex-grow: 1;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px 20px 20px 20px;
+}
+.div {
+  display: flex;
+  flex-direction: column;
 }
 .doh {
   display: flex;
@@ -657,12 +659,17 @@ dd {
   display: flex;
   font-family: Be Vietnam Pro;
   color: #ffffff;
-  margin-top: 150px;
+  margin-top: 0;
   margin-left: 40px;
 }
 .donut {
   display: flex;
-  justify-content: left ;
-  width: 400px; /*564*/
-  height: 550px; /*846*/
+  justify-content: left;
+  margin-left: 300px;
+  margin-top: 60px;
+  width: 390px; /*564*/
+  height: 530px; /*846*/
 }
+/*A continuacion media query para celular de vista ERROR.JS*/
+@media (min-width: 280px) and (max-width: 350px) {}
+@media (min-width: 350px) and (max-width: 600px) {}
