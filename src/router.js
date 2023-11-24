@@ -10,11 +10,7 @@ export const setRootElement = (newRootElementValue) => {//Set viene de seter que
 export const setRoutes = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
     // optional Throw errors if routes doesn't define an /error route
-  if(typeof newRoutesValue === "object" && newRoutesValue["/error"]){
-    if(newRoutesValue["/error"]){
       ROUTES = newRoutesValue;
-    }
-  }
   // assign ROUTES
 }
 
@@ -32,24 +28,19 @@ const queryStringToObject = (queryString) => {//Esta funcion es opcional
 
 const renderView = (pathname, props = {}) => {
   //Limpiar el elemento raíz (root):
-  const root = document.getElementById('root');
+  const root = rootElement;
   if (root) {
     root.innerHTML = '';
   //Buscar la vista correcta en ROUTES:
-  if (ROUTES[pathname] && typeof ROUTES[pathname] === 'function') {
+  if (ROUTES[pathname]) {
   //Renderizar la vista correcta:
     const template = ROUTES[pathname](props); 
   //Agregar la vista al DOM:
-      if (template instanceof Node) { 
         root.appendChild(template);
       } else {
   //Manejar rutas no encontradas:
         root.appendChild(ROUTES['/error'](props));
       }
-    } else {
-      root.appendChild(ROUTES['/error'](props));
-
-   }
   }
 };
 
@@ -64,11 +55,14 @@ export const navigateTo = (pathname, props={}) => {//principal funcion actualiza
 }
 
 export const onURLChange = () => {
-  const pathnameVista = window.location.pathname;
+  const pathnameVista = window.location.pathname;//nos da la parte del pathname de la URL actual, que es la parte de la URL despues del nombre de dominio
   // parse the location for the pathname and search params
   // convert the search params to an object
   // render the view with the pathname and object
-  renderView(pathnameVista);
+  renderView(pathnameVista);//renderiza la vista
+
+  /*const routeHandler = ROUTES[pathnameVista] || ROUTES["/error"];//busca a ROUTES una función controladora correspondiente al pathnameVista y si no se encuentra una ruta específica, utiliza una ruta de error
+  const content = routeHandler(); //llama a la funcion y almacena el resultado
+  renderContent(content);//llama a la funcion y le pasa el valor anterior */
 };
-document.addEventListener("DOMContentLoaded", onURLChange);
-window.addEventListener("popstate", onURLChange);
+window.onpopstate = onURLChange;

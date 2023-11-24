@@ -1,3 +1,6 @@
+import { navigateTo } from "../router";
+import { detail } from "../views/Details";
+
 export const renderItems = (data) => {
    //creamos el ul fuera del for para que se cree una sola vez
     const ul = document.createElement('ul');
@@ -30,6 +33,10 @@ export const renderItems = (data) => {
       const dd2 = document.createElement('dd');
       dd2.setAttribute('itemprop', 'edad');
       dd2.innerHTML = item.edad;
+      lista.addEventListener("click",function(){ 
+      console.log(item.id);
+      navigateTo("/details",(item.id))
+    });
       nombres.appendChild(dd2);
     });
     return ul;
