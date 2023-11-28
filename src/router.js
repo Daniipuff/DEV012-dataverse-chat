@@ -38,11 +38,12 @@ const renderView = (pathname, props = {}) => {
       }
   }
 };
-export const navigateTo = (pathname, props={}) => {//principal funcion actualizar el historial pushState y renderizar la vista
-  // update window history with pushState
-  const URLvisited = window.location.origin + pathname;//nos devuelve a la pagina principal dejando registro origin para incluir protocolo y host
-  history.pushState({},"",URLvisited);// guarda el historial de lo que va ocurriendo
-  // render the view with the pathname and props
+export const navigateTo = (pathname, props={}) => {
+  //principal funcion actualizar el historial pushState y renderizar la vista
+  const URLvisited = window.location.origin + pathname;
+  //nos devuelve a la pagina principal dejando registro origin para incluir protocolo y host
+  history.pushState({},"",URLvisited);
+  // guarda el historial de lo que va ocurriendo
   renderView(pathname, props);
 }
 export const onURLChange = () => {

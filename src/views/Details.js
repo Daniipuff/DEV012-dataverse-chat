@@ -1,56 +1,47 @@
-// En Details.js
-export const detail = () => {
-  const params = new URLSearchParams(window.location.search);
-  const personajeId = params.get('id');
-  console.log(params);
+import data from "../data/dataset.js";
+import { header } from "../Componentes/Header.js";
+import { footer } from "../Componentes/Footer.js";
 
+export const detail = ({id}) => {
+ 
+    let detailContenido = document.createElement("div");
+    detailContenido.setAttribute('class', 'cajaFuerte')
+      
+    const params = new URLSearchParams(window.location.search);
 
-const tituloChatIndividual = document.createElement('div');
-tituloChatIndividual.classList.add('chat-individual');
-tituloChatIndividual.innerHTML = `
-  <h1 class="titulo-personaje">Nombre del personaje</h1>
-`;
+    const personaje = data.filter(x => x.id == id);
+    console.log(personaje);
 
-const detalleContenido = document.createElement('div');
-detalleContenido.id = 'detalleContenido';
-detalleContenido.innerHTML = `
-  <div class ="descripcion">
-    Descripcion del personaje ...
-  </div>
-`;
+    if (personaje.length > 0){
+        const persona = personaje[0];
+        detailContenido.innerHTML = `
+        <section class="frontis-chat"></section>
+        <div id="caja">
+            <div id="detalles">
+                <img src=${persona.imageUrl} class="profile"></img>
+                <h1 class="h1"> Descripción</h1>
+                <p class="uno">Soy ${persona.name +' y tengo '}${persona.edad}...</p>
+                <p class="uno">Nací en ${persona.facts.placeOfBirth}.</p>
+                <p class="uno">${persona.description}</p>
+                
+            </div>    
+            <div id="text-chat"> ${persona.name}
+                <div id="chat-magic"></div>
+                <input type="text" class="chatinput" placeholder="Escribe tu mensaje..."> </input>
+                <button class="sendbutton"> Enviar </button>
+            </div>
+        </div>    
+        <button class="backbutton"> Regresar </button>
+        `;
+    
+    }
+    //Adjuntamos el "<header>"
+    const encabezado = detailContenido.querySelector('.frontis-chat');
+    const elHeader = header();
+    encabezado.appendChild(elHeader);
+    //Adjuntamos el "<footer>"
+    const footerComponent = footer();
+    detailContenido.appendChild(footerComponent);
 
-// Agregar los elementos al cuerpo del documento
-document.body.appendChild(tituloChatIndividual);
-document.body.appendChild(detalleContenido);
-
-
-  const chatIndivi = document.createElement('div');
-  chatIndivi.setAttribute('id', 'chatIndivi');
-  const chatPersonajes = document.createElement('div');
-  chatPersonajes.classList.add('chat-individual');
-  chatPersonajes.innerHTML = `
-    <h1>Chat en línea</h1>
-  `;
-  chatIndivi.appendChild(chatPersonajes);
-  const chatMensajes = document.createElement('div');
-  chatMensajes.classList.add('chat-mensaje');
-  chatIndivi.appendChild(chatMensajes);
-  const chatInput2 = document.createElement('input');
-  chatInput2.setAttribute('type', 'text');
-  chatInput2.setAttribute('placeholder', 'Escribe tu mensaje...');
-  chatInput2.classList.add('chat-input');
-  chatIndivi.appendChild(chatInput2);
-  const enviarBoton = document.createElement('button');
-  enviarBoton.textContent = 'Enviar';
-  enviarBoton.classList.add('send-button');
-  chatIndivi.appendChild(enviarBoton);
-  const regresarBoton = document.createElement('button');
-  regresarBoton.textContent = 'Regresar';
-  regresarBoton.classList.add('back-button');
-  chatIndivi.appendChild(regresarBoton);
-  
-  detalleContenido.appendChild(chatIndivi); // Añadir el chatIndivi al detalle principal
-
-  return detalleContenido;
-};
-
+    return detailContenido;
+  };

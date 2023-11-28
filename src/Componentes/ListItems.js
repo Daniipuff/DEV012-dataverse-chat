@@ -1,5 +1,9 @@
 import { navigateTo } from ".././router.js";
 //import { detail } from "../views/Details.js";
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcfc667420933b433154aaf5f586345a4ead96de
 export const renderItems = (data) => {
    //creamos el ul fuera del for para que se cree una sola vez
     const ul = document.createElement('ul');
@@ -35,7 +39,6 @@ export const renderItems = (data) => {
       console.log(item.id);
       navigateTo("/details", { id: item.id });
 
-      
     });
       nombres.appendChild(dd2);
     });
