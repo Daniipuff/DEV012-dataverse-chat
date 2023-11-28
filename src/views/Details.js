@@ -1,17 +1,47 @@
-// En Details.js
-export const detail = () => {
+import data from "../data/dataset.js";
+import { header } from "../Componentes/Header.js";
+import { footer } from "../Componentes/Footer.js";
+
+export const detail = ({id}) => {
+ 
+    let detailContenido = document.createElement("div");
+    detailContenido.setAttribute('class', 'cajaFuerte')
+      
     const params = new URLSearchParams(window.location.search);
-    const personajeId = params.get('id');
-    console.log(params);
-  
-    // Lógica para obtener información del personaje según el id y mostrarla
-  
-    const detailContenido = document.createElement('div');
-    detailContenido.innerHTML = `
-      <h1>Detalles del personaje ${personajeId}</h1>
-      <!-- Agrega aquí la información específica del personaje -->
-    `;
-  
+
+    const personaje = data.filter(x => x.id == id);
+    console.log(personaje);
+
+    if (personaje.length > 0){
+        const persona = personaje[0];
+        detailContenido.innerHTML = `
+        <section class="frontis-chat"></section>
+        <div id="caja">
+            <div id="detalles">
+                <img src=${persona.imageUrl} class="profile"></img>
+                <h1 class="h1"> Descripción</h1>
+                <p class="uno">Soy ${persona.name +' y tengo '}${persona.edad}...</p>
+                <p class="uno">Nací en ${persona.facts.placeOfBirth}.</p>
+                <p class="uno">${persona.description}</p>
+                
+            </div>    
+            <div id="text-chat"> ${persona.name}
+                <div id="chat-magic"></div>
+                <input type="text" class="chatinput" placeholder="Escribe tu mensaje..."> </input>
+                <button class="sendbutton"> Enviar </button>
+            </div>
+        </div>    
+        <button class="backbutton"> Regresar </button>
+        `;
+    
+    }
+    //Adjuntamos el "<header>"
+    const encabezado = detailContenido.querySelector('.frontis-chat');
+    const elHeader = header();
+    encabezado.appendChild(elHeader);
+    //Adjuntamos el "<footer>"
+    const footerComponent = footer();
+    detailContenido.appendChild(footerComponent);
+
     return detailContenido;
   };
-  
