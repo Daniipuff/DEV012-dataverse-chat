@@ -787,14 +787,23 @@ dd {
   border-radius: 4px;
   cursor: pointer;
 }
-.sendbutton, 
-.backbutton  {
+.sendbutton
+ {
   margin-top: 10px;
   background-color: #227000;
   color: #fff;
   padding: 5px 10px;
   border: none;
   cursor: pointer;
+}
+.backbutton {
+  background-color: #FFD401;
+  border-radius: 10px;
+  padding: 20px 10px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: gluten;
+  font-size: x-large;
 }
 
 

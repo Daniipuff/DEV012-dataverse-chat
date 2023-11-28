@@ -65,9 +65,9 @@ export const Home = () => {
   //Adjuntamos las tarjetas de los personajes en home.js
   const datalist = renderItems(data);
   dataview.appendChild(datalist);
-familia.addEventListener("change", filtros);
-ordena.addEventListener("change", filtros);
-function filtros() {
+  familia.addEventListener("change", filtros);
+  ordena.addEventListener("change", filtros);
+  function filtros() {
   const datalist = renderItems(data);
   dataview.innerHTML = '';
   parrafo_estadistica.innerHTML = "Facts";

@@ -1,4 +1,5 @@
 import { navigateTo } from ".././router.js";
+import { chat } from "./ChatPanel.js";
 //import { detail } from "../views/Details.js";
 export const renderItems = (data) => {
    //creamos el ul fuera del for para que se cree una sola vez
@@ -33,10 +34,9 @@ export const renderItems = (data) => {
       dd2.innerHTML = item.edad;
       lista.addEventListener("click",function(){
       console.log(item.id);
-      navigateTo("/details", { id: item.id });
-
-    });
+      navigateTo("/details", { id: item.id });  
       nombres.appendChild(dd2);
     });
     return ul;
-  };
+  });
+};
