@@ -228,54 +228,6 @@ dd {
 }
 #check {
   display: none;
-/*Inicia pantalla de chat individual*/
-}
-#chatContenido {
-  max-width:50%;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  background-color: #fff;
-}
-
-.chat-header {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  border-radius: 8px 8px 0 0;
-}
-
-.chat-messages {
-  max-height: 200px;
-  overflow-y: auto;
-  padding: 10px;
-}
-
-.chat-input {
-  width: 100%;
-  padding: 80px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.send-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.send-button:hover {
-  background-color: #45a049;
 }
 
 
@@ -721,3 +673,138 @@ dd {
 /*A continuacion media query para celular de vista ERROR.JS*/
 @media (min-width: 280px) and (max-width: 350px) {}
 @media (min-width: 350px) and (max-width: 600px) {}
+
+/*Chat individual*/
+.cajaFuerte {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+#caja {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  background-color: #61994A;
+  width: 85%;
+  height: 85%;
+  margin-top: 60px;
+  border-radius: 15px;
+}
+#detalles {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center ; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 40%;
+  background-image: url("https://raw.githubusercontent.com/Paulinakbrr/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg");
+  border-radius: 15px 0 0 15px;
+}
+.profile {
+  display: grid;
+  justify-content: center ;
+  align-items: center; 
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+}
+.h1 {
+  font-size: 12px;
+}
+.uno {
+  margin: 0 10px 0 10px;
+}
+
+#text-chat {
+  display: grid;
+  width: 60%;
+  margin: 10px;
+}
+#chat-magic{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(116, 202, 119, 0.826);
+}
+
+.chatinput {
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.sendbutton,
+.backbutton{
+  width: 50%;
+  height: 30%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sendbutton, 
+.backbutton  {
+  margin-top: 10px;
+  background-color: #227000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/*Chat grupal*/
+#chatContenido {
+  max-width:50%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #fff;
+}
+
+.chat-header {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.chat-messages {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-input {
+  width: 100%;
+  padding: 80px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.send-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #45a049;
+}
