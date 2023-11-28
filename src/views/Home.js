@@ -5,6 +5,7 @@ import { header } from "../Componentes/Header.js";
 import { footer } from "../Componentes/Footer.js";
 import data from "../data/dataset.js";
 import {chat} from "../Componentes/ChatPanel.js"
+import { detail } from "./Details.js";
  
 // Definición del componente Home
 export const Home = () => {
@@ -58,6 +59,7 @@ export const Home = () => {
   const lisPersonaje = document.querySelectorAll('.listas');
   const chatContenido = document.querySelector('#chatContenido');
 
+
   //Adjuntamos el de los personajes en home.js
   const elHeader = header();
   encabezado.appendChild(elHeader);
@@ -105,7 +107,7 @@ const arregloDeFiltros = soloUnFiltro(data,claveSeleccionada,ordenSeleccionado,p
       console.log(chatContenido);
       //chatContenido.appendChild(chatComponent);
     });
-  });
 
+      });
   return homeView;
 };

@@ -1,10 +1,8 @@
-import { navigateTo } from "../router";
-import { detail } from "../views/Details";
-
+import { navigateTo } from ".././router.js";
+//import { detail } from "../views/Details.js";
 export const renderItems = (data) => {
    //creamos el ul fuera del for para que se cree una sola vez
     const ul = document.createElement('ul');
-    
     data.forEach(item => {
       const lista = document.createElement('li');
       lista.classList.add("listas");
@@ -33,9 +31,11 @@ export const renderItems = (data) => {
       const dd2 = document.createElement('dd');
       dd2.setAttribute('itemprop', 'edad');
       dd2.innerHTML = item.edad;
-      lista.addEventListener("click",function(){ 
+      lista.addEventListener("click",function(){
       console.log(item.id);
-      navigateTo("/details",(item.id))
+      navigateTo("/details", { id: item.id });
+
+      
     });
       nombres.appendChild(dd2);
     });

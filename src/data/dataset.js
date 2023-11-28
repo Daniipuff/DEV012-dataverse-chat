@@ -187,7 +187,7 @@ export default [
     "lastname": "asmitades",
     "name": "Barney Gumble",
     "shortDescription": "Amigo de Homer Simpson, conocido por su amor por la cerveza.",
-    "description": "Barney Gumble es un amigo cercano de Homer Simpson en Springfield. Es conocido por su afición a la cerveza y su comportamiento a menudo descuidado debido a su embriaguez crónica.",
+    "description": "Soy un amigo cercano de Homer Simpson en Springfield, y mi nombre es Barney Gumble. Me caracterizo por mi gran afición a la cerveza, y la verdad es que mi comportamiento a menudo tiende a ser descuidado, todo gracias a mi embriaguez crónica. En la ciudad, soy reconocido por ser el alma de la fiesta, aunque a veces mi amor por la bebida pueda ponerme en situaciones un tanto peculiares. A pesar de todo, siempre puedo contar con la amistad y apoyo de Homer, ¡y eso es lo que realmente importa en la vida!",
     "imageUrl": "https://st1.uvnimg.com/dims4/default/605b42b/2147483647/thumbnail/480x270/quality/75/?url=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2F7%2F7-personajes-secundarios-de-los-simpsons-que-cambiaron-de-personalidad-con-los-anos-2.jpg",
     "edad": "40 años",
     "facts": {
@@ -202,7 +202,7 @@ export default [
     "lastname": "amistades",
     "name": "Lenny Leonard",
     "shortDescription": "Amigo de Homer Simpson y trabajador en la Planta Nuclear de Springfield.",
-    "description": "Lenny Leonard es uno de los amigos cercanos de Homer Simpson en Springfield. Trabaja en la Planta Nuclear de Springfield junto a su amigo Carl. Lenny es conocido por su personalidad tranquila y su sentido del humor.",
+    "description": "Soy Lenny Leonard, uno de los amigos más cercanos de Homer Simpson aquí en Springfield. Mi lugar de trabajo es la Planta Nuclear, donde comparto el día a día con mi buen amigo Carl. Me consideran una persona tranquila, y mi sentido del humor es algo que la gente suele recordar. Aunque mi trabajo en la planta pueda ser un poco monótono a veces, siempre encuentro la manera de mantener el ánimo alto con algunas bromas. En definitiva, la amistad y el buen ambiente son lo que hacen que la vida en Springfield sea especial para mí.",
     "imageUrl": "https://i.pinimg.com/474x/cd/a2/47/cda247644126f07bb8e089f1776fa540.jpg",
     "edad": "38 años",
     "facts": {
@@ -217,7 +217,7 @@ export default [
     "lastname": "amistades",
     "name": "Carl Carlson",
     "shortDescription": "Amigo de Homer y trabajador en la Planta de Energía Nuclear de Springfield.",
-    "description": "Carl Carlson es un residente de Springfield y uno de los amigos cercanos de Homer Simpson. Trabaja en la Planta de Energía Nuclear de Springfield junto a Homer y Lenny.",
+    "description": "Soy Carl Carlson, un residente de Springfield y uno de los amigos cercanos de Homer Simpson. Al igual que Homer y Lenny, paso la mayor parte de mi tiempo en la Planta de Energía Nuclear de Springfield, donde trabajo codo a codo con ellos. Mi día a día en la planta puede ser agitado, pero siempre encuentro tiempo para disfrutar de la compañía de mis amigos. Me consideran una persona relajada y de trato fácil. Aunque a veces las situaciones en Springfield pueden volverse un tanto extravagantes, siempre puedo contar con la amistad leal de Homer y el resto del grupo.",
     "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/carl-carlson-1600986805.png",
     "edad": "35 años",
     "facts": {
@@ -232,7 +232,7 @@ export default [
     "lastname": "amistades",
     "name": "Seymour Skinner",
     "shortDescription": "Director de la Escuela Primaria de Springfield y ex militar.",
-    "description": "Seymour Skinner, también conocido como Director Skinner, es un personaje de Los Simpson. Antes de ser director de la Escuela Primaria de Springfield, sirvió en el ejército y tiene una relación complicada con su madre, Agnes Skinner.",
+    "description": "Soy Seymour Skinner, aunque muchos me conocen más como el Director Skinner en Springfield. Antes de asumir la dirección de la Escuela Primaria, pasé parte de mi vida sirviendo en el ejército, una experiencia que ha dejado su huella en mí. Mi relación con mi madre, Agnes Skinner, es complicada, y las interacciones con ella a veces pueden ser tan desafiantes como dirigir una escuela llena de niños traviesos. A pesar de los desafíos, trato de mantener la disciplina en la escuela y asegurarme de que todo funcione con la mayor eficiencia posible. La vida en Springfield puede ser un tanto peculiar, pero siempre estoy listo para enfrentar los desafíos que se presenten, ya sea en el frente escolar o en el frente familiar.",
     "imageUrl": "https://i.pinimg.com/564x/9b/7c/e4/9b7ce4cbbb11935e594070f884fa5853.jpg",
     "edad": "44 años",
     "facts": {
@@ -247,7 +247,7 @@ export default [
     "lastname": "amistades",
     "name": "Edna Krabappel",
     "shortDescription": "Profesora en la Escuela Primaria de Springfield.",
-    "description": "Edna Krabappel es una de las profesoras en la Escuela Primaria de Springfield. Es conocida por su actitud sarcástica y su relación con el director Seymour Skinner.",
+    "description": "Soy Edna Krabappel, una de las profesoras en la Escuela Primaria de Springfield. Mi actitud sarcástica a veces puede dar la impresión de que me tomo las cosas a la ligera, pero la verdad es que soy una educadora dedicada. Mi relación con el director Seymour Skinner ha pasado por altibajos, como suele suceder en la vida escolar y, bueno, en la vida en general. Aunque pueda parecer que estoy un poco cansada de la rutina escolar, siempre encuentro formas creativas de mantener el interés de mis alumnos y, al mismo tiempo, lidiar con las complejidades de la vida en Springfield. A veces, la ironía es mi mejor aliada en este mundo tan peculiar.",
     "imageUrl": "https://www.quever.news/u/fotografias/m/2021/2/28/f638x638-7330_65497_3441.jpeg",
     "edad": "40 años",
     "facts": {
@@ -262,7 +262,7 @@ export default [
     "lastname": "amistades",
     "name": "Otto Mann",
     "shortDescription": "Conductor de autobús escolar y músico ocasional.",
-    "description": "Otto es un personaje de la serie de televisión 'Los Simpson'. Es conocido por ser el conductor del autobús escolar de la Escuela Primaria de Springfield...",
+    "description":"Soy Otto Mann, el tipo relajado y siempre de buen rollo que tiene el honor de ser el conductor del autobús escolar en la Escuela Primaria de Springfield. La carretera es mi segunda casa y el autobús, mi santuario sobre ruedas. Con mi melena larga y mi actitud despreocupada, siempre estoy listo para llevar a los niños de un lado a otro, aunque a veces mi enfoque en la música y las distracciones pueda desconcertar un poco. En este pequeño rincón de locura llamado Springfield, ser el conductor del autobús escolar no es solo un trabajo, ¡es una aventura diaria llena de risas y situaciones inesperadas!",
     "imageUrl": "https://www.lifeboxset.com/wp-content/uploads/2023/01/otto-2023-01-19_08-05-15.jpg",
     "edad": "26 años",
     "facts": {
@@ -277,7 +277,7 @@ export default [
     "lastname": "amistades",
     "name": "Milhouse Van Houten",
     "shortDescription": "Mejor amigo de Bart Simpson y compañero de clase en la Escuela Primaria de Springfield.",
-    "description": "Milhouse es un personaje de la serie de televisión 'Los Simpson'...",
+    "description": "Soy Milhouse Van Houten, el eterno mejor amigo y compañero de travesuras de Bart Simpson en Springfield. Mi vida en este pequeño pueblo no siempre es fácil, especialmente siendo el blanco de las bromas de Nelson y teniendo a Lisa como vecina y amor platónico. A pesar de mis anteojos y mi estilo un tanto nerd, siempre trato de mantener una actitud positiva. Ser el mejor amigo de Bart me ha llevado a vivir aventuras increíbles, aunque a veces me encuentre en situaciones un poco embarazosas. Pero bueno, ¡así es la vida en Springfield, llena de giros inesperados y momentos divertidos!",
     "imageUrl": "https://elcomercio.pe/resizer/GaVw0qToUKuc8OO3Ss_ygvOWpeg=/580x330/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/5AFW5W6P25E3LFY47RIKDIX2OQ.jpg",
     "edad": "11 años",
     "facts": {
@@ -292,7 +292,7 @@ export default [
     "lastname": "amistades",
     "name": "Dr. Julius Hibbert",
     "shortDescription": "Médico de Springfield y amigo de la familia Simpson.",
-    "description": "El Dr. Hibbert es un personaje de la serie de televisión 'Los Simpson'...",
+    "description": "Soy el Dr. Hibbert, el médico más querido (y risueño) de Springfield. Con mi risa contagiosa y mi enfoque relajado hacia la medicina, siempre estoy listo para ayudar a los residentes de esta peculiar ciudad. Mi consultorio es un lugar donde la salud se mezcla con el humor, y aunque a veces pueda parecer un poco despreocupado, tengo la situación bajo control. Mi relación con la familia Simpson ha involucrado más de una visita a la consulta, ¡pero siempre estoy feliz de ayudar! En este mundo animado de Springfield, ser médico no es solo un trabajo, es una comedia de situaciones médicas inusuales y pacientes igualmente inusuales.",
     "imageUrl": "https://assets.mycast.io/characters/dr-julius-hibbert-5081817-normal.jpg",
     "edad": "56   años",
     "facts": {
@@ -307,7 +307,7 @@ export default [
     "lastname": "amistades",
     "name": "Sideshow Bob (Tahiti Bob)",
     "shortDescription": "Ex asistente de Krusty el Payaso y archienemigo de Bart Simpson.",
-    "description": "Sideshow Bob es un personaje de la serie de televisión 'Los Simpson'...",
+    "description": "Soy Sideshow Bob, conocido por mi inteligencia y, desafortunadamente, por mi historial criminal. Aunque mi amor por el arte y la cultura es innegable, mi relación con Bart Simpson ha llevado nuestras interacciones a extremos un tanto extremos. A pesar de mis intentos de venganza, a veces siento que la vida en Springfield me presenta desafíos que van más allá de mis maquinaciones malévolas. Mi tiempo como ayudante de Krusty el Payaso me marcó, pero ahora, la búsqueda de la venganza parece ser mi destino. Aunque a veces pueda ser visto como el 'villano', en mi mente, solo estoy tratando de corregir las injusticias y hacer que el mundo sea un lugar más refinado.",
     "imageUrl": "https://images4.fanpop.com/image/photos/15800000/Robert-Terwilliger-sideshow-bob-15818268-418-500.jpg",
     "edad": "39 años",
     "facts": {
@@ -322,7 +322,7 @@ export default [
     "lastname": "wiggum",
     "name": "Ralph Wiggum",
     "shortDescription": "Estudiante de la Escuela Primaria de Springfield y miembro de la familia Wiggum.",
-    "description": "Ralph es un personaje de la serie de televisión 'Los Simpson'...",
+    "description": "Soy Ralph Wiggum, el encantador e inocente niño de Springfield. Aunque mi lógica y comprensión del mundo a veces pueden ser desconcertantes, siempre llevo un corazón puro y dispuesto. Mi padre es el Jefe de Policía, pero eso no impide que tenga mis propias aventuras y perspectivas únicas. Mis interacciones con Lisa Simpson y mi presencia en la Escuela Primaria de Springfield suelen agregar un toque de inocencia y diversión a la vida en el pueblo. ¡La vida de Ralph es como un cuento de hadas lleno de colores brillantes y momentos divertidos que simplemente no puedo evitar compartir con todos!",
     "imageUrl": "https://diesimpsons.de/media/lightbox/ralph-wiggum-2.jpg",
     "edad": "8 años",
     "facts": {
@@ -337,7 +337,7 @@ export default [
     "lastname": "bouvier",
     "name": "Patty y Selma Bouvier",
     "shortDescription": "Hermanas de Marge Simpson y empleadas del Departamento de Policía de Springfield.",
-    "description": "Patty y Selma son personajes de la serie de televisión 'Los Simpson'...",
+    "description": "Somos Patty y Selma Bouvier, las gemelas de Springfield que, según algunos, pueden ser un poco difíciles de tratar. Trabajamos en el Departamento de Inspección de DMV y, aunque nuestras vidas no sean tan emocionantes como las de nuestras queridas hermanas Marge y Selma, sabemos cómo hacerle frente a la vida con humor sarcástico y una actitud práctica. Nuestra relación con Homer Simpson puede ser un tanto tensa, pero la verdad es que, en el fondo, solo queremos lo mejor para nuestra hermana Marge y su familia. La vida en Springfield puede ser un desafío, pero siempre nos aseguramos de mantener la cabeza en alto y disfrutar de nuestro propio toque especial de realidad.",
     "imageUrl": "https://i.redd.it/0unklwj5gab81.jpg",
     "edad": "45 años",
     "facts": {
@@ -353,7 +353,7 @@ export default [
     "name": "Clancy Wiggum",
     "lastname": "wiggum",
     "shortDescription": "Jefe de Policía de Springfield y padre de Ralph Wiggum.",
-    "description": "Clancy Wiggum es un personaje de la serie de televisión 'Los Simpson'...",
+    "description": "Soy Clancy Wiggum, el Jefe de Policía de Springfield y el encargado de mantener la ley y el orden en esta pintoresca ciudad. Aunque mi enfoque puede ser un poco relajado, siempre intento hacer lo mejor para mantener a salvo a los ciudadanos de Springfield. Mi relación con mi hijo Ralph agrega un toque de comedia a mi vida cotidiana, y aunque a veces pueda parecer que me cuesta mantener el control, siempre estoy listo para enfrentar cualquier desafío que se presente en el cumplimiento de mi deber. La vida en Springfield es un continuo desfile de situaciones inusuales, pero con mi uniforme de policía y mi sentido del humor, estoy listo para hacer frente a cualquier cosa que venga.",
     "imageUrl": "https://www.animationconnection.com/assets/artwork/1656099886-973-5909-chief-wiggum-original-cel.jpg",
     "edad": "40 años",
     "facts": {

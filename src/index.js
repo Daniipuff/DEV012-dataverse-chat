@@ -11,7 +11,7 @@ const routes = {
   "/home": Home,
   "/error": Error,
   "/details":detail,
-  "/chatindividual":chat,
+  "/chatgrupal":chat,
 
 
 };
@@ -30,7 +30,8 @@ setRootElement(y);
 document.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 
-  onURLChange(event.target.location.pathname); // Cambia la URL según la ruta actual
+  onURLChange(event.target.location.pathname); 
+  console.log (event.target.location.pathname);// Cambia la URL según la ruta actual
   //const homeContent = Home();   // Obtén el contenido de la página de inicio
 
   // Asegúrate de que el contenido sea un nodo antes de agregarlo al contenedor

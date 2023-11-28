@@ -263,7 +263,8 @@ dd {
   box-sizing: border-box;
 }
 
-.send-button {
+.send-button, 
+.back-button{
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -274,11 +275,56 @@ dd {
   cursor: pointer;
 }
 
-.send-button:hover {
-  background-color: #45a049;
+#detalleContenido {
+  max-width: 80%;
+  margin: 150px auto 20px auto; 
+  padding: 20px;
+  background: #36b101;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  border-radius: 30px;
 }
 
+#detalleContenido .descripcion {
+  width: 48%; /* Ancho de la columna  */
+}
 
+#chatIndivi {
+  width: 48%; /* Ancho de la columna del chat */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-personaje {
+  color: #ffffff;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: #36b101;
+  border-radius: 30px;
+  
+}
+.chat-individual h1 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0;
+}
+.chat-input {
+  margin-top: 20px;
+  padding: 5px;
+
+}
+.send-button, .back-button  {
+  margin-top: 10px;
+  background-color: #227000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
 
 /*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. ESTO EVITA QUE SE ROMPA EL CODIGO*/
 @media (min-width: 280px) and (max-width: 350px) {
