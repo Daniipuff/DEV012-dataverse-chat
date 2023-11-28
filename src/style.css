@@ -102,7 +102,7 @@ option {
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-#chat {
+#chat, #api-key-btn{
   background-color: #254805;
   border-radius: 10px;
   padding: 5px 10px;
@@ -269,7 +269,34 @@ dd {
   border: none;
   cursor: pointer;
 }
+.contenedor-api-key h3 {
+  display: inline-block;
+  background-color: rgb(34, 77, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: x-large;
+  position: relative;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 10px; /* Agregamos margen derecho para separar del input */
+}
 
+.contenedor-api-key input {
+  display: block;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+  margin: 10px;
+}
+
+.contenedor-api-key input {
+  display: block;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+}
 /*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. ESTO EVITA QUE SE ROMPA EL CODIGO*/
 @media (min-width: 280px) and (max-width: 350px) {
   * {
@@ -754,9 +781,13 @@ dd {
 }
 
 #text-chat {
-  display: grid;
-  width: 60%;
-  margin: 10px;
+    display: grid;
+    width: 60%;
+    margin: 10px;
+    font-family: gluten;
+    padding: 20px 1px 1px;
+    font-size: x-large;
+    text-align: center;
 }
 #chat-magic{
   display: flex;
@@ -767,13 +798,15 @@ dd {
 
 .chatinput {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   width: 100%;
   height: 25px;
-  margin-top: 10px;
+  margin-top: auto; /* Utiliza "auto" para empujarlo hacia la parte inferior */
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
+  justify-content: flex-start;
 }
 .sendbutton,
 .backbutton{
@@ -792,11 +825,13 @@ dd {
   margin-top: 10px;
   background-color: #227000;
   color: #fff;
-  padding: 5px 10px;
-  border: none;
+  padding: 0px;
   cursor: pointer;
+  font-family: gluten;
+  font-size: x-large;
+  border-radius: 20px;
 }
-.backbutton {
+.backbutton , .back-button {
   background-color: #FFD401;
   border-radius: 10px;
   padding: 20px 10px;
@@ -806,6 +841,15 @@ dd {
   font-size: x-large;
 }
 
+.boton-aceptar{
+  background-color: #FFD401;
+  border-radius: 10px;
+  padding: 10px 5px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: gluten;
+  font-size: x-large;
+}
 
 /*Chat grupal*/
 #chatContenido {
