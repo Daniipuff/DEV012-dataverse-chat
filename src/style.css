@@ -215,7 +215,7 @@ dd {
   color: #fff;
   text-align: center;
   position: relative;
-  top: 100px;
+  top: 10px;
 }
 .mostrar,
 .ocultar {
@@ -753,7 +753,7 @@ dd {
   background-color: #61994A;
   width: 85%;
   height: 85%;
-  margin-top: 60px;
+  margin-top: 0px;
   border-radius: 15px;
 }
 #detalles {
@@ -761,7 +761,7 @@ dd {
   grid-template-columns: 1fr;
   justify-content: center ; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  width: 40%;
+  width: 30%;
   background-image: url("https://raw.githubusercontent.com/Paulinakbrr/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg");
   border-radius: 15px 0 0 15px;
 }
@@ -782,7 +782,7 @@ dd {
 
 #text-chat {
     display: grid;
-    width: 60%;
+    width: 70%;
     margin: 10px;
     font-family: gluten;
     padding: 20px 1px 1px;
@@ -799,14 +799,15 @@ dd {
 .chatinput {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 25px;
-  margin-top: auto; /* Utiliza "auto" para empujarlo hacia la parte inferior */
+  width: 90%;
+  height: 35px;
+  margin-top: auto;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   position: relative;
   justify-content: flex-start;
+  bottom: -115%;
 }
 .sendbutton,
 .backbutton{
@@ -820,25 +821,30 @@ dd {
   border-radius: 4px;
   cursor: pointer;
 }
-.sendbutton
- {
+.sendbutton {
   margin-top: 10px;
   background-color: #227000;
   color: #fff;
-  padding: 0px;
   cursor: pointer;
   font-family: gluten;
   font-size: x-large;
   border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 92%;
+  bottom: -60%;
 }
-.backbutton , .back-button {
+.backbutton, .back-button {
   background-color: #FFD401;
   border-radius: 10px;
-  padding: 20px 10px;
   cursor: pointer;
   color: rgb(0, 0, 0);
   font-family: gluten;
   font-size: x-large;
+  position: relative;
+  left: 34%;
+  width: 16%;
 }
 
 .boton-aceptar{

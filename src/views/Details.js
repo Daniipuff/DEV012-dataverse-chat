@@ -28,7 +28,7 @@ export const detail = ({id}) => {
             <div id="text-chat"> ${persona.name}
                 <div id="chat-magic"></div>
                 <input type="text" class="chatinput" placeholder="Escribe tu mensaje..."> </input>
-                <button class="sendbutton"> Enviar </button>
+                <button class="sendbutton"> <img src= "https://cdn4.iconfinder.com/data/icons/core-ui-filled-rounded/32/filled_rounded_send-512.png" height="30" width="30"> </button>
             </div>
         </div>    
         <button class="backbutton"> Regresar </button>
