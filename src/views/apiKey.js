@@ -1,5 +1,6 @@
 import { footer } from "../Componentes/Footer.js";
 import { header } from "../Componentes/Header.js";
+import { navigateTo } from ".././router.js";
 export const componenteApiKey = () => {
     const contenedorApiKey = document.createElement('div');
     contenedorApiKey.setAttribute('class', 'contenedor-api-key');
@@ -23,7 +24,11 @@ export const componenteApiKey = () => {
     botonAceptar.addEventListener('click', manejarClicEnAceptar);
     contenedorApiKey.appendChild(botonAceptar);
 
-    
+    let botonRegresar = document.createElement('button');
+    botonRegresar.setAttribute('id', 'boton-regresar');
+    botonRegresar.innerHTML = 'Regresar';
+    contenedorApiKey.appendChild(botonRegresar);
+
     function manejarClicEnAceptar() {
         
         var valorContraseña = entradaContraseña.value;
@@ -37,6 +42,10 @@ export const componenteApiKey = () => {
     const footerComponent = footer();
     contenedorApiKey.appendChild(footerComponent);
 
+    const regresarBoton2 = contenedorApiKey.querySelector('button[id="boton-regresar"]');
+    regresarBoton2.addEventListener('click', function () {
+      navigateTo("/home");
+    });
     return contenedorApiKey;
 };
 

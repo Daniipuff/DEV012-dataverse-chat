@@ -1,6 +1,7 @@
 import data from "../data/dataset.js";
 import { header } from "../Componentes/Header.js";
 import { footer } from "../Componentes/Footer.js";
+import { navigateTo } from ".././router.js";
 
 export const detail = ({id}) => {
  
@@ -25,13 +26,14 @@ export const detail = ({id}) => {
                 <p class="uno">${persona.description}</p>
                 
             </div>    
-            <div id="text-chat"> ${persona.name}
+            <div id="text-chat"> ${persona.name}</img>
+            <div id="icono-chat"><img src=${persona.imageUrl}></img></div>
                 <div id="chat-magic"></div>
                 <input type="text" class="chatinput" placeholder="Escribe tu mensaje..."> </input>
                 <button class="sendbutton"><img src ="https://cdn4.iconfinder.com/data/icons/core-ui-filled-rounded/32/filled_rounded_send-512.png" height="40" width="40"></button>
             </div>
         </div>    
-        <button class="backbutton"> Regresar </button>
+        <button class="backbutton" id="regresarHome"> Regresar </button>
         `;
     
     }
@@ -43,5 +45,9 @@ export const detail = ({id}) => {
     const footerComponent = footer();
     detailContenido.appendChild(footerComponent);
 
+    const regresarBoton = detailContenido.querySelector('button[id="regresarHome"]');
+    regresarBoton.addEventListener('click', function () {
+      navigateTo("/home");
+    });
     return detailContenido;
   };

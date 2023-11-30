@@ -1,7 +1,9 @@
 import { footer } from "../Componentes/Footer.js";
 import { header } from "../Componentes/Header.js";
+import { navigateTo } from ".././router.js";
 
 export const chat = () => {
+  const divRoot = document.querySelector('#root');
   const chatContenido = document.createElement('div');
   chatContenido.setAttribute('id', 'chatContenido');
   const chatHeader = document.createElement('div');
@@ -23,18 +25,24 @@ export const chat = () => {
   sendButton.textContent = 'Enviar';
   sendButton.classList.add('send-button');
   chatContenido.appendChild(sendButton);
-  // Agrega el header directamente al principio de chatContenido
+
   const elHeader = header();
-  chatContenido.insertBefore(elHeader, chatContenido.firstChild);
+  divRoot.appendChild(elHeader);
 
   const back1Button = document.createElement('button');
   back1Button.textContent = 'Regresar';
+  back1Button.setAttribute('id','regresarInicio');
   back1Button.classList.add('back-button');
   chatContenido.appendChild(back1Button);
+  
+  const regresarBoton1 = chatContenido.querySelector('button[id="regresarInicio"]');
+  regresarBoton1.addEventListener('click', function () {
+    navigateTo("/home");
+  });
 
-  // Adjuntamos el "<footer>"
-  const footerComponent = footer();
-  chatContenido.appendChild(footerComponent);
+    // Adjuntamos el "<footer>"
+    const footerComponent = footer();
+    divRoot.appendChild(footerComponent);
 
   return chatContenido;
 };
