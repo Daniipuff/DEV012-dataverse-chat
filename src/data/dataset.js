@@ -305,7 +305,7 @@ export default [
     "id": "021",
     "genero":"m",
     "lastname": "amistades",
-    "name": "Sideshow Bob (Tahiti Bob)",
+    "name": "Sideshow Bob",
     "shortDescription": "Ex asistente de Krusty el Payaso y archienemigo de Bart Simpson.",
     "description": "Soy conocido por mi inteligencia y, desafortunadamente, por mi historial criminal. Aunque mi amor por el arte y la cultura es innegable, mi relación con Bart Simpson ha llevado nuestras interacciones a extremos un tanto extremos. A pesar de mis intentos de venganza, a veces siento que la vida en Springfield me presenta desafíos que van más allá de mis maquinaciones malévolas. Mi tiempo como ayudante de Krusty el Payaso me marcó, pero ahora, la búsqueda de la venganza parece ser mi destino. Aunque a veces pueda ser visto como el 'villano', en mi mente, solo estoy tratando de corregir las injusticias y hacer que el mundo sea un lugar más refinado.",
     "imageUrl": "https://images4.fanpop.com/image/photos/15800000/Robert-Terwilliger-sideshow-bob-15818268-418-500.jpg",
