@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@600&family=Itim&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap");
 /*VISTA DE HOME.JS*/
 * {
   padding: 0;
@@ -18,6 +17,10 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: overlay;
   font-family: "Indie Flower";
+}
+#root {
+  display: flex;
+  flex-direction: column;
 }
 .header {
   width: 100%;
@@ -63,7 +66,7 @@ h2 {
   font-size: larger;
   font-family: "Indie Flower";
 }
-.menu{
+.menu {
   width: 90%;
   height: 8vh;
   display: flex;
@@ -90,7 +93,7 @@ select {
   padding: 5px;
   border: 3px solid #227000;
   border-radius: 5px;
-  background-color: #E2F3D5
+  background-color: #E2F3D5;
 }
 option {
   font-family: "Indie Flower";
@@ -102,7 +105,8 @@ option {
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-#chat, #api-key-btn{
+#chat,
+#api-key-btn {
   background-color: #254805;
   border-radius: 10px;
   padding: 5px 10px;
@@ -113,7 +117,7 @@ option {
   margin: 0px 0px 0px 10px;
 }
 #chatt {
-  display:none;
+  display: none;
 }
 #check {
   display: none;
@@ -121,15 +125,15 @@ option {
 .mostrar {
   display: none;
 }
-
+.ocultar {
+  display: none;
+}
 #resultados {
   padding: 0;
 }
-
 #resultados2 {
   display: none;
 }
-
 #facts {
   display: flex;
   background-color: rgb(34, 77, 0);
@@ -144,7 +148,7 @@ option {
   font-family: "Itim";
   font-size: x-large;
   position: relative;
-  top: 30px; 
+  top: 30px;
 }
 .foco {
   position: relative;
@@ -157,11 +161,19 @@ option {
   line-height: 1.5;
   font-weight: 700;
   font-size: x-large;
-  margin-top: 30px;/*100px*/
+  margin-top: 30px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 #contenedor {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   position: relative;
   top: 100px;
@@ -184,7 +196,11 @@ ul {
   font-size: 100%;
   font-weight: 700;
   list-style-type: none;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("https://static.vecteezy.com/system/resources/previews/004/948/426/non_2x/cartoon-comic-cloud-copy-space-background-on-blue-free-vector.jpg");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("https://static.vecteezy.com/system/resources/previews/004/948/426/non_2x/cartoon-comic-cloud-copy-space-background-on-blue-free-vector.jpg");
   margin-bottom: 30px;
 }
 .listas img {
@@ -193,35 +209,20 @@ ul {
   border-radius: 15px;
 }
 dt {
-  display:flex;
+  display: flex;
   justify-content: center;
   margin-left: 20px;
   margin: 0;
   margin-top: 5px;
   font-size: 14px;
 }
-
 dd {
-  display:flex;
+  display: flex;
   justify-content: center;
   margin-left: 40px;
   font-size: 16px;
   margin: 0;
   padding: 10px;
-}
-.footer {
-  width: 100%;
-  background-color: #7B3D87;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  top: 100%;
-}
-.mostrar,
-.ocultar {
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
 }
 .menu {
   order: 1;
@@ -229,39 +230,35 @@ dd {
 #check {
   display: none;
 }
-
 #detalleContenido .descripcion {
-  width: 48%; /* Ancho de la columna  */
+  width: 48%;
 }
-
 #chatIndivi {
-  width: 48%; /* Ancho de la columna del chat */
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .titulo-personaje {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 30px;
   margin: 0;
   text-align: center;
   padding: 10px;
-  background-color: #36b101;
+  background-color: #36B101;
   border-radius: 30px;
-  
 }
 .chat-individual h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 24px;
   margin: 0;
 }
 .chat-input {
   margin-top: 20px;
   padding: 5px;
-
 }
-.send-button, .back-button  {
+.send-button,
+.back-button {
   margin-top: 10px;
   background-color: #227000;
   color: #fff;
@@ -280,12 +277,10 @@ dd {
   border-radius: 15px;
   margin-right: 10px; /* Agregamos margen derecho para separar del input */
 }
-
-.contenedor-api-key{
+.contenedor-api-key {
   width: 100%;
   height: 100%;
 }
-
 .contenedor-api-key input {
   display: block;
   width: 50%;
@@ -294,7 +289,6 @@ dd {
   margin-top: 20px;
   margin: 10px;
 }
-
 .contenedor-api-key input {
   display: block;
   width: 50%;
@@ -302,410 +296,19 @@ dd {
   padding: 10px;
   margin-top: 20px;
 }
-/*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. ESTO EVITA QUE SE ROMPA EL CODIGO*/
-@media (min-width: 280px) and (max-width: 350px) {
-  * {
-    padding: 0;
-    margin: 0;
-  }
-
-  body {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    font-family: "Indie Flower";
-    background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
-  }
-  
-  #root {
-    display: flex;
-    justify-content: center; 
-  }
-  
-  .frontis {
-    background-image: url("https://images3.alphacoders.com/591/591067.jpg");
-    background-size: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: overlay;
-  }
-
-  .header {
-    display: flex;
-    content: space-between;
-    margin-top: 0;
-  } 
-  
-  .imagenTitulo {
-    width: 140px;
-    height: 140px;
-  }
-
-  .imagenFamilia {
-    width: 100px;
-    height: 110px;
-    margin-left: 20px;
-  }
-
-  main {
-    background-color: #4A9F2D;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 0;
-    padding: 0;
-  }
-
-  #facts {
-    background-color: rgb(34, 77, 0);
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: 270px;
-  }
-
-  .foco {
-    display: none;
-  }
-
-  #chat {
-    display: none;
-  }
-
-  #resultados2 {
-    display: block;
-  }
-
-  #resultados {
-    display: none;
-  }
-
-  #chatt {
-    background-color: #254805;
-    border-radius: 10px;
-    padding: 5px 10px;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    margin: 0px 0px 0px 10px;
-  }
-  
-  .mostrar,
-  .ocultar {
-    display: block;
-  }
-
-  .mostrar {
-    display: absolute;
-    justify-items: end;
-    font-size: 30px;
-    cursor: pointer;
-    top:5px;
-    padding: 0;
-  }
-
-  .menu {
-    position: absolute;
-    width: 50%;
-    height: 100vh;
-    background: #86CA68;
-    text-align: center;
-    z-index: 100;
-    right: 100%;
-    transition: none;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 20px 90px;
-  }
-
-  .menu label {
-    display: block;
-  }
-
-  .ocultar {
-    position: absolute;
-    top: 10px;
-  }
-
-  #check:checked~.menu {
-    right: 0;
-  }
-
-  h2 {
-    display: none;
-  }
-
-  #genero {
-    display: flex;
-    justify-content: center;
-    font-family: "Indie Flower";
-    line-height: 1.5;
-    font-weight: 700;
-    font-size: x-large;
-    margin-top: 200px;
-  }
-
-  #check {
-    visibility: hidden;
-  }
-  
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #contenedor {
-    width: 100vw;
-    max-width: 1000px;
-    min-width: 320px;
-    margin: auto;
-    position: relative;
-  }
-
-  #contenedor img {
-    width: 100%;
-    height: 150px;
-  }
-
-  .listas {
-    display: flex;
-    justify-content: center;
-    margin-left: 23px;
-  }
-
-  label {
-    color: #254805;
-    font-family: "Indie Flower";
-    font-size: x-large;
-    font-weight: 900;
-  }
-
-  .footer {
-    width: auto ;
-    background-color: #7B3D87;
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    position: relative;
-    padding: 8px;
-  }
+.footer {
+  width: 100%;
+  background-color: #7B3D87;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -40px;
 }
-
-@media (min-width: 350px) and (max-width: 600px) {
-  * {
-    padding: 0;
-    margin: 0;
-  }
-
-  body {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    font-family: "Indie Flower";
-    background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
-  }
-  
-  .frontis {
-    background-image: url("https://images3.alphacoders.com/591/591067.jpg") ;
-    background-size: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: overlay;
-  }
-
-  .header {
-    display: flex;
-    content: space-between;
-    margin-top: 0;
-  } 
-  
-  .imagenTitulo {
-    width: 140px;
-    height: 140px;
-  }
-
-  .imagenFamilia {
-    width: 100px;
-    height: 110px;
-    margin-left: 40px;
-  }
-
-  main {
-    background-color: #4A9F2D;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 0;
-    padding: 0;
-  }
-
-  #facts {
-    background-color: rgb(34, 77, 0);
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: 270px;
-  }
-
-  .foco {
-    display: none;
-  }
-
-  #chat {
-    display: none;
-  }
-
-  #resultados2 {
-    display: block;
-  }
-
-  #resultados {
-    display: none;
-  }
-
-  #chatt {
-    background-color: #254805;
-    border-radius: 10px;
-    padding: 5px 10px;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    margin: 0px 0px 0px 10px;
-  }
-  
-  .mostrar,
-  .ocultar {
-    display: block;
-  }
-
-  .mostrar {
-    display: absolute;
-    justify-items: end;
-    font-size: 30px;
-    cursor: pointer;
-    top:5px;
-    padding: 0;
-  }
-
-  .menu {
-    position: absolute;
-    width: 50%;
-    height: 100vh;
-    background: #86CA68;
-    text-align: center;
-    z-index: 100;
-    right: 100%;
-    transition: none;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 20px 90px;
-  }
-
-  .menu label {
-    display: block;
-  }
-
-  .ocultar {
-    position: absolute;
-    top: 10px;
-  }
-
-  #check:checked~.menu {
-    right: 0;
-  }
-
-  h2 {
-    display: none;
-  }
-
-  #genero {
-    display: flex;
-    justify-content: center;
-    font-family: "Indie Flower";
-    line-height: 1.5;
-    font-weight: 700;
-    font-size: x-large;
-    margin-top: 200px;
-  }
-
-  #check {
-    visibility: hidden;
-  }
-  
-  ul {
-    
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #contenedor {
-    width: 100vw;
-    max-width: 1000px;
-    min-width: 320px;
-    margin: auto;
-    position: relative;
-  }
-
-  #contenedor img {
-    width: 100%;
-    height: 150px;
-  }
-
-  .listas {
-    display: flex;
-    justify-content: center;
-    margin-left: 23px;
-  }
-
-  label {
-    color: #254805;
-    font-family: "Indie Flower";
-    font-size: x-large;
-    font-weight: 900;
-  }
-  
-  #root {
-    display: flex;
-    justify-content: center; 
-  }
-
-  .footer {
-    width: auto ;
-    background-color: #7B3D87;
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    position: relative;
-    padding: 8px;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 750px) {}
-@media (min-width: 750px) and (max-width: 850px) {}
-@media (min-width: 850px) and (max-width: 3543px) {}
-
-/*VISTA DE ERROR.JS*/ 
+/*VISTA DE ERROR.JS*/
 #error404 {
   background-color: #95DD78;
-  width: 97%; 
+  width: 97%;
   height: 540px;
   display: flex;
   position: relative;
@@ -719,16 +322,16 @@ dd {
 .doh {
   display: flex;
   font-family: Be Vietnam Pro;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 100px;
   margin-top: 60px;
   margin-left: 40px;
   padding: auto;
 }
-.p{
+.p {
   display: flex;
   font-family: Be Vietnam Pro;
-  color: #ffffff;
+  color: #FFFFFF;
   margin-top: 0;
   margin-left: 40px;
 }
@@ -737,17 +340,13 @@ dd {
   justify-content: left;
   margin-left: 300px;
   margin-top: 60px;
-  width: 390px; /*564*/
-  height: 530px; /*846*/
+  width: 390px;
+  height: 530px;
 }
-/*A continuacion media query para celular de vista ERROR.JS*/
-@media (min-width: 280px) and (max-width: 350px) {}
-@media (min-width: 350px) and (max-width: 600px) {}
-
-/*Chat individual*/
+/*CHAT INDIVIDUAL*/
 .cajaFuerte {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -763,7 +362,7 @@ dd {
 #detalles {
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: center ; /* Centra horizontalmente */
+  justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   width: 30%;
   background-image: url("https://raw.githubusercontent.com/Paulinakbrr/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg");
@@ -771,28 +370,27 @@ dd {
 }
 .profile {
   display: grid;
-  justify-content: center ;
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   border-top-left-radius: 15px;
 }
 .h1 {
-  font-size: 12px;
+  font-size: 11px;
 }
 .uno {
   margin: 0 10px 0 10px;
 }
-
 #text-chat {
-    display: grid;
-    width: 70%;
-    margin: 10px;
-    font-family: gluten;
-    padding: 20px 1px 1px;
-    font-size: x-large;
-    text-align: center;
-    height: 50px;
+  display: grid;
+  width: 70%;
+  margin: 10px;
+  font-family: gluten;
+  padding: 20px 1px 1px;
+  font-size: x-large;
+  text-align: center;
+  height: 50px;
 }
 #icono-chat img {
   height: 50px;
@@ -815,7 +413,6 @@ dd {
   border-radius: 15px;
   margin-left: 2%;
 }
-
 .chatinput {
   display: flex;
   flex-direction: column;
@@ -829,7 +426,7 @@ dd {
   justify-content: flex-start;
   bottom: -115%;
 }
-.backbutton{
+.backbutton {
   width: 50%;
   height: 30%;
   padding: 10px;
@@ -841,18 +438,23 @@ dd {
 }
 .sendbutton {
   margin-top: 10px;
-  color: #fff;
+  background-color: transparent;
   cursor: pointer;
   font-family: gluten;
-  font-size: x-large;
+  border: 0;
   border-radius: 20px;
   width: 50px;
   height: 50px;
   position: relative;
-  left: 92%;
+  left: 90%;
   bottom: 20%;
 }
-.backbutton, .back-button {
+.senddbbuton {
+  width: 40px;
+  height: 40px;
+}
+.backbutton,
+.back-button {
   background-color: #FFD401;
   border-radius: 10px;
   cursor: pointer;
@@ -863,8 +465,7 @@ dd {
   left: 34%;
   width: 16%;
 }
-
-.boton-aceptar{
+.boton-aceptar {
   background-color: #FFD401;
   border-radius: 10px;
   padding: 10px 5px;
@@ -873,7 +474,6 @@ dd {
   font-family: gluten;
   font-size: x-large;
 }
-
 /*Chat grupal*/
 #chatContenido {
   margin: 20px auto;
@@ -884,21 +484,18 @@ dd {
   background-color: #fff;
   width: 90%;
 }
-
 .chat-header {
-  background-color: #4caf50;
+  background-color: #4CAF50;
   color: #fff;
   padding: 10px;
   text-align: center;
   border-radius: 8px 8px 0 0;
 }
-
 .chat-messages {
   max-height: 200px;
   overflow-y: auto;
   padding: 10px;
 }
-
 .chat-input {
   width: 100%;
   padding: 80px;
@@ -907,18 +504,978 @@ dd {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
 .send-button {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #4caf50;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
-
 .send-button:hover {
-  background-color: #45a049;
+  background-color: #45A049;
 }
+
+  /*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. ESTO EVITA QUE SE ROMPA EL CODIGO*/
+  
+  @media (min-width: 280px) and (max-width: 350px) {
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Indie Flower";
+      background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+    }
+    #root {
+      display: grid;
+      align-items: center;
+    }
+    .frontis {
+      background-image: url("https://images3.alphacoders.com/591/591067.jpg");
+      background-size: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-blend-mode: overlay;
+    }
+    .header {
+      display: flex;
+      content: space-between;
+      margin-top: 0;
+    }
+    .imagenTitulo {
+      width: 140px;
+      height: 140px;
+    }
+    .imagenFamilia {
+      width: 100px;
+      height: 110px;
+      margin-left: 20px;
+    }
+    main {
+      display: flex;
+      background-color: #4A9F2D;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 0;
+    }
+    nav {
+      position: relative;
+      display: flex;
+      height: 40px;
+      padding-top: 10px;
+      justify-content: center;
+    }
+    .menu {
+      display: grid;
+      padding-top: 20px;
+      padding-left: 20px;
+      width: 150px;
+      height: 55vh;
+      background: #4A9F2D;
+      z-index: 100;
+      transition: none;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 30px 60px;
+      border-radius: revert;
+      border-color: #4A9F2D;
+      position: absolute;
+      top: 20%;
+    }
+    #facts {
+      background-color: rgb(34, 77, 0);
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+      position: relative;
+      top: 270px;
+    }
+    .foco {
+      display: none;
+    }
+    #chat {
+      display: none;
+    }
+    #resultados2 {
+      display: block;
+    }
+    #resultados {
+      display: none;
+    }
+    #chat {
+      display: block;
+      background-color: #254805;
+      border-radius: 10px;
+      padding: 5px 10px;
+      box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      margin: 0px 0px 0px 10px;
+    }
+    #check {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 30px;
+      opacity: 0;
+    }
+    .menu label {
+      display: block;
+    }
+    label {
+      color: #040700;
+      font-family: "Indie Flower";
+      font-size: x-large;
+      font-weight: 900;
+    }
+    .ocultar {
+      justify-items: center;
+      font-family: none;
+      font-size: 40px;
+      pointer-events: none;
+      cursor: pointer;
+      bottom: 5px;
+      padding: 0;
+      position: relative;
+    }
+    .mostrar {
+      display: block;
+      justify-items: center;
+      font-size: 30px;
+      pointer-events: none;
+      cursor: pointer;
+      top: 5px;
+      padding: 0;
+    }
+    .menu {
+      display: none;
+    }
+    #check:checked ~ .menu {
+      display: block;
+    }
+    #check:checked ~ .mostrar {
+      display: none;
+    }
+    #check:checked ~ .ocultar {
+      display: block;
+    }
+    h2 {
+      display: none;
+    }
+    #genero {
+      display: flex;
+      justify-content: center;
+      font-family: "Indie Flower";
+      line-height: 1.5;
+      font-weight: 700;
+      font-size: x-large;
+      margin-top: 0;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .dl {
+      width: 100%;
+    }
+    #contenedor {
+      width: 100vw;
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+    }
+    #contenedor img {
+      width: 100%;
+      height: 150px;
+    }
+    /*Chat individual*/
+    .cajaFuerte {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #caja {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin-top: 0px;
+      border-radius: 15px;
+    }
+    #detalles {
+      display: flex;
+      flex-direction: column;
+      order: -1;
+      justify-content: center;
+      align-items: center;
+      width: 100.7%;
+      background-color: #61994A;
+      background-image: none;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+    .profile {
+      display: none;
+    }
+    .h1 {
+      font-size: 10px;
+    }
+    .uno {
+      font-size: 8px;
+      margin: 0 10px 0 10px;
+    }
+    #text-chat {
+      width: 100%;
+      height: fit-content;
+      font-family: gluten;
+      background-color: #61994A;
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
+    }
+    #icono-chat {
+      width: 100%;
+      height: 40px;
+    }
+    #icono-chat img {
+      position: relative;
+      right: 38%;
+      bottom: 28px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0;
+    }
+    #chat-magic {
+      display: flex;
+      width: 100%;
+      background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+      background-color: rgba(255, 255, 255, 0.461);
+      background-blend-mode: overlay;
+      position: relative;
+      margin: 0;
+      border-radius: 0;
+    }
+    .chatinput {
+      width: 90%;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    .backbutton {
+      width: 50%;
+      height: 30%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #61994A;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .sendbutton {
+      margin-top: 10px;
+      background-color: transparent;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 0;
+      width: 30px;
+      height: 26px;
+      position: relative;
+      bottom: 0;
+    }
+    .senddbbuton {
+      width: 20px;
+      height: 20px;
+    }
+    .backbutton,
+    .back-button {
+      background-color: #FFD401;
+      border-radius: 10px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      font-family: gluten;
+      font-size: 12px;
+      position: relative;
+      width: 25%;
+      margin: 5px 40px 0 0;
+    }
+    .boton-aceptar {
+      background-color: #FFD401;
+      border-radius: 10px;
+      padding: 10px 5px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      font-family: gluten;
+      font-size: x-large;
+    }
+    .footer {
+      width: 100%;
+      background-color: #7B3D87;
+      color: #fff;
+      font-size: 11px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: -66%;
+    }
+  }
+
+  @media (min-width: 350px) and (max-width: 522px) {
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Indie Flower";
+      background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+    }
+    #root {
+      display: grid;
+      align-items: center;
+    }
+    .frontis {
+      background-image: url("https://images3.alphacoders.com/591/591067.jpg");
+      background-size: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-blend-mode: overlay;
+    }
+    .header {
+      display: flex;
+      content: space-between;
+      margin-top: 0;
+    }
+    .imagenTitulo {
+      width: 140px;
+      height: 140px;
+    }
+    .imagenFamilia {
+      width: 100px;
+      height: 110px;
+      margin-left: 20px;
+    }
+    main {
+      display: flex;
+      background-color: #4A9F2D;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 0;
+    }
+    nav {
+      position: relative;
+      display: flex;
+      height: 40px;
+      padding-top: 10px;
+      justify-content: center;
+    }
+    .menu {
+      display: grid;
+      padding-top: 20px;
+      padding-left: 20px;
+      width: 150px;
+      height: 55vh;
+      background: #4A9F2D;
+      z-index: 100;
+      transition: none;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 30px 60px;
+      border-radius: revert;
+      border-color: #4A9F2D;
+      position: absolute;
+      top: 20%;
+    }
+    #facts {
+      background-color: rgb(34, 77, 0);
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+      position: relative;
+      top: 270px;
+    }
+    .foco {
+      display: none;
+    }
+    #chat {
+      display: none;
+    }
+    #resultados2 {
+      display: block;
+    }
+    #resultados {
+      display: none;
+    }
+    #chat {
+      display: block;
+      background-color: #254805;
+      border-radius: 10px;
+      padding: 5px 10px;
+      box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      margin: 0px 0px 0px 10px;
+    }
+    #check {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 30px;
+      opacity: 0;
+    }
+    .menu label {
+      display: block;
+    }
+    label {
+      color: #040700;
+      font-family: "Indie Flower";
+      font-size: x-large;
+      font-weight: 900;
+    }
+    .ocultar {
+      justify-items: center;
+      font-family: none;
+      font-size: 40px;
+      pointer-events: none;
+      cursor: pointer;
+      bottom: 5px;
+      padding: 0;
+      position: relative;
+    }
+    .mostrar {
+      display: block;
+      justify-items: center;
+      font-size: 30px;
+      pointer-events: none;
+      cursor: pointer;
+      top: 5px;
+      padding: 0;
+    }
+    .menu {
+      display: none;
+    }
+    #check:checked ~ .menu {
+      display: block;
+    }
+    #check:checked ~ .mostrar {
+      display: none;
+    }
+    #check:checked ~ .ocultar {
+      display: block;
+    }
+    h2 {
+      display: none;
+    }
+    #genero {
+      display: flex;
+      justify-content: center;
+      font-family: "Indie Flower";
+      line-height: 1.5;
+      font-weight: 700;
+      font-size: x-large;
+      margin-top: 0;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .dl {
+      width: 100%;
+    }
+    #contenedor {
+      width: 100vw;
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+    }
+    #contenedor img {
+      width: 100%;
+      height: 150px;
+    }
+    /*Chat individual*/
+    .cajaFuerte {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #caja {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin-top: 0px;
+      border-radius: 15px;
+    }
+    #detalles {
+      display: flex;
+      flex-direction: column;
+      order: -1;
+      justify-content: center;
+      align-items: center;
+      width: 100.7%;
+      background-color: #61994A;
+      background-image: none;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+    .profile {
+      display: none;
+    }
+    .h1 {
+      font-size: 10px;
+    }
+    .uno {
+      font-size: 8px;
+      margin: 0 10px 0 10px;
+    }
+    #text-chat {
+      width: 100%;
+      height: fit-content;
+      font-family: gluten;
+      background-color: #61994A;
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
+    }
+    #icono-chat {
+      width: 100%;
+      height: 40px;
+    }
+    #icono-chat img {
+      position: relative;
+      right: 38%;
+      bottom: 28px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0;
+    }
+    #chat-magic {
+      display: flex;
+      width: 100%;
+      background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+      background-color: rgba(255, 255, 255, 0.461);
+      background-blend-mode: overlay;
+      position: relative;
+      margin: 0;
+      border-radius: 0;
+    }
+    .chatinput {
+      width: 90%;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    .backbutton {
+      width: 50%;
+      height: 30%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #61994A;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .sendbutton {
+      margin-top: 10px;
+      background-color: transparent;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 0;
+      width: 30px;
+      height: 26px;
+      position: relative;
+      bottom: 0;
+    }
+    .senddbbuton {
+      width: 20px;
+      height: 20px;
+    }
+    .backbutton,
+    .back-button {
+      background-color: #FFD401;
+      border-radius: 10px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      font-family: gluten;
+      font-size: 12px;
+      position: relative;
+      width: 25%;
+      margin: 5px 40px 0 0;
+    }
+    .boton-aceptar {
+      background-color: #FFD401;
+      border-radius: 10px;
+      padding: 10px 5px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      font-family: gluten;
+      font-size: x-large;
+    }
+    .footer {
+      width: 100%;
+      background-color: #7B3D87;
+      color: #fff;
+      font-size: 11px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: -66%;
+    }
+  }
+
+  @media (min-width: 522px) and (max-width: 750px) {
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Indie Flower";
+      background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+    }
+    #root {
+      display: grid;
+      align-items: center;
+    }
+    .frontis {
+      background-image: url("https://images3.alphacoders.com/591/591067.jpg");
+      background-size: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-blend-mode: overlay;
+    }
+    .header {
+      display: flex;
+      content: space-between;
+      margin-top: 0;
+    }
+    .imagenTitulo {
+      width: 140px;
+      height: 140px;
+    }
+    .imagenFamilia {
+      width: 100px;
+      height: 110px;
+      margin-left: 20px;
+    }
+    main {
+      display: flex;
+      background-color: #4A9F2D;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 0;
+    }
+    nav {
+      position: relative;
+      display: flex;
+      height: 40px;
+      padding-top: 10px;
+      justify-content: center;
+    }
+    .menu {
+      display: grid;
+      padding-top: 20px;
+      padding-left: 20px;
+      width: 150px;
+      height: 55vh;
+      background: #4A9F2D;
+      z-index: 100;
+      transition: none;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 30px 60px;
+      border-radius: revert;
+      border-color: #4A9F2D;
+      position: absolute;
+      top: 20%;
+    }
+    #facts {
+      background-color: rgb(34, 77, 0);
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+      position: relative;
+      top: 270px;
+    }
+    .foco {
+      display: none;
+    }
+    #chat {
+      display: none;
+    }
+    #resultados2 {
+      display: block;
+    }
+    #resultados {
+      display: none;
+    }
+    #chat {
+      display: block;
+      background-color: #254805;
+      border-radius: 10px;
+      padding: 5px 10px;
+      box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      margin: 0px 0px 0px 10px;
+    }
+    #check {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 30px;
+      opacity: 0;
+    }
+    .menu label {
+      display: block;
+    }
+    label {
+      color: #040700;
+      font-family: "Indie Flower";
+      font-size: x-large;
+      font-weight: 900;
+    }
+    .ocultar {
+      justify-items: center;
+      font-family: none;
+      font-size: 40px;
+      pointer-events: none;
+      cursor: pointer;
+      bottom: 5px;
+      padding: 0;
+      position: relative;
+    }
+    .mostrar {
+      display: block;
+      justify-items: center;
+      font-size: 30px;
+      pointer-events: none;
+      cursor: pointer;
+      top: 5px;
+      padding: 0;
+    }
+    .menu {
+      display: none;
+    }
+    #check:checked ~ .menu {
+      display: block;
+    }
+    #check:checked ~ .mostrar {
+      display: none;
+    }
+    #check:checked ~ .ocultar {
+      display: block;
+    }
+    h2 {
+      display: none;
+    }
+    #genero {
+      display: flex;
+      justify-content: center;
+      font-family: "Indie Flower";
+      line-height: 1.5;
+      font-weight: 700;
+      font-size: x-large;
+      margin-top: 0;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dl {
+      width: 100%;
+    }
+    #contenedor {
+      width: 100vw;
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+    }
+    #contenedor img {
+      width: 100%;
+      height: 150px;
+    }
+    /*Chat individual*/
+    .cajaFuerte {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #caja {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin-top: 0px;
+      border-radius: 15px;
+    }
+    #detalles {
+      display: flex;
+      flex-direction: column;
+      order: -1;
+      justify-content: center;
+      align-items: center;
+      width: 100.7%;
+      background-color: #61994A;
+      background-image: none;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+    .profile {
+      display: none;
+    }
+    .h1 {
+      font-size: 10px;
+    }
+    .uno {
+      font-size: 8px;
+      margin: 0 10px 0 10px;
+    }
+    #text-chat {
+      width: 100%;
+      height: fit-content;
+      font-family: gluten;
+      background-color: #61994A;
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
+    }
+    #icono-chat {
+      width: 100%;
+      height: 40px;
+    }
+    #icono-chat img {
+      position: relative;
+      right: 38%;
+      bottom: 28px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0;
+    }
+    #chat-magic {
+      display: flex;
+      width: 100%;
+      background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+      background-color: rgba(255, 255, 255, 0.461);
+      background-blend-mode: overlay;
+      position: relative;
+      margin: 0;
+      border-radius: 0;
+    }
+    .chatinput {
+      width: 90%;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    .backbutton {
+      width: 50%;
+      height: 30%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #61994A;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .sendbutton {
+      margin-top: 10px;
+      background-color: transparent;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 0;
+      width: 30px;
+      height: 26px;
+      position: relative;
+      bottom: 0;
+    }
+    .senddbbuton {
+      width: 20px;
+      height: 20px;
+    }
+    .backbutton,
+    .back-button {
+      background-color: #FFD401;
+      border-radius: 10px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      font-family: gluten;
+      font-size: 12px;
+      position: relative;
+      width: 25%;
+      margin: 5px 40px 0 0;
+    }
+    .boton-aceptar {
+      background-color: #FFD401;
+      border-radius: 10px;
+      padding: 10px 5px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      font-family: gluten;
+      font-size: x-large;
+    }
+    .footer {
+      width: 100%;
+      background-color: #7B3D87;
+      color: #fff;
+      font-size: 11px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: -66%;
+    }
+  }
+@media (min-width: 750px) and (max-width: 850px) {}
+@media (min-width: 850px) and (max-width: 3543px) {}
+

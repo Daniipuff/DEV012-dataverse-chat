@@ -14,6 +14,7 @@ export const Home = () => {
   homeView.innerHTML = `
         <section class="frontis"></section>
         <main>
+        <nav>
         <input type="checkbox" id="check">
         <label for="check" class="mostrar">&#8801</label>
         <div class="menu">
@@ -39,6 +40,7 @@ export const Home = () => {
         <button type="button" id="chat">Chat</button>
         <button type="button" id="api-key-btn">Api Key</button>
     </div>
+    </nav>
           <div id="resultados">
           <button type="facts_1 " id="facts">Facts</button>
           <img src="https://play-lh.googleusercontent.com/tNr21lrG_29rtMZDz_SD4XtZwNIsRDhbIjGBvu1cPe5UjSNCD--pBMLzfp_q8BFlGtw=w600-h300-pc0xffffff-pd"
@@ -93,6 +95,10 @@ const arregloDeFiltros = soloUnFiltro(data,claveSeleccionada,ordenSeleccionado,p
 
   const botonChat = homeView.querySelector('button[id="chat"]');
   botonChat.addEventListener('click', function () {
+    navigateTo("/chatgrupal");
+  });
+  const botonChatt = homeView.querySelector('button[id="chatt"]');
+  botonChatt.addEventListener('click', function () {
     navigateTo("/chatgrupal");
   });
 
