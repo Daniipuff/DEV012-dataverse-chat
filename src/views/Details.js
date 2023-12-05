@@ -27,13 +27,14 @@ export const detail = ({id}) => {
                 
             </div>    
             <div id="text-chat"> ${persona.name}</img>
-            <div id="icono-chat"><img src=${persona.imageUrl}></img></div>
+             <div id="icono-chat">
+              <img src=${persona.imageUrl}></img></div>
                 <div id="chat-magic"></div>
                 <input type="text" class="chatinput" placeholder="Escribe tu mensaje..."> </input>
-                <button class="sendbutton"><img src ="https://cdn4.iconfinder.com/data/icons/core-ui-filled-rounded/32/filled_rounded_send-512.png" height="40" width="40"></button>
+                <button class="sendbutton"><img class="senddbbuton" src ="https://cdn4.iconfinder.com/data/icons/core-ui-filled-rounded/32/filled_rounded_send-512.png" height="40" width="40"></button>
             </div>
         </div>    
-        <button class="backbutton" id="regresarHome"> Regresar </button>
+        <button class="backbutton" id="regresarHome">Regresar </button>
         `;
     
     }
