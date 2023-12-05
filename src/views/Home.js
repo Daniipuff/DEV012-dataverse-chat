@@ -108,10 +108,6 @@ export const Home = () => {
   botonChat.addEventListener("click", function () {
     navigateTo("/chatgrupal");
   });
-  const botonChatt = homeView.querySelector('button[id="chatt"]');
-  botonChatt.addEventListener('click', function () {
-    navigateTo("/chatgrupal");
-  });
 
   const botonApiKey = homeView.querySelector('button[id="api-key-btn"]');
   botonApiKey.addEventListener("click", function () {

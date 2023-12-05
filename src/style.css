@@ -116,6 +116,8 @@ option {
   color: rgb(255, 255, 255);
   font-weight: bold;
   margin: 0px 0px 0px 10px;
+  position: relative;
+  top: 10%;
 }
 #chatt {
   display: none;
@@ -150,6 +152,25 @@ option {
   font-size: x-large;
   position: relative;
   top: 30px;
+}
+#boton-regresar {
+  display: flex;
+  background-color: rgb(34, 77, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  margin-left: 70px;
+  font-family: "Itim";
+  font-size: x-large;
+  position: relative;
+  top: 47px;
+  left: 35%;
+  width: 8%;
+  height: 11%;
+  text-align: center;
 }
 .foco {
   position: relative;
@@ -269,35 +290,28 @@ dd {
 }
 .contenedor-api-key h3 {
   display: inline-block;
-  background-color: rgb(34, 77, 0);
-  color: rgb(255, 255, 255);
+  color: black;
   font-weight: bold;
-  font-size: x-large;
+  font-size: 35px;
   position: relative;
-  padding: 10px;
-  border-radius: 15px;
-  margin-right: 10px; /* Agregamos margen derecho para separar del input */
-}
-.contenedor-api-key {
+  padding: 15px;
+  background-color: #4a9f2d;
   width: 100%;
-  height: 100%;
+  text-align: center;
 }
 .contenedor-api-key input {
   display: block;
-  width: 50%;
+  width: 40%;
   box-sizing: border-box;
   padding: 10px;
   margin-top: 20px;
   margin: 10px;
+  position: relative;
+  left: 30%;
+  font-family: gluten;
+  padding: 15px;
+  border-radius: 15px;
 }
-.contenedor-api-key input {
-  display: block;
-  width: 50%;
-  box-sizing: border-box;
-  padding: 10px;
-  margin-top: 20px;
-}
-
 .footer {
   width: 100%;
   background-color: #7b3d87;
@@ -407,19 +421,19 @@ dd {
 }
 #chat-magic {
   display: flex;
-  width: 95%;
-  height: 300px;
+  width: 100%;
+  height: 340px;
   background-image: url(https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/fondo.png?raw=true);
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: overlay;
   position: relative;
-  border-radius: 15px;
-  margin-left: 2%;
+  margin-left: %;
+  bottom: 10%;
 }
 .chatinput {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 93%;
   height: 35px;
   margin-top: auto;
   border: 1px solid #ccc;
@@ -427,7 +441,7 @@ dd {
   box-sizing: border-box;
   position: relative;
   justify-content: flex-start;
-  bottom: -115%;
+  bottom: 79%;
 }
 .backbutton {
   width: 50%;
@@ -455,6 +469,9 @@ dd {
 .senddbbuton {
   width: 40px;
   height: 40px;
+  position: relative;
+  left: 90%;
+  bottom: 130%;
 }
 
 .backbutton,
@@ -478,6 +495,8 @@ dd {
   color: rgb(0, 0, 0);
   font-family: gluten;
   font-size: x-large;
+  position: relative;
+  left: 50%;
 }
 /*Chat grupal*/
 #chatContenido {
@@ -522,7 +541,12 @@ dd {
 .send-button:hover {
   background-color: #45A049;
 }
-
+#estadoEscribiendo, #chat-input {
+  position: relative;
+  bottom: 150%;
+  font-size: 15px;
+  right: 43%;
+}
 /*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. ESTO EVITA QUE SE ROMPA EL CODIGO*/
 @media (min-width: 280px) and (max-width: 350px) {
   * {
@@ -595,7 +619,9 @@ dd {
     top: 20%;
   }
 
+
   #facts {
+    display: block;
     background-color: rgb(34, 77, 0);
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -850,6 +876,16 @@ dd {
     bottom: 0;
     margin-bottom: -66%;
   }
+  #limpiar {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    top: 35%;
+    right: 50%;
+}
 }
 
 @media (min-width: 350px) and (max-width: 522px) {
@@ -956,6 +992,9 @@ dd {
     color: rgb(255, 255, 255);
     font-weight: bold;
     margin: 0px 0px 0px 10px;
+    position: relative;
+    top: 5%;
+    
   }
   #check {
     display: block;
@@ -1177,6 +1216,17 @@ dd {
     bottom: 0;
     margin-bottom: -66%;
   }
+  #limpiar {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    top: 35%;
+    right: 50%;
+    
+}
 }
 
 @media (min-width: 522px) and (max-width: 750px) {
@@ -1504,6 +1554,16 @@ dd {
     bottom: 0;
     margin-bottom: -66%;
   }
+  #limpiar {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    top: 35%;
+    right: 50%;
+}
 }
 
 @media (min-width: 750px) and (max-width: 850px) {
