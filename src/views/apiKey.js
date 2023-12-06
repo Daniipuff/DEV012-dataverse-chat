@@ -3,7 +3,7 @@ import { header } from "../Componentes/Header.js";
 import { navigateTo } from ".././router.js";
 
 
-const contrasenaCorrecta = "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";
+const contrasenaCorrecta = "";
 
 export const componenteApiKey = () => {
     let contenedorApiKey = document.createElement("div");
