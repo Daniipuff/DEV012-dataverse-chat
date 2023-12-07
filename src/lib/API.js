@@ -1,39 +1,34 @@
-import OpenAI from "openai";
+export function apiKeyChat(input) {
+  const apiKey = localStorage.getItem("apiKey");
 
-const openai = new OpenAI();
+  const data = {
+    model: "gpt-3.5-turbo",
+    messages: [
+      { role: "system", content: "respondeme como si fueras Homero Simpson" },
+      { role: "user", content: input },
+    ],
+  };
 
-async function apiKeyChat() {
-    const stream = await openai.chat.completions.create({
-        model: "gpt-4",
-        messages: [{ role: "user", content: "Say this is a test" }],
-        stream: true,
-    });
-    for await (const chunk of stream) {
-        process.stdout.write(chunk.choices[0]?.delta?.content || "");
-    }
-    {
-        body: JSON.stringify({
-        "id": "chatcmpl-123",
-        "object": "chat.completion",
-        "created": 1677652288,
-        "model": "gpt-3.5-turbo-0613",
-        "system_fingerprint": "fp_44709d6fcb",
-        "choices": [{
-          "index": 0,
-          "message": {
-            "role": "assistant",
-            "content": "\n\nHello there, how may I assist you today?",
-          },
-          "finish_reason": "stop"
-        }],
-        "usage": {
-          "prompt_tokens": 9,
-          "completion_tokens": 12,
-          "total_tokens": 21
-          
-        }
+  return fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(data),
+  })
+    .then((respuesta) => {
+      if (!respuesta.ok) {
+        throw new Error(`HTTP error! Status: ${respuesta.status}`);
       }
-    )}
+      return respuesta.json();
+    })
+    .then((data) => {
+      console.log(data);
+      return data;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      throw error;
+    });
 }
-
-apiKeyChat();

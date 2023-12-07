@@ -3,28 +3,47 @@ import { header } from "../Componentes/Header.js";
 import { navigateTo } from ".././router.js";
 
 
-const contrasenaCorrecta = "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";
-
 export const componenteApiKey = () => {
     let contenedorApiKey = document.createElement("div");
     contenedorApiKey.setAttribute("class", "contenedor-api-key");
-    contenedorApiKey.innerHTML = `
-        <h3 class="contenedor-api-key">Por favor ingresa tu Api key...!!</h3>
-        <input  class="inputKey" type="password" placeholder="Ingresa tu Api Key"></input>
-        <button class="boton-aceptar">Aceptar</button>
-        <button id="boton-regresar">Regresar</button>
-    `;
+    let tituloApiKey = document.createElement('h3');
+    tituloApiKey.setAttribute('class','contenedor-api-key');
+    tituloApiKey.innerHTML = 'Api Key';
+    contenedorApiKey.appendChild(tituloApiKey);
 
-    const botonAceptar = contenedorApiKey.querySelector('button[class="boton-aceptar"]');
+    
+    let entradaContraseña = document.createElement('input');
+    entradaContraseña.setAttribute('class', 'inputKey');
+    entradaContraseña.setAttribute('type', 'password');
+    entradaContraseña.setAttribute('placeholder', 'Ingresa tu Api Key');
+    contenedorApiKey.appendChild(entradaContraseña);
+
+    
+    let botonAceptar = document.createElement('button');
+    botonAceptar.setAttribute('class', 'boton-aceptar');
+    botonAceptar.innerHTML = 'Aceptar';
     botonAceptar.addEventListener('click', manejarClicEnAceptar);
     contenedorApiKey.appendChild(botonAceptar);
 
+    let botonRegresar = document.createElement('button');
+    botonRegresar.setAttribute('id', 'boton-regresar');
+    botonRegresar.innerHTML = 'Regresar';
+    contenedorApiKey.appendChild(botonRegresar);
+
+
+    const botonAceptar2 = contenedorApiKey.querySelector('button[class="boton-aceptar"]');
+    botonAceptar2.addEventListener('click', manejarClicEnAceptar);
+    contenedorApiKey.appendChild(botonAceptar);
+
+    let valorContraseña = contenedorApiKey.querySelector('.inputKey');
     function manejarClicEnAceptar() {
 
-        var valorContraseña = contenedorApiKey.querySelector('.inputKey').value;
+       
 
-        if (valorContraseña === contrasenaCorrecta) {
+        if (valorContraseña) {
             alert('Contraseña correcta. Acceso permitido. REGRESAR AL INICIO');
+
+            localStorage.setItem("apiKey",valorContraseña.value)
    
         } else {
             alert('Contraseña incorrecta. Acceso denegado.');
