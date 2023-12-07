@@ -923,14 +923,15 @@ dd {
   margin-left: 10px;
   padding: auto;
 }
-.manito{
+.manito {
   display: flex;
   font-family: Be Vietnam Pro;
   color: #FFFFFF;
-  font-size: 50px;
-  margin-top: 40px;
-  margin-left: 10px;
   padding: auto;
+  height: 40%;
+  position: absolute;
+  left: 10%;
+  margin: 10%;
 }
 .p {
   display: flex;
