@@ -667,7 +667,31 @@ dd {
     color: rgb(255, 255, 255);
     font-weight: bold;
     margin: 0px 0px 0px 10px;
-  }
+    position: relative;
+    right: 7%;
+}
+#api-key-btn {
+  background-color: #254805;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin: 0px 0px 0px 10px;
+  position: relative;
+  top: 10px;
+  display: flex;
+  left: 35%;
+}
+select {
+  margin-right: 10px;
+  padding: 5px;
+  border: 3px solid #227000;
+  border-radius: 5px;
+  background-color: #e2f3d5;
+  width: 70%;
+}
   #check {
     display: block;
     position: absolute;
@@ -896,19 +920,17 @@ dd {
     cursor: pointer;
     position: relative;
     top: 35%;
-    right: 50%;
+    left: 20%;
+    display: flex;
 }
 /*pantalla de error*/
 #error404 {
   display: flex;
   flex-direction: column;
   background-color: #95dd78;
-  width: 10%;
-  height: 540px;
-  display: flex;
+  width: 88%;
   position: relative;
-  display: flex;
-  margin: 20px 20px 20px 20px;
+  height: 550px;
 }
 .div {
   display: flex;
@@ -918,35 +940,53 @@ dd {
   display: flex;
   font-family: Be Vietnam Pro;
   color: #FFFFFF;
-  font-size: 50px;
-  margin-top: 40px;
-  margin-left: 10px;
+  font-size: 60px;
+  margin-top: 50px;
+  margin-left: 0;
   padding: auto;
+  justify-content: center;
 }
 .manito {
   display: flex;
+  flex-direction: column;
   font-family: Be Vietnam Pro;
   color: #FFFFFF;
-  padding: auto;
-  height: 40%;
+  height: 45%;
   position: absolute;
-  left: 10%;
-  margin: 10%;
+  left: 1%;
+  bottom: -120px;
 }
 .p {
   display: flex;
   font-family: Be Vietnam Pro;
   color: #FFFFFF;
-  margin-top: 0;
-  margin-left: 40px;
+  position: relative;
+  top: 50%;
+  text-align: center;
+  margin-left: 5px;
+  padding: 5px;
 }
 .donut {
   display: flex;
   justify-content: left;
-  margin-left: 300px;
-  margin-top: 60px;
-  width: 390px;
+  margin-left: 10px;
   height: 530px;
+  width: 0;
+}
+.volverInicio {
+  background-color: rgb(34 77 0 / 15%);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 60%;
+  display: flex;
+  position: relative;
+  left: 25%;
 }
 }
 

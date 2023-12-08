@@ -6,7 +6,7 @@ export const Error = () => {
    <div class="texto">
    <h1 class="doh"> D’OH! </h1>
    <p class="p">Página no encontrada. Error 404.</p>
-   <button class="volverInicio"> Dale click aquí...!! para volver al inicio</button>
+   <button class="volverInicio"> Regresar a Inicio</button>
   
 
    </div>

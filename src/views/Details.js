@@ -4,6 +4,10 @@ import { footer } from "../Componentes/Footer.js";
 import { navigateTo } from "../router.js"; 
 import { apiKeyChat } from "../lib/API.js";
 
+function updateText(value) {
+}
+
+
 export const detail = ({ id }) => {
   let detailContenido = document.createElement("div");
   detailContenido.setAttribute("class", "cajaFuerte");
@@ -30,7 +34,7 @@ export const detail = ({ id }) => {
                     <img src="${persona.imageUrl}"></img>
                 </div>
                 <div id="chat-magic"></div>
-                <input id="prompt" type="text" onkeyup="updateText(this.value)" class="chatinput" placeholder="Escribe tu mensaje...">
+                <input id="inputTextoChat" type="text" onkeyup="updateText(this.value)" class="chatinput" placeholder="Escribe tu mensaje...">
                 </input>
                 <p id="estadoEscribiendo"></p>
                 <!-- Nuevo elemento para mostrar la entrada del input -->
@@ -48,6 +52,7 @@ export const detail = ({ id }) => {
     const generarBoton = detailContenido.querySelector('#generar');
     const entradaMostrada = detailContenido.querySelector('#entrada-mostrada');
 
+
     generarBoton.addEventListener('click', function () {
       const textoIngresado = entradaMensaje.value.trim();
       apiKeyChat(textoIngresado)
@@ -60,7 +65,26 @@ export const detail = ({ id }) => {
         });
     });
   }
+  const entradaMensaje = detailContenido.querySelector('input[class="chatinput"]');
+  //const estadoEscribiendo = detailContenido.querySelector('#estadoEscribiendo2');
+  const sendbutton = detailContenido.querySelector('button[class="sendbutton"]');
+  const chatMessages = detailContenido.querySelector('div[id="chat-magic"]');
 
+  const historialMensajes = [];
+
+  /*entradaMensaje.addEventListener('input', function () {
+    const textoIngresado = entradaMensaje.value.trim();
+    estadoEscribiendo.textContent = textoIngresado !== '' ? 'Está escribiendo...' : '';
+  });*/
+
+  sendbutton.addEventListener('click', function () {
+    const mensaje = entradaMensaje.value.trim();
+    if (mensaje !== '') {
+      historialMensajes.push(mensaje);
+      chatMessages.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
+      entradaMensaje.value = ''; // Borra el contenido del input
+    }
+  });
   // Adjuntamos el "<header>"
   const encabezado = detailContenido.querySelector('.frontis-chat');
   const elHeader = header();
@@ -74,38 +98,6 @@ export const detail = ({ id }) => {
   regresarBoton.addEventListener('click', function () {
     navigateTo("/home");
   });
-
+  window.updateText = updateText;
   return detailContenido;
 };
-
-document.addEventListener('DOMContentLoaded', function() {
-  let chatContainer = document.getElementById('chat-magic');
-  let mensajeInput = document.getElementById('prompt');
-  
-  function enviarMensaje() {
-    let mensaje = mensajeInput.value;
-    if (mensaje.trim() !== '') {
-      // Crea un nuevo elemento de párrafo para mostrar el mensaje
-      var mensajeElement = document.createElement('p');
-      mensajeElement.textContent = 'Tú: ' + mensaje;
-      // Agrega el elemento al contenedor de chat
-      chatContainer.appendChild(mensajeElement);
-      // Borra el campo de entrada después de enviar el mensaje
-      mensajeInput.value = '';
-      // Desplázate hacia abajo para mostrar el último mensaje
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-  }
-  
-  // Asocia la función enviarMensaje al presionar la tecla Enter en el campo de entrada
-  document.addEventListener('DOMContentLoaded', function() {
-    mensajeInput.addEventListener('keyup', function(event) {
-      if (event.key === 'Enter') {
-        enviarMensaje();
-      }
-    });
-  });
-  
-
-  });
-  
