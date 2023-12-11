@@ -22,7 +22,6 @@ export const detail = ({ id }) => {
         <section class="frontis-chat"></section>
         <div id="caja">
             <div id="detalles">
-                <img src="${persona.imageUrl}" class="profile"></img>
                 <h1 class="h1"> Descripción</h1>
                 <p class="uno">Soy ${persona.name + ' y tengo '}${persona.edad}...</p>
                 <p class="uno">Nací en ${persona.facts.placeOfBirth}.</p>
@@ -30,9 +29,7 @@ export const detail = ({ id }) => {
             </div>    
             <div id="text-chat">
                 ${persona.name}
-                <div id="icono-chat">
-                    <img src="${persona.imageUrl}"></img>
-                </div>
+                <img src="${persona.imageUrl}" id="icono-chat"></img>
                 <div id="chat-magic"></div>
                 <input id="inputTextoChat" type="text" onkeyup="updateText(this.value)" class="chatinput" placeholder="Escribe tu mensaje...">
                 </input>
@@ -50,41 +47,27 @@ export const detail = ({ id }) => {
     const entradaMensaje = detailContenido.querySelector('input[class="chatinput"]');
     const chatMagic = detailContenido.querySelector('#chat-magic');
     const generarBoton = detailContenido.querySelector('#generar');
-    const entradaMostrada = detailContenido.querySelector('#entrada-mostrada');
-
+    const historialMensajes = [];
 
     generarBoton.addEventListener('click', function () {
       const textoIngresado = entradaMensaje.value.trim();
-      apiKeyChat(textoIngresado)
+
+      if (textoIngresado !== '') {
+        historialMensajes.push(textoIngresado);
+        chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
+       
+        apiKeyChat(textoIngresado)
         .then((data) => {
-          chatMagic.textContent = data.choices[0].message.content;
-          entradaMensaje.value = "";
+         historialMensajes.push(data.choices[0].message.content);
+         chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
+         entradaMensaje.value = "";
         })
         .catch((error) => {
           console.error('Error al obtener respuesta:', error);
         });
-    });
-  }
-  const entradaMensaje = detailContenido.querySelector('input[class="chatinput"]');
-  //const estadoEscribiendo = detailContenido.querySelector('#estadoEscribiendo2');
-  const sendbutton = detailContenido.querySelector('button[class="sendbutton"]');
-  const chatMessages = detailContenido.querySelector('div[id="chat-magic"]');
+      };
+    })
 
-  const historialMensajes = [];
-
-  /*entradaMensaje.addEventListener('input', function () {
-    const textoIngresado = entradaMensaje.value.trim();
-    estadoEscribiendo.textContent = textoIngresado !== '' ? 'Está escribiendo...' : '';
-  });*/
-
-  sendbutton.addEventListener('click', function () {
-    const mensaje = entradaMensaje.value.trim();
-    if (mensaje !== '') {
-      historialMensajes.push(mensaje);
-      chatMessages.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
-      entradaMensaje.value = ''; // Borra el contenido del input
-    }
-  });
   // Adjuntamos el "<header>"
   const encabezado = detailContenido.querySelector('.frontis-chat');
   const elHeader = header();
@@ -100,4 +83,5 @@ export const detail = ({ id }) => {
   });
   window.updateText = updateText;
   return detailContenido;
+}
 };

@@ -60,7 +60,7 @@ export const chat = () => {
     if (mensaje !== '') {
       historialMensajes.push(mensaje);
       chatMessages.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
-      entradaMensaje2.value = ''; // Borra el contenido del input
+      entradaMensaje2.value = ''; 
     }
   });
 

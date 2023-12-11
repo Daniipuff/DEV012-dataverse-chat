@@ -371,20 +371,25 @@ dd {
 #caja {
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
   background-color: #61994a;
   width: 85%;
   margin-top: 0px;
   border-radius: 15px;
+  flex-direction: column;
+  height: 90vh;
+  position: relative;
+  top: 60px;
 }
 #detalles {
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  width: 30%;
-  background-image: url("https://raw.githubusercontent.com/Paulinakbrr/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg");
-  border-radius: 15px 0 0 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url(https://raw.githubusercontent.com/Paulinakbrr/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  bottom: 39%;
 }
 .profile {
   display: grid;
@@ -395,44 +400,56 @@ dd {
   border-top-left-radius: 15px;
 }
 .h1 {
-  font-size: 11px;
+  font-size: 24px;
+  position: relative;
+  margin-top: 10px;
 }
 .uno {
   margin: 0 10px 0 10px;
 }
 #text-chat {
   display: grid;
-  width: 70%;
+  width: 98%;
   margin: 10px;
   font-family: gluten;
   padding: 20px 1px 1px;
-  font-size: x-large;
+  font-size: medium;
   text-align: center;
   height: 50px;
+  position: relative;
+  bottom: 247px;
 }
-#icono-chat img {
+#icono-chat {
   height: 50px;
   border-radius: 100%;
   position: relative;
-  right: 20%;
   bottom: 40px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  left: 30%;
 }
 #chat-magic {
   display: flex;
-  width: 100%;
+  width: 95%;
   height: 340px;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: overlay;
   position: relative;
   bottom: 10%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow-y: scroll;
+  text-align: left;
+  padding: 20px;
+  bottom: 30px;
+  height: 360px;
 }
 .chatinput {
   display: flex;
   flex-direction: column;
-  width: 93%;
+  width: 95%;
   height: 35px;
   margin-top: auto;
   border: 1px solid #ccc;
@@ -440,7 +457,7 @@ dd {
   box-sizing: border-box;
   position: relative;
   justify-content: flex-start;
-  bottom: 79%;
+  top: -26%;
 }
 .backbutton {
   width: 50%;
@@ -469,11 +486,24 @@ dd {
   width: 40px;
   height: 40px;
   position: relative;
-  left: 90%;
-  bottom: 130%;
+  left: 150%;
+  bottom: 102%;
 }
 
-.backbutton,
+.backbutton {
+  background-color: #ffd401;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: gluten;
+  font-size: x-large;
+  position: relative;
+  left: 34%;
+  width: 16%;
+  height: 35px;
+  position: relative;
+  top: 70px;
+}
 .back-button {
   background-color: #ffd401;
   border-radius: 10px;
@@ -484,8 +514,8 @@ dd {
   position: relative;
   left: 34%;
   width: 16%;
+  height: 20px;
 }
-
 .boton-aceptar {
   background-color: #ffd401;
   border-radius: 10px;
@@ -1251,6 +1281,7 @@ select {
     position: relative;
     margin: 0;
     border-radius: 0;
+    
   }
   .chatinput {
     width: 90%;
