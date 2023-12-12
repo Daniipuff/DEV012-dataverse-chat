@@ -6,17 +6,16 @@ import { apiKeyChat } from "../lib/API.js";
 
 function updateText(value) {
 }
-
-
 export const detail = ({ id }) => {
   let detailContenido = document.createElement("div");
   detailContenido.setAttribute("class", "cajaFuerte");
 
+//Aqui, se crea un nuevo objeto URLSearchParams que representa los parámetros de la búsqueda en la URL actual de la página. 
   const params = new URLSearchParams(window.location.search);
+//Esta buscando un objeto en data cuya propiedad id coincida con el valor de id.
+  const personaje = data.filter((x) => x.id == id); 
 
-  const personaje = data.filter((x) => x.id == id);
-
-  if (personaje.length > 0) {
+  if (personaje.length > 0) {//Validamos si el personaje seleccionado tiene al menos un elemento 
     const persona = personaje[0];
     detailContenido.innerHTML = `
         <section class="frontis-chat"></section>
@@ -47,20 +46,20 @@ export const detail = ({ id }) => {
     const entradaMensaje = detailContenido.querySelector('input[class="chatinput"]');
     const chatMagic = detailContenido.querySelector('#chat-magic');
     const generarBoton = detailContenido.querySelector('#generar');
-    const historialMensajes = [];
+    const historialMensajes = [];//creamos un arreglo vacio para almacenar el historial posteriormente
 
     generarBoton.addEventListener('click', function () {
-      const textoIngresado = entradaMensaje.value.trim();
+      const textoIngresado = entradaMensaje.value.trim();//el valor ingresado elimina los espacios en blanco al principio y al final del texto con el .trim
 
-      if (textoIngresado !== '') {
-        historialMensajes.push(textoIngresado);
+      if (textoIngresado !== '') {//condicion que valida si.."no es igual a"
+        historialMensajes.push(textoIngresado);//metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
         chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
        
-        apiKeyChat(textoIngresado)
+        apiKeyChat(textoIngresado,persona)
         .then((data) => {
          historialMensajes.push(data.choices[0].message.content);
-         chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
-         entradaMensaje.value = "";
+         chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');//crea un nuevo array con un  elemento p, .join une todos los elementos del array 
+         entradaMensaje.value = "";//borra el contenido 
         })
         .catch((error) => {
           console.error('Error al obtener respuesta:', error);

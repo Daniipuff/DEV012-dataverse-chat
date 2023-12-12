@@ -1,14 +1,11 @@
-// Importación de funciones y módulos
 import { soloUnFiltro, computeStats } from "../lib/dataFunctions.js";
 import { renderItems } from "../Componentes/ListItems.js";
 import { header } from "../Componentes/Header.js";
 import { footer } from "../Componentes/Footer.js";
 import { navigateTo } from ".././router.js";
 import data from "../data/dataset.js";
-/*import {chat} from "../Componentes/ChatPanel.js"*/
 
 export const Home = () => {
-  // Plantilla HTML del componente Home
   let homeView = document.createElement("div");
   homeView.setAttribute("id", "homeView");
   homeView.innerHTML = `
@@ -58,10 +55,7 @@ export const Home = () => {
   const parrafo_genero = homeView.querySelector("#genero");
   const parrafo_estadistica = homeView.querySelector("#facts");
   const encabezado = homeView.querySelector(".frontis");
-  const lisPersonaje = document.querySelectorAll(".listas");
-  const chatContenido = document.querySelector("#chatContenido");
 
-  //Adjuntamos el de los personajes en home.js
   const elHeader = header();
   encabezado.appendChild(elHeader);
 
@@ -106,7 +100,7 @@ export const Home = () => {
 
   const botonChat = homeView.querySelector('button[id="chat"]');
   botonChat.addEventListener("click", function () {
-    navigateTo("/chatgrupal");
+    navigateTo("/panel");
   });
 
   const botonApiKey = homeView.querySelector('button[id="api-key-btn"]');
@@ -116,3 +110,4 @@ export const Home = () => {
 
   return homeView;
 };
+

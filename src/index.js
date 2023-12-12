@@ -11,7 +11,7 @@ const routes = {
   "/home": Home,
   "/error": Error,
   "/details":detail,
-  "/chatgrupal":chat,
+  "/panel":chat,
   "/apikey": componenteApiKey,
 };
 // Elemento contenedor de las vistas

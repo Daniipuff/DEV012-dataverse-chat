@@ -6,3 +6,4 @@ export const footer = () => {
     return footerComponent;
   };
   
+

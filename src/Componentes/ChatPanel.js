@@ -1,13 +1,19 @@
 import { footer } from "../Componentes/Footer.js";
 import { header } from "../Componentes/Header.js";
 import { navigateTo } from ".././router.js";
+import data from "../data/dataset.js";
+import { apiKeyChat } from "../lib/API.js";
 
-export const chat = () => {
+export const chat = ( { id } ) => {
   const divRoot = document.querySelector('#root');
   const chatContenido = document.createElement('div');
   chatContenido.setAttribute('id', 'chatContenido');
   const chatHeader = document.createElement('div');
   chatHeader.classList.add('chat-header');
+
+  const personajes = data.filter((x) => x.id == id);
+  console.log(personajes);
+
   chatHeader.innerHTML = `
     <h1>Chat en línea</h1>
     <p id="estadoEscribiendo2"></p>
@@ -41,28 +47,50 @@ export const chat = () => {
     navigateTo("/home");
   });
 
+
   // Adjuntamos el "<footer>"
   const footerComponent = footer();
   divRoot.appendChild(footerComponent);
 
-  const entradaMensaje2 = chatContenido.querySelector('input[class="chat-input"]');
-  const estadoEscribiendo2 = chatContenido.querySelector('#estadoEscribiendo2');
+  const entradaMensajeG = chatContenido.querySelector('input[class="chat-input"]');
+  //const estadoEscribiendo2 = chatContenido.querySelector('#estadoEscribiendo2');
+  const cajaMensajes = chatContenido.querySelector('.chat-messages');
+  const enviarChat = chatContenido.querySelector('.send-button');
+  const historialMensajes = [];//creamos un arreglo vacio para almacenar el historial posteriormente
 
-  const historialMensajes = [];
 
-  entradaMensaje2.addEventListener('input', function () {
+
+  enviarChat.addEventListener('click', function () {
+    const textoIngresadoG = entradaMensajeG.value.trim();//el valor ingresado elimina los espacios en blanco al principio y al final del texto con el .trim
+
+    if (textoIngresadoG !== '') {//condicion que valida si.."no es igual a"
+      historialMensajes.push(textoIngresadoG);//metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
+      cajaMensajes.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
+     
+      apiKeyChat(textoIngresadoG,personajes)
+      .then((data) => {
+       historialMensajes.push(data.choices[0].message.content);
+       cajaMensajes.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');//crea un nuevo array con un  elemento p, .join une todos los elementos del array 
+       entradaMensajeG.value = "";//borra el contenido 
+      })
+      .catch((error) => {
+        console.error('Error al obtener respuesta:', error);
+      });
+    };
+  })
+  /*entradaMensaje2.addEventListener('input', function () {
     const textoIngresado = entradaMensaje2.value.trim();
     estadoEscribiendo2.textContent = textoIngresado !== '' ? 'Está escribiendo...' : '';
-  });
+  });*/
 
-  sendButton.addEventListener('click', function () {
+  /*sendButton.addEventListener('click', function () {
     const mensaje = entradaMensaje2.value.trim();
     if (mensaje !== '') {
       historialMensajes.push(mensaje);
       chatMessages.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
       entradaMensaje2.value = ''; 
     }
-  });
+  });*/
 
   return chatContenido;
 };
