@@ -2,9 +2,9 @@ import { footer } from "../Componentes/Footer.js";
 import { header } from "../Componentes/Header.js";
 import { navigateTo } from ".././router.js";
 import data from "../data/dataset.js";
-import { apiKeyChat } from "../lib/API.js";
+import { apiKeyChatGrupal } from '../lib/API.js';
 
-export const chat = ( { id } ) => {
+export const chat = ({ id }) => {
   const divRoot = document.querySelector('#root');
   const chatContenido = document.createElement('div');
   chatContenido.setAttribute('id', 'chatContenido');
@@ -41,56 +41,45 @@ export const chat = ( { id } ) => {
   back1Button.setAttribute('id', 'regresarInicio');
   back1Button.classList.add('back-button');
   chatContenido.appendChild(back1Button);
-
+  //Regresamos con navigateTo
   const regresarBoton1 = chatContenido.querySelector('button[id="regresarInicio"]');
   regresarBoton1.addEventListener('click', function () {
     navigateTo("/home");
   });
-
 
   // Adjuntamos el "<footer>"
   const footerComponent = footer();
   divRoot.appendChild(footerComponent);
 
   const entradaMensajeG = chatContenido.querySelector('input[class="chat-input"]');
-  //const estadoEscribiendo2 = chatContenido.querySelector('#estadoEscribiendo2');
   const cajaMensajes = chatContenido.querySelector('.chat-messages');
   const enviarChat = chatContenido.querySelector('.send-button');
-  const historialMensajes = [];//creamos un arreglo vacio para almacenar el historial posteriormente
-
-
+  //creamos un arreglo vacio para almacenar el historial posteriormente
+  const historialMensajes = [];
 
   enviarChat.addEventListener('click', function () {
-    const textoIngresadoG = entradaMensajeG.value.trim();//el valor ingresado elimina los espacios en blanco al principio y al final del texto con el .trim
-
-    if (textoIngresadoG !== '') {//condicion que valida si.."no es igual a"
-      historialMensajes.push(textoIngresadoG);//metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
+    //el valor ingresado elimina los espacios en blanco al principio y al final del texto con el .trim
+    const textoIngresadoG = 'yo: ' + entradaMensajeG.value.trim();
+    //condicion que valida si.."no es igual a"
+    if (textoIngresadoG !== '') {
+      //metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
+      historialMensajes.push(textoIngresadoG);
+      //recorre cada el elemento del array y crea un parrafo, con join une la cadena y con br damos un salto de linea
       cajaMensajes.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
-     
-      apiKeyChat(textoIngresadoG,personajes)
-      .then((data) => {
-       historialMensajes.push(data.choices[0].message.content);
-       cajaMensajes.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');//crea un nuevo array con un  elemento p, .join une todos los elementos del array 
-       entradaMensajeG.value = "";//borra el contenido 
-      })
-      .catch((error) => {
-        console.error('Error al obtener respuesta:', error);
-      });
-    };
-  })
-  /*entradaMensaje2.addEventListener('input', function () {
-    const textoIngresado = entradaMensaje2.value.trim();
-    estadoEscribiendo2.textContent = textoIngresado !== '' ? 'Está escribiendo...' : '';
-  });*/
 
-  /*sendButton.addEventListener('click', function () {
-    const mensaje = entradaMensaje2.value.trim();
-    if (mensaje !== '') {
-      historialMensajes.push(mensaje);
-      chatMessages.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
-      entradaMensaje2.value = ''; 
+      apiKeyChatGrupal(personajes, textoIngresadoG)
+        .then((apiResponse) => {
+          //metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
+          historialMensajes.push(apiResponse);
+          //recorre cada el elemento del array y crea un parrafo, con join une la cadena y con br damos un salto de linea
+          cajaMensajes.innerHTML = historialMensajes.map(msg => `<p class="chatGPTres">${msg}</p>`).join('<br>');
+          entradaMensajeG.value = "";
+        })
+        .catch((error) => {
+          console.error('Error al obtener respuesta:', error);
+        });
     }
-  });*/
+  });
 
   return chatContenido;
 };
