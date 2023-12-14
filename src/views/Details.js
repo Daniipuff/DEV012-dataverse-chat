@@ -1,7 +1,7 @@
 import data from "../data/dataset.js";
 import { header } from "../Componentes/Header.js";
 import { footer } from "../Componentes/Footer.js";
-import { navigateTo } from "../router.js"; 
+import { navigateTo } from "../router.js";
 import { apiKeyChat } from "../lib/API.js";
 
 function updateText(value) {
@@ -10,10 +10,10 @@ export const detail = ({ id }) => {
   let detailContenido = document.createElement("div");
   detailContenido.setAttribute("class", "cajaFuerte");
 
-//Aqui, se crea un nuevo objeto URLSearchParams que representa los parámetros de la búsqueda en la URL actual de la página. 
+  //Aqui, se crea un nuevo objeto URLSearchParams que representa los parámetros de la búsqueda en la URL actual de la página. 
   const params = new URLSearchParams(window.location.search);
-//Esta buscando un objeto en data cuya propiedad id coincida con el valor de id.
-  const personaje = data.filter((x) => x.id == id); 
+  //Esta buscando un objeto en data cuya propiedad id coincida con el valor de id.
+  const personaje = data.filter((x) => x.id == id);
 
   if (personaje.length > 0) {//Validamos si el personaje seleccionado tiene al menos un elemento 
     const persona = personaje[0];
@@ -54,37 +54,46 @@ export const detail = ({ id }) => {
       //condicion que valida si.."no es igual a"
       if (textoIngresado !== '') {
         //metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
-        historialMensajes.push(textoIngresado);
+        //historialMensajes.push(textoIngresado);
+        const p = document.createElement('p');
+        p.classList.add('chatUser');
+        p.textContent = textoIngresado
+        chatMagic.appendChild(p);
         //crea un nuevo array con un  elemento p, .join une todos los elementos del array
-        chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
-       
-        apiKeyChat(textoIngresado,persona)
-        .then((data) => {
-         historialMensajes.push(data.choices[0].message.content);
-         //crea un nuevo array con un  elemento p, .join une todos los elementos del array
-         chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>'); 
-         entradaMensaje.value = "";//borra el contenido 
-        })
-        .catch((error) => {
-          console.error('Error al obtener respuesta:', error);
-        });
+        //chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
+
+        apiKeyChat(textoIngresado, persona)
+          .then((data) => {
+            const r = document.createElement('p');
+            r.classList.add('chatRespuesta');
+            r.textContent = data.choices[0].message.content
+            chatMagic.appendChild(r);
+
+            //historialMensajes.push(data.choices[0].message.content);
+            //crea un nuevo array con un  elemento p, .join une todos los elementos del array
+            //chatMagic.innerHTML = historialMensajes.map(msg => `<p class="chatRespuesta">${msg}</p>`).join('<br>'); 
+            entradaMensaje.value = "";//borra el contenido 
+          })
+          .catch((error) => {
+            console.error('Error al obtener respuesta:', error);
+          });
       };
     })
 
-  // Adjuntamos el "<header>"
-  const encabezado = detailContenido.querySelector('.frontis-chat');
-  const elHeader = header();
-  encabezado.appendChild(elHeader);
+    // Adjuntamos el "<header>"
+    const encabezado = detailContenido.querySelector('.frontis-chat');
+    const elHeader = header();
+    encabezado.appendChild(elHeader);
 
-  // Adjuntamos el "<footer>"
-  const footerComponent = footer();
-  detailContenido.appendChild(footerComponent);
+    // Adjuntamos el "<footer>"
+    const footerComponent = footer();
+    detailContenido.appendChild(footerComponent);
 
-  const regresarBoton = detailContenido.querySelector('button[id="regresarHome"]');
-  regresarBoton.addEventListener('click', function () {
-    navigateTo("/home");
-  });
-  window.updateText = updateText;
-  return detailContenido;
-}
+    const regresarBoton = detailContenido.querySelector('button[id="regresarHome"]');
+    regresarBoton.addEventListener('click', function () {
+      navigateTo("/home");
+    });
+    window.updateText = updateText;
+    return detailContenido;
+  }
 };

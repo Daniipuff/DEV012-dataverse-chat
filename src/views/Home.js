@@ -69,7 +69,7 @@ export const Home = () => {
 
   familia.addEventListener("change", filtros);
   ordena.addEventListener("change", filtros);
-  
+
   function filtros() {
     const datalist = renderItems(data);
     dataview.innerHTML = "";

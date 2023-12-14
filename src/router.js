@@ -6,12 +6,12 @@ export const setRootElement = (newRootElementValue) => {//Set viene de seter que
 }
 export const setRoutes = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
-    // optional Throw errors if routes doesn't define an /error route
-      ROUTES = newRoutesValue;
+  // optional Throw errors if routes doesn't define an /error route
+  ROUTES = newRoutesValue;
   // assign ROUTES
 }
 const queryStringToObject = (queryString) => {//Esta funcion es opcional
-    //Partes de URL
+  //Partes de URL
   // convert query string to URLSearchParams
   // convert URLSearchParams to an object
   // return the object
@@ -26,23 +26,23 @@ const renderView = (pathname, props = {}) => {
   pathname = pathname.toLowerCase();
   if (root) {
     root.innerHTML = '';
-  //Buscar la vista correcta en ROUTES:
-  if (ROUTES[pathname]) {
-  //Renderizar la vista correcta:
-    const template = ROUTES[pathname](props);
-  //Agregar la vista al DOM:
-        root.appendChild(template);
-      } else {
-  //Manejar rutas no encontradas:
-        root.appendChild(ROUTES['/error'](props));
-      }
+    //Buscar la vista correcta en ROUTES:
+    if (ROUTES[pathname]) {
+      //Renderizar la vista correcta:
+      const template = ROUTES[pathname](props);
+      //Agregar la vista al DOM:
+      root.appendChild(template);
+    } else {
+      //Manejar rutas no encontradas:
+      root.appendChild(ROUTES['/error'](props));
+    }
   }
 };
-export const navigateTo = (pathname, props={}) => {
+export const navigateTo = (pathname, props = {}) => {
   //principal funcion actualizar el historial pushState y renderizar la vista
   const URLvisited = window.location.origin + pathname;
   //nos devuelve a la pagina principal dejando registro origin para incluir protocolo y host
-  history.pushState({},"",URLvisited);
+  history.pushState({}, "", URLvisited);
   // guarda el historial de lo que va ocurriendo
   renderView(pathname, props);
 }

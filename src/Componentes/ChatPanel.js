@@ -12,7 +12,7 @@ export const chat = ({ id }) => {
   chatHeader.classList.add('chat-header');
 
   const personajes = data.filter((x) => x.id == id);
-  console.log(personajes);
+  // console.log(personajes);
 
   chatHeader.innerHTML = `
     <h1>Chat en línea</h1>
@@ -67,17 +67,33 @@ export const chat = ({ id }) => {
       //recorre cada el elemento del array y crea un parrafo, con join une la cadena y con br damos un salto de linea
       cajaMensajes.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
 
-      apiKeyChatGrupal(personajes, textoIngresadoG)
-        .then((apiResponse) => {
-          //metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
+
+      const answers = data.map(personajes => apiKeyChatGrupal(textoIngresadoG, personajes))
+      // console.log(answers);
+      Promise.all(answers)
+        .then(apiResponse => {
+
           historialMensajes.push(apiResponse);
           //recorre cada el elemento del array y crea un parrafo, con join une la cadena y con br damos un salto de linea
-          cajaMensajes.innerHTML = historialMensajes.map(msg => `<p class="chatGPTres">${msg}</p>`).join('<br>');
+          cajaMensajes.innerHTML = historialMensajes.map(msg => `<p> ${msg}</p>`).join('<br>');
           entradaMensajeG.value = "";
-        })
-        .catch((error) => {
-          console.error('Error al obtener respuesta:', error);
+
         });
+      /*contenedor .appendChild y lo que recibes 
+      donde se construye la promesa en fetch 
+      vista appendChild
+      en api 
+      result retorna un nodo document.createElement p .textContent retur p */
+      /* .then((apiResponse) => {
+         //metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
+         historialMensajes.push(apiResponse);
+         //recorre cada el elemento del array y crea un parrafo, con join une la cadena y con br damos un salto de linea
+         cajaMensajes.innerHTML = historialMensajes.map(msg => `<p> ${msg}</p>`).join('<br>');
+         entradaMensajeG.value = "";
+       })
+       .catch((error) => {
+         console.error('Error al obtener respuesta:', error);
+       });*/
     }
   });
 

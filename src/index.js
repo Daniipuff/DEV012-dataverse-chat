@@ -4,14 +4,14 @@ import { Home } from './views/Home.js';
 import { setRoutes, setRootElement, onURLChange } from './router.js';
 import { detail } from './views/Details.js';
 import { chat } from './Componentes/ChatPanel.js';
-import {componenteApiKey} from './views/apiKey.js'
+import { componenteApiKey } from './views/apiKey.js'
 // Definición de rutas
 const routes = {
   "/": Home,
   "/home": Home,
   "/error": Error,
-  "/details":detail,
-  "/panel":chat,
+  "/details": detail,
+  "/panel": chat,
   "/apikey": componenteApiKey,
 };
 // Elemento contenedor de las vistas
@@ -22,7 +22,7 @@ setRoutes(routes);
 setRootElement(y);
 // Evento que se dispara cuando el DOM está completamente cargado
 document.addEventListener("DOMContentLoaded", (event) => {
-  
+
   console.log("DOM fully loaded and parsed");
   onURLChange(event.target.location.pathname); // Cambia la URL según la ruta actual
   //const homeContent = Home();   // Obtén el contenido de la página de inicio

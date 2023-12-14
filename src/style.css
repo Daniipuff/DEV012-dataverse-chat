@@ -3,11 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@600&family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap");
+
 /*VISTA DE HOME.JS*/
 * {
   padding: 0;
   margin: 0;
 }
+
 body {
   width: 100%;
   height: 80vh;
@@ -18,10 +20,12 @@ body {
   background-blend-mode: overlay;
   font-family: "Indie Flower";
 }
+
 #root {
   display: flex;
   flex-direction: column;
 }
+
 .header {
   width: 100%;
   height: 25vh;
@@ -29,26 +33,31 @@ body {
   justify-content: center;
   margin-top: 20px;
 }
+
 .h1 {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
 }
+
 .imagenTitulo {
   width: 200px;
   height: 180px;
 }
+
 .imagenFamilia {
   width: 215px;
   height: 160px;
 }
+
 main {
   margin-top: 70px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 h2 {
   width: 80%;
   height: 4vh;
@@ -66,6 +75,7 @@ h2 {
   font-size: larger;
   font-family: "Indie Flower";
 }
+
 .menu {
   width: 90%;
   height: 8vh;
@@ -89,6 +99,7 @@ label {
   font-weight: 900;
   margin-right: 10px;
 }
+
 select {
   margin-right: 10px;
   padding: 5px;
@@ -96,9 +107,11 @@ select {
   border-radius: 5px;
   background-color: #e2f3d5;
 }
+
 option {
   font-family: "Indie Flower";
 }
+
 #limpiar {
   background-color: #254805;
   border-radius: 10px;
@@ -106,6 +119,7 @@ option {
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+
 #chat,
 #api-key-btn {
   background-color: #254805;
@@ -119,24 +133,31 @@ option {
   position: relative;
   top: 10%;
 }
+
 #chatt {
   display: none;
 }
+
 #check {
   display: none;
 }
+
 .mostrar {
   display: none;
 }
+
 .ocultar {
   display: none;
 }
+
 #resultados {
   padding: 0;
 }
+
 #resultados2 {
   display: none;
 }
+
 #facts {
   display: flex;
   background-color: rgb(34, 77, 0);
@@ -153,6 +174,7 @@ option {
   position: relative;
   top: 30px;
 }
+
 #boton-regresar {
   display: flex;
   background-color: rgb(34, 77, 0);
@@ -172,10 +194,12 @@ option {
   height: 11%;
   text-align: center;
 }
+
 .foco {
   position: relative;
   top: -20px;
 }
+
 #genero {
   display: flex;
   justify-content: center;
@@ -186,12 +210,14 @@ option {
   margin-top: 30px;
 
 }
+
 nav {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
+
 #contenedor {
   width: 100%;
   display: flex;
@@ -201,6 +227,7 @@ nav {
   position: relative;
   top: 100px;
 }
+
 ul {
   width: 80%;
   display: flex;
@@ -210,6 +237,7 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
+
 .listas {
   height: 300px;
   width: 200px;
@@ -219,18 +247,18 @@ ul {
   font-size: 100%;
   font-weight: 700;
   list-style-type: none;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)),
     url("https://static.vecteezy.com/system/resources/previews/004/948/426/non_2x/cartoon-comic-cloud-copy-space-background-on-blue-free-vector.jpg");
   margin-bottom: 30px;
 }
+
 .listas img {
   width: 100%;
   height: 180px;
   border-radius: 15px;
 }
+
 dt {
   display: flex;
   justify-content: center;
@@ -239,6 +267,7 @@ dt {
   margin-top: 5px;
   font-size: 14px;
 }
+
 dd {
   display: flex;
   justify-content: center;
@@ -247,21 +276,26 @@ dd {
   margin: 0;
   padding: 10px;
 }
+
 .menu {
   order: 1;
 }
+
 #check {
   display: none;
 }
+
 #detalleContenido .descripcion {
   width: 48%;
 }
+
 #chatIndivi {
   width: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .titulo-personaje {
   color: #FFFFFF;
   font-size: 30px;
@@ -271,15 +305,18 @@ dd {
   background-color: #36B101;
   border-radius: 30px;
 }
+
 .chat-individual h1 {
   color: #FFFFFF;
   font-size: 24px;
   margin: 0;
 }
+
 .chat-input {
   margin-top: 20px;
   padding: 5px;
 }
+
 .send-button,
 .back-button {
   margin-top: 10px;
@@ -289,6 +326,7 @@ dd {
   border: none;
   cursor: pointer;
 }
+
 .contenedor-api-key h3 {
   display: inline-block;
   color: black;
@@ -302,6 +340,7 @@ dd {
   position: relative;
   top: 80px;
 }
+
 .contenedor-api-key input {
   display: block;
   width: 40%;
@@ -338,10 +377,12 @@ dd {
   display: flex;
   margin: 20px 20px 20px 20px;
 }
+
 .div {
   display: flex;
   flex-direction: column;
 }
+
 .doh {
   display: flex;
   font-family: Be Vietnam Pro;
@@ -351,6 +392,7 @@ dd {
   margin-left: 40px;
   padding: auto;
 }
+
 .p {
   display: flex;
   font-family: Be Vietnam Pro;
@@ -358,6 +400,7 @@ dd {
   margin-top: 0;
   margin-left: 40px;
 }
+
 .donut {
   display: flex;
   justify-content: left;
@@ -366,6 +409,7 @@ dd {
   width: 390px;
   height: 530px;
 }
+
 /*CHAT INDIVIDUAL*/
 .cajaFuerte {
   display: flex;
@@ -373,6 +417,7 @@ dd {
   justify-content: center;
   align-items: center;
 }
+
 #caja {
   display: flex;
   justify-content: center;
@@ -385,6 +430,7 @@ dd {
   position: relative;
   top: 60px;
 }
+
 #detalles {
   display: grid;
   grid-template-columns: 1fr;
@@ -396,6 +442,7 @@ dd {
   position: relative;
   bottom: 39%;
 }
+
 .profile {
   display: grid;
   justify-content: center;
@@ -404,14 +451,17 @@ dd {
   height: 100%;
   border-top-left-radius: 15px;
 }
+
 .h1 {
   font-size: 24px;
   position: relative;
   margin-top: 10px;
 }
+
 .uno {
   margin: 0 10px 0 10px;
 }
+
 #text-chat {
   display: grid;
   width: 98%;
@@ -424,6 +474,7 @@ dd {
   position: relative;
   bottom: 247px;
 }
+
 #icono-chat {
   height: 50px;
   border-radius: 100%;
@@ -434,6 +485,7 @@ dd {
   border-radius: 50%;
   left: 30%;
 }
+
 #chat-magic {
   display: flex;
   position: relative;
@@ -452,6 +504,7 @@ dd {
   height: 360px;
   text-align: left;
 }
+
 #chat-magic p {
   display: flex;
   background-color: #2270005c;
@@ -459,12 +512,13 @@ dd {
   border-radius: 11px;
 }
 
-.chat-messages p.chatGPTres{
+.chat-messages p.chatGPTres {
   display: flex;
   background-color: #cc1a1a5c;
   padding: 12px;
   border-radius: 11px;
 }
+
 .chatinput {
   display: flex;
   flex-direction: column;
@@ -478,6 +532,7 @@ dd {
   justify-content: flex-start;
   top: -26%;
 }
+
 .backbutton {
   width: 50%;
   height: 30%;
@@ -488,6 +543,7 @@ dd {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .sendbutton {
   margin-top: 10px;
   background-color: transparent;
@@ -501,6 +557,7 @@ dd {
   left: 90%;
   bottom: 20%;
 }
+
 .senddbbuton {
   width: 40px;
   height: 40px;
@@ -523,6 +580,7 @@ dd {
   position: relative;
   top: 70px;
 }
+
 .back-button {
   background-color: #ffd401;
   border-radius: 10px;
@@ -535,6 +593,7 @@ dd {
   width: 16%;
   height: 20px;
 }
+
 .boton-aceptar {
   background-color: #ffd401;
   border-radius: 10px;
@@ -547,6 +606,7 @@ dd {
   left: 50%;
   top: 180px;
 }
+
 /*Chat grupal*/
 #chatContenido {
   margin: 20px auto;
@@ -557,6 +617,7 @@ dd {
   background-color: #fff;
   width: 90%;
 }
+
 .chat-header {
   background-color: #4CAF50;
   color: #fff;
@@ -564,6 +625,7 @@ dd {
   text-align: center;
   border-radius: 8px 8px 0 0;
 }
+
 .chat-messages {
   max-height: 200px;
   box-sizing: border-box;
@@ -576,12 +638,14 @@ dd {
   align-items: flex-end;
   text-align: left;
 }
+
 .chat-messages p {
   display: flex;
   background-color: #95dd7773;
   padding: 12px;
   border-radius: 11px;
 }
+
 .chat-input {
   width: 100%;
   padding: 10px;
@@ -591,6 +655,7 @@ dd {
   box-sizing: border-box;
   height: 42px;
 }
+
 .send-button {
   width: 100%;
   padding: 10px;
@@ -601,15 +666,19 @@ dd {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .send-button:hover {
   background-color: #45A049;
 }
-#estadoEscribiendo, #chat-input {
+
+#estadoEscribiendo,
+#chat-input {
   position: relative;
   bottom: 150%;
   font-size: 15px;
   right: 43%;
 }
+
 .volverInicio {
   background-color: rgb(34 77 0 / 15%);
   color: rgb(255, 255, 255);
@@ -623,12 +692,14 @@ dd {
   top: 20px;
   left: 10%;
 }
+
 /*ABAJO AMBOS SON PARA CELULAR, SE SEPARAN PERO TIENEN EL MISMO CODIGO. ESTO EVITA QUE SE ROMPA EL CODIGO*/
 @media (min-width: 280px) and (max-width: 350px) {
   * {
     padding: 0;
     margin: 0;
   }
+
   body {
     height: 80vh;
     display: flex;
@@ -636,30 +707,36 @@ dd {
     font-family: "Indie Flower";
     background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
   }
+
   #root {
     display: grid;
     align-items: center;
   }
+
   .frontis {
     background-image: url("https://images3.alphacoders.com/591/591067.jpg");
     background-size: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: overlay;
   }
+
   .header {
     display: flex;
     content: space-between;
     margin-top: 0;
   }
+
   .imagenTitulo {
     width: 140px;
     height: 140px;
   }
+
   .imagenFamilia {
     width: 100px;
     height: 110px;
     margin-left: 20px;
   }
+
   main {
     display: flex;
     background-color: #4A9F2D;
@@ -669,6 +746,7 @@ dd {
     margin-top: 0;
     padding: 0;
   }
+
   nav {
     position: relative;
     display: flex;
@@ -676,7 +754,7 @@ dd {
     padding-top: 10px;
     justify-content: center;
   }
- 
+
   .menu {
     display: grid;
     padding-top: 20px;
@@ -709,18 +787,23 @@ dd {
     position: relative;
     top: 270px;
   }
+
   .foco {
     display: none;
   }
+
   #chat {
     display: none;
   }
+
   #resultados2 {
     display: block;
   }
+
   #resultados {
     display: none;
   }
+
   #chat {
     display: block;
     background-color: #254805;
@@ -733,29 +816,32 @@ dd {
     margin: 0px 0px 0px 10px;
     position: relative;
     right: 7%;
-}
-#api-key-btn {
-  background-color: #254805;
-  border-radius: 10px;
-  padding: 5px 10px;
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  margin: 0px 0px 0px 10px;
-  position: relative;
-  top: 10px;
-  display: flex;
-  left: 35%;
-}
-select {
-  margin-right: 10px;
-  padding: 5px;
-  border: 3px solid #227000;
-  border-radius: 5px;
-  background-color: #e2f3d5;
-  width: 70%;
-}
+  }
+
+  #api-key-btn {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 0px 0px 0px 10px;
+    position: relative;
+    top: 10px;
+    display: flex;
+    left: 35%;
+  }
+
+  select {
+    margin-right: 10px;
+    padding: 5px;
+    border: 3px solid #227000;
+    border-radius: 5px;
+    background-color: #e2f3d5;
+    width: 70%;
+  }
+
   #check {
     display: block;
     position: absolute;
@@ -767,6 +853,7 @@ select {
   .menu label {
     display: block;
   }
+
   label {
     color: #040700;
     font-family: "Indie Flower";
@@ -798,19 +885,23 @@ select {
   .menu {
     display: none;
   }
-  #check:checked ~ .menu {
+
+  #check:checked~.menu {
     display: block;
   }
-  #check:checked ~ .mostrar {
+
+  #check:checked~.mostrar {
     display: none;
   }
-  #check:checked ~ .ocultar {
+
+  #check:checked~.ocultar {
     display: block;
   }
 
   h2 {
     display: none;
   }
+
   #genero {
     display: flex;
     justify-content: center;
@@ -828,15 +919,18 @@ select {
     align-items: center;
     justify-content: center;
   }
+
   .dl {
     width: 100%;
   }
+
   #contenedor {
     width: 100vw;
     max-width: 1000px;
     margin: auto;
     position: relative;
   }
+
   #contenedor img {
     width: 100%;
     height: 150px;
@@ -849,6 +943,7 @@ select {
     justify-content: center;
     align-items: center;
   }
+
   #caja {
     display: flex;
     flex-direction: column;
@@ -856,6 +951,7 @@ select {
     margin-top: 0px;
     border-radius: 15px;
   }
+
   #detalles {
     display: flex;
     flex-direction: column;
@@ -868,16 +964,20 @@ select {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
   }
+
   .profile {
     display: none;
   }
+
   .h1 {
     font-size: 10px;
   }
+
   .uno {
     font-size: 8px;
     margin: 0 10px 0 10px;
   }
+
   #text-chat {
     width: 100%;
     height: fit-content;
@@ -887,10 +987,12 @@ select {
     text-align: center;
     margin: 0;
   }
+
   #icono-chat {
     width: 100%;
     height: 40px;
   }
+
   #icono-chat img {
     position: relative;
     right: 38%;
@@ -900,6 +1002,7 @@ select {
     border-radius: 50%;
     padding: 0;
   }
+
   #chat-magic {
     display: flex;
     width: 100%;
@@ -910,6 +1013,7 @@ select {
     margin: 0;
     border-radius: 0;
   }
+
   .chatinput {
     width: 90%;
     height: 28px;
@@ -920,6 +1024,7 @@ select {
     justify-content: center;
     align-items: center;
   }
+
   .backbutton {
     width: 50%;
     height: 30%;
@@ -930,6 +1035,7 @@ select {
     border-radius: 4px;
     cursor: pointer;
   }
+
   .sendbutton {
     margin-top: 10px;
     background-color: transparent;
@@ -941,10 +1047,12 @@ select {
     position: relative;
     bottom: 0;
   }
+
   .senddbbuton {
     width: 20px;
     height: 20px;
   }
+
   .backbutton,
   .back-button {
     background-color: #ffd401;
@@ -957,6 +1065,7 @@ select {
     width: 25%;
     margin: 5px 40px 0 0;
   }
+
   .boton-aceptar {
     background-color: #ffd401;
     border-radius: 10px;
@@ -966,6 +1075,7 @@ select {
     font-family: gluten;
     font-size: x-large;
   }
+
   .footer {
     width: 100%;
     background-color: #7b3d87;
@@ -976,6 +1086,7 @@ select {
     bottom: 0;
     margin-bottom: -66%;
   }
+
   #limpiar {
     background-color: #254805;
     border-radius: 10px;
@@ -986,72 +1097,79 @@ select {
     top: 35%;
     left: 20%;
     display: flex;
-}
-/*pantalla de error*/
-#error404 {
-  display: flex;
-  flex-direction: column;
-  background-color: #95dd78;
-  width: 88%;
-  position: relative;
-  height: 550px;
-}
-.div {
-  display: flex;
-  flex-direction: column;
-}
-.doh {
-  display: flex;
-  font-family: Be Vietnam Pro;
-  color: #FFFFFF;
-  font-size: 60px;
-  margin-top: 50px;
-  margin-left: 0;
-  padding: auto;
-  justify-content: center;
-}
-.manito {
-  display: flex;
-  flex-direction: column;
-  font-family: Be Vietnam Pro;
-  color: #FFFFFF;
-  height: 45%;
-  position: absolute;
-  left: 1%;
-  bottom: -120px;
-}
-.p {
-  display: flex;
-  font-family: Be Vietnam Pro;
-  color: #FFFFFF;
-  position: relative;
-  top: 50%;
-  text-align: center;
-  margin-left: 5px;
-  padding: 5px;
-}
-.donut {
-  display: flex;
-  justify-content: left;
-  margin-left: 10px;
-  height: 530px;
-  width: 0;
-}
-.volverInicio {
-  background-color: rgb(34 77 0 / 15%);
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
-  position: relative;
-  top: 60%;
-  display: flex;
-  position: relative;
-  left: 25%;
-}
+  }
+
+  /*pantalla de error*/
+  #error404 {
+    display: flex;
+    flex-direction: column;
+    background-color: #95dd78;
+    width: 88%;
+    position: relative;
+    height: 550px;
+  }
+
+  .div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doh {
+    display: flex;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-left: 0;
+    padding: auto;
+    justify-content: center;
+  }
+
+  .manito {
+    display: flex;
+    flex-direction: column;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    height: 45%;
+    position: absolute;
+    left: 1%;
+    bottom: -120px;
+  }
+
+  .p {
+    display: flex;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    margin-left: 5px;
+    padding: 5px;
+  }
+
+  .donut {
+    display: flex;
+    justify-content: left;
+    margin-left: 10px;
+    height: 530px;
+    width: 0;
+  }
+
+  .volverInicio {
+    background-color: rgb(34 77 0 / 15%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 60%;
+    display: flex;
+    position: relative;
+    left: 25%;
+  }
 }
 
 @media (min-width: 350px) and (max-width: 522px) {
@@ -1059,6 +1177,7 @@ select {
     padding: 0;
     margin: 0;
   }
+
   body {
     height: 80vh;
     display: flex;
@@ -1066,30 +1185,36 @@ select {
     font-family: "Indie Flower";
     background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
   }
+
   #root {
     display: grid;
     align-items: center;
   }
+
   .frontis {
     background-image: url("https://images3.alphacoders.com/591/591067.jpg");
     background-size: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: overlay;
   }
+
   .header {
     display: flex;
     content: space-between;
     margin-top: 0;
   }
+
   .imagenTitulo {
     width: 140px;
     height: 140px;
   }
+
   .imagenFamilia {
     width: 100px;
     height: 110px;
     margin-left: 20px;
   }
+
   main {
     display: flex;
     background-color: #4A9F2D;
@@ -1099,6 +1224,7 @@ select {
     margin-top: 0;
     padding: 0;
   }
+
   nav {
     position: relative;
     display: flex;
@@ -1106,6 +1232,7 @@ select {
     padding-top: 10px;
     justify-content: center;
   }
+
   .menu {
     display: grid;
     padding-top: 20px;
@@ -1136,18 +1263,23 @@ select {
     position: relative;
     top: 270px;
   }
+
   .foco {
     display: none;
   }
+
   #chat {
     display: none;
   }
+
   #resultados2 {
     display: block;
   }
+
   #resultados {
     display: none;
   }
+
   #chat {
     display: block;
     background-color: #254805;
@@ -1160,8 +1292,9 @@ select {
     margin: 0px 0px 0px 10px;
     position: relative;
     top: 5%;
-    
+
   }
+
   #check {
     display: block;
     position: absolute;
@@ -1173,6 +1306,7 @@ select {
   .menu label {
     display: block;
   }
+
   label {
     color: #040700;
     font-family: "Indie Flower";
@@ -1204,19 +1338,23 @@ select {
   .menu {
     display: none;
   }
-  #check:checked ~ .menu {
+
+  #check:checked~.menu {
     display: block;
   }
-  #check:checked ~ .mostrar {
+
+  #check:checked~.mostrar {
     display: none;
   }
-  #check:checked ~ .ocultar {
+
+  #check:checked~.ocultar {
     display: block;
   }
 
   h2 {
     display: none;
   }
+
   #genero {
     display: flex;
     justify-content: center;
@@ -1234,15 +1372,18 @@ select {
     align-items: center;
     justify-content: center;
   }
+
   .dl {
     width: 100%;
   }
+
   #contenedor {
     width: 100vw;
     max-width: 1000px;
     margin: auto;
     position: relative;
   }
+
   #contenedor img {
     width: 100%;
     height: 150px;
@@ -1255,6 +1396,7 @@ select {
     justify-content: center;
     align-items: center;
   }
+
   #caja {
     display: flex;
     flex-direction: column;
@@ -1262,6 +1404,7 @@ select {
     margin-top: 0px;
     border-radius: 15px;
   }
+
   #detalles {
     display: flex;
     flex-direction: column;
@@ -1274,16 +1417,20 @@ select {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
   }
+
   .profile {
     display: none;
   }
+
   .h1 {
     font-size: 10px;
   }
+
   .uno {
     font-size: 8px;
     margin: 0 10px 0 10px;
   }
+
   #text-chat {
     width: 100%;
     height: fit-content;
@@ -1293,10 +1440,12 @@ select {
     text-align: center;
     margin: 0;
   }
+
   #icono-chat {
     width: 100%;
     height: 40px;
   }
+
   #icono-chat img {
     position: relative;
     right: 38%;
@@ -1306,6 +1455,7 @@ select {
     border-radius: 50%;
     padding: 0;
   }
+
   #chat-magic {
     display: flex;
     width: 100%;
@@ -1315,8 +1465,9 @@ select {
     position: relative;
     margin: 0;
     border-radius: 0;
-    
+
   }
+
   .chatinput {
     width: 90%;
     height: 28px;
@@ -1327,6 +1478,7 @@ select {
     justify-content: center;
     align-items: center;
   }
+
   .backbutton {
     width: 50%;
     height: 30%;
@@ -1337,6 +1489,7 @@ select {
     border-radius: 4px;
     cursor: pointer;
   }
+
   .sendbutton {
     margin-top: 10px;
     background-color: transparent;
@@ -1348,10 +1501,12 @@ select {
     position: relative;
     bottom: 0;
   }
+
   .senddbbuton {
     width: 20px;
     height: 20px;
   }
+
   .backbutton,
   .back-button {
     background-color: #ffd401;
@@ -1364,6 +1519,7 @@ select {
     width: 25%;
     margin: 5px 40px 0 0;
   }
+
   .boton-aceptar {
     background-color: #ffd401;
     border-radius: 10px;
@@ -1373,6 +1529,7 @@ select {
     font-family: gluten;
     font-size: x-large;
   }
+
   .footer {
     width: 100%;
     background-color: #7b3d87;
@@ -1383,6 +1540,7 @@ select {
     bottom: 0;
     margin-bottom: -66%;
   }
+
   #limpiar {
     background-color: #254805;
     border-radius: 10px;
@@ -1392,8 +1550,8 @@ select {
     position: relative;
     top: 35%;
     right: 50%;
-    
-}
+
+  }
 }
 
 @media (min-width: 522px) and (max-width: 750px) {
@@ -1401,6 +1559,7 @@ select {
     padding: 0;
     margin: 0;
   }
+
   body {
     height: 80vh;
     display: flex;
@@ -1408,30 +1567,36 @@ select {
     font-family: "Indie Flower";
     background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
   }
+
   #root {
     display: grid;
     align-items: center;
   }
+
   .frontis {
     background-image: url("https://images3.alphacoders.com/591/591067.jpg");
     background-size: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: overlay;
   }
+
   .header {
     display: flex;
     content: space-between;
     margin-top: 0;
   }
+
   .imagenTitulo {
     width: 140px;
     height: 140px;
   }
+
   .imagenFamilia {
     width: 100px;
     height: 110px;
     margin-left: 20px;
   }
+
   main {
     display: flex;
     background-color: #4A9F2D;
@@ -1441,6 +1606,7 @@ select {
     margin-top: 0;
     padding: 0;
   }
+
   nav {
     position: relative;
     display: flex;
@@ -1448,6 +1614,7 @@ select {
     padding-top: 10px;
     justify-content: center;
   }
+
   .menu {
     display: grid;
     padding-top: 20px;
@@ -1478,18 +1645,23 @@ select {
     position: relative;
     top: 270px;
   }
+
   .foco {
     display: none;
   }
+
   #chat {
     display: none;
   }
+
   #resultados2 {
     display: block;
   }
+
   #resultados {
     display: none;
   }
+
   #chat {
     display: block;
     background-color: #254805;
@@ -1501,6 +1673,7 @@ select {
     font-weight: bold;
     margin: 0px 0px 0px 10px;
   }
+
   #check {
     display: block;
     position: absolute;
@@ -1512,6 +1685,7 @@ select {
   .menu label {
     display: block;
   }
+
   label {
     color: #040700;
     font-family: "Indie Flower";
@@ -1543,19 +1717,23 @@ select {
   .menu {
     display: none;
   }
-  #check:checked ~ .menu {
+
+  #check:checked~.menu {
     display: block;
   }
-  #check:checked ~ .mostrar {
+
+  #check:checked~.mostrar {
     display: none;
   }
-  #check:checked ~ .ocultar {
+
+  #check:checked~.ocultar {
     display: block;
   }
 
   h2 {
     display: none;
   }
+
   #genero {
     display: flex;
     justify-content: center;
@@ -1573,15 +1751,18 @@ select {
     align-items: center;
     justify-content: space-between;
   }
+
   .dl {
     width: 100%;
   }
+
   #contenedor {
     width: 100vw;
     max-width: 1000px;
     margin: auto;
     position: relative;
   }
+
   #contenedor img {
     width: 100%;
     height: 150px;
@@ -1594,6 +1775,7 @@ select {
     justify-content: center;
     align-items: center;
   }
+
   #caja {
     display: flex;
     flex-direction: column;
@@ -1601,6 +1783,7 @@ select {
     margin-top: 0px;
     border-radius: 15px;
   }
+
   #detalles {
     display: flex;
     flex-direction: column;
@@ -1613,16 +1796,20 @@ select {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
   }
+
   .profile {
     display: none;
   }
+
   .h1 {
     font-size: 10px;
   }
+
   .uno {
     font-size: 8px;
     margin: 0 10px 0 10px;
   }
+
   #text-chat {
     width: 100%;
     height: fit-content;
@@ -1632,10 +1819,12 @@ select {
     text-align: center;
     margin: 0;
   }
+
   #icono-chat {
     width: 100%;
     height: 40px;
   }
+
   #icono-chat img {
     position: relative;
     right: 38%;
@@ -1645,6 +1834,7 @@ select {
     border-radius: 50%;
     padding: 0;
   }
+
   #chat-magic {
     display: flex;
     width: 100%;
@@ -1655,6 +1845,7 @@ select {
     margin: 0;
     border-radius: 0;
   }
+
   .chatinput {
     width: 90%;
     height: 28px;
@@ -1665,6 +1856,7 @@ select {
     justify-content: center;
     align-items: center;
   }
+
   .backbutton {
     width: 50%;
     height: 30%;
@@ -1675,6 +1867,7 @@ select {
     border-radius: 4px;
     cursor: pointer;
   }
+
   .sendbutton {
     margin-top: 10px;
     background-color: transparent;
@@ -1686,10 +1879,12 @@ select {
     position: relative;
     bottom: 0;
   }
+
   .senddbbuton {
     width: 20px;
     height: 20px;
   }
+
   .backbutton,
   .back-button {
     background-color: #ffd401;
@@ -1702,6 +1897,7 @@ select {
     width: 25%;
     margin: 5px 40px 0 0;
   }
+
   .boton-aceptar {
     background-color: #ffd401;
     border-radius: 10px;
@@ -1711,6 +1907,7 @@ select {
     font-family: gluten;
     font-size: x-large;
   }
+
   .footer {
     width: 100%;
     background-color: #7b3d87;
@@ -1721,6 +1918,7 @@ select {
     bottom: 0;
     margin-bottom: -66%;
   }
+
   #limpiar {
     background-color: #254805;
     border-radius: 10px;
@@ -1730,10 +1928,9 @@ select {
     position: relative;
     top: 35%;
     right: 50%;
-}
+  }
 }
 
-@media (min-width: 750px) and (max-width: 850px) {
-}
-@media (min-width: 850px) and (max-width: 3543px) {
-}
+@media (min-width: 750px) and (max-width: 850px) {}
+
+@media (min-width: 850px) and (max-width: 3543px) {}
