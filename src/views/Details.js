@@ -53,14 +53,12 @@ export const detail = ({ id }) => {
       const textoIngresado = entradaMensaje.value.trim();
       //condicion que valida si.."no es igual a"
       if (textoIngresado !== '') {
-        //metodo que agrega un nuevo elemento al final del array, cada vez que esta línea se ejecuta, se añade el ultimo mensaje al array, lo que permite rastrear los mensajes anteriores en el historial.
-        //historialMensajes.push(textoIngresado);
+        
         const p = document.createElement('p');
         p.classList.add('chatUser');
         p.textContent = textoIngresado
         chatMagic.appendChild(p);
-        //crea un nuevo array con un  elemento p, .join une todos los elementos del array
-        //chatMagic.innerHTML = historialMensajes.map(msg => `<p>${msg}</p>`).join('<br>');
+      
 
         apiKeyChat(textoIngresado, persona)
           .then((data) => {
@@ -69,10 +67,7 @@ export const detail = ({ id }) => {
             r.textContent = data.choices[0].message.content
             chatMagic.appendChild(r);
 
-            //historialMensajes.push(data.choices[0].message.content);
-            //crea un nuevo array con un  elemento p, .join une todos los elementos del array
-            //chatMagic.innerHTML = historialMensajes.map(msg => `<p class="chatRespuesta">${msg}</p>`).join('<br>'); 
-            entradaMensaje.value = "";//borra el contenido 
+            entradaMensaje.value = "";
           })
           .catch((error) => {
             console.error('Error al obtener respuesta:', error);

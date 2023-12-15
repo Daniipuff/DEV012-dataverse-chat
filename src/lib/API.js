@@ -38,7 +38,6 @@ export function apiKeyChat(input, persona) {
 const apiURL = "https://api.openai.com/v1/chat/completions";
 
 export function apiKeyChatGrupal(input, personajesChat) {
-  //console.log(input, personajesChat);
 
   const apiKey = localStorage.getItem("apiKey");
   const data = {
@@ -77,12 +76,15 @@ export function apiKeyChatGrupal(input, personajesChat) {
         if (firstChoice && firstChoice.message && firstChoice.message.content) {
           return firstChoice.message.content;
         }
-      }
-
+      }   
       return 'Empty response';
     })
+
     .catch((error) => {
       console.error('Error obtaining response:', error);
       throw error;
     });
 }
+
+
+
