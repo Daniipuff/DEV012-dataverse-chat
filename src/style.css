@@ -505,20 +505,21 @@ dd {
   text-align: left;
 }
 
-#chat-magic p {
+.chatRespuesta {
   display: flex;
-  background-color: #2270005c;
+  background-color: #7a88748a;
+  padding: 12px;
+  border-radius: 11px;
+  position: relative;
+  left: 0;
+
+}
+.chatUser {
+  display: flex;
+  background-color: #4a9f2dba;
   padding: 12px;
   border-radius: 11px;
 }
-
-.chat-messages p.chatGPTres {
-  display: flex;
-  background-color: #cc1a1a5c;
-  padding: 12px;
-  border-radius: 11px;
-}
-
 .chatinput {
   display: flex;
   flex-direction: column;
@@ -627,26 +628,17 @@ dd {
 }
 
 .chat-messages {
-  max-height: 200px;
-  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: overlay;
+  flex-direction: column;
   overflow-y: scroll;
-  text-align: right;
   padding: 20px;
   height: 360px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: left;
 }
 
-.chat-messages p {
-  display: flex;
-  background-color: #95dd7773;
-  padding: 12px;
-  border-radius: 11px;
-}
-
-.chat-input {
+.chat-input2 {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -656,6 +648,25 @@ dd {
   height: 42px;
 }
 
+.chatRespuesta2 {
+  display: flex;
+  background-color: #7a88748a;
+  padding: 12px;
+  border-radius: 11px;
+  position: relative;
+  left: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.chatUser2 {
+  display: flex;
+  background-color: #4a9f2dba;
+  padding: 12px;
+  border-radius: 11px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 .send-button {
   width: 100%;
   padding: 10px;
