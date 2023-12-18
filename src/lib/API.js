@@ -1,4 +1,4 @@
-import dataset from "../data/dataset.js";
+//import data from "../data/dataset.js";
 
 export function apiKeyChat(input, persona) {
   console.log(persona);
@@ -51,7 +51,7 @@ export function apiKeyChatGrupal(input, personajesChat) {
     ],
   };
 
-  const result = fetch(apiURL, {
+  const endpoint = fetch(apiURL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -60,23 +60,27 @@ export function apiKeyChatGrupal(input, personajesChat) {
     body: JSON.stringify(data),
   });
 
-  return result
+  return endpoint
     .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+      //Verifica si el código de estado de la respuesta no es un codigo de estado "OK"
+      if (!response.ok) {//Si la respuesta tiene un codigo de estado exitoso, devuelve el cuerpo de la respuesta en formato JSON
+        throw new Error(`HTTP error! Status: ${response.status}`);//Si la respuesta no es exitosa, lanza un error con informacion sobre el código de estado
       }
       return response.json();
     })
     .then((data) => {
+      //nos aseguramos que "data" tenga una propiedad llamada choices, si existe, se asigna el valor de "data.choices" a la variable "choices"
       const choices = data && data.choices;
-
+      //verificamos que la variable "choices" existe, es un array y tiene al menos un elemento antes de intentar acceder al primer elemento del array y verificamos que al menos tenga un elemento antes de acceder
       if (choices && Array.isArray(choices) && choices.length > 0) {
+        //asigna el primer elemento del array "choices" a la variable firstChoice
         const firstChoice = choices[0];
-
+        //verifica que "firstChoice" no es null, verifica que "firstChoice.message" existe,verifica que "firstChoice.message.content" existe
         if (firstChoice && firstChoice.message && firstChoice.message.content) {
           return firstChoice.message.content;
         }
-      }   
+      }
+      //se ejecutara si las condiciones en la estructura condicional anterior no se cumplen
       return 'Empty response';
     })
 
@@ -85,6 +89,3 @@ export function apiKeyChatGrupal(input, personajesChat) {
       throw error;
     });
 }
-
-
-

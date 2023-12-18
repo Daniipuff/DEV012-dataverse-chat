@@ -315,6 +315,11 @@ dd {
 .chat-input {
   margin-top: 20px;
   padding: 5px;
+  padding: 10px;
+  border: darkgreen;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 92%;
 }
 
 .send-button,
@@ -514,11 +519,13 @@ dd {
   left: 0;
 
 }
-.chatUser {
-  display: flex;
+.chatUser2 {
+  display: inline-flex;
   background-color: #4a9f2dba;
   padding: 12px;
   border-radius: 11px;
+  align-self: flex-end;
+  position: relative;
 }
 .chatinput {
   display: flex;
@@ -635,9 +642,10 @@ dd {
   flex-direction: column;
   overflow-y: scroll;
   padding: 20px;
-  height: 360px;
+  height: 400px; /* Ajusta la altura según sea necesario */
+  justify-content: flex-start;
+  align-items: self-start;
 }
-
 .chat-input2 {
   width: 100%;
   padding: 10px;
@@ -650,13 +658,12 @@ dd {
 
 .chatRespuesta2 {
   display: flex;
-  background-color: #7a88748a;
+  background-color: #b4ccab;
   padding: 12px;
   border-radius: 11px;
-  position: relative;
-  left: 0;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 10px; /* Ajusta este margen según sea necesario */
 }
 
 .chatUser2 {
@@ -666,6 +673,15 @@ dd {
   border-radius: 11px;
   justify-content: flex-end;
   align-items: flex-end;
+}
+.imagenRespuesta {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .send-button {
   width: 100%;
@@ -953,29 +969,40 @@ dd {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
+    position: relative;
+    top: 7px;
+}
   #caja {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     margin-top: 0px;
     border-radius: 15px;
-  }
-
-  #detalles {
-    display: flex;
-    flex-direction: column;
-    order: -1;
-    justify-content: center;
-    align-items: center;
-    width: 100.7%;
-    background-color: #61994a;
-    background-image: none;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-
+    height: 95vh;
+    position: relative;
+}
+#detalles {
+  display: flex;
+  flex-direction: column;
+  order: -1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #61994a;
+  background-image: none;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  position: relative;
+  top: 0%;
+}
+.chatUser {
+  display: inline-flex;
+  background-color: #4a9f2dba;
+  padding: 12px;
+  border-radius: 11px;
+  align-self: flex-end;
+  position: relative;
+}
   .profile {
     display: none;
   }
@@ -986,23 +1013,28 @@ dd {
 
   .uno {
     font-size: 8px;
-    margin: 0 10px 0 10px;
-  }
-
-  #text-chat {
-    width: 100%;
-    height: fit-content;
-    font-family: gluten;
-    background-color: #61994a;
-    font-size: 14px;
-    text-align: center;
-    margin: 0;
-  }
-
+    /* margin: 0 10px 0 10px; */
+    position: relative;
+    top: auto;
+}
+#text-chat {
+  width: 104%;
+  height: fit-content;
+  font-family: gluten;
+  /* background-color: #61994a; */
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  bottom: -11px;
+}
   #icono-chat {
-    width: 100%;
-    height: 40px;
-  }
+    width: 15%;
+    height: 38px;
+    position: relative;
+    left: 3%;
+    top: -76%;
+}
 
   #icono-chat img {
     position: relative;
@@ -1013,29 +1045,29 @@ dd {
     border-radius: 50%;
     padding: 0;
   }
-
   #chat-magic {
     display: flex;
-    width: 100%;
+    width: 80%;
     background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
     background-color: rgba(255, 255, 255, 0.461);
     background-blend-mode: overlay;
     position: relative;
-    margin: 0;
+    margin: 5px;
     border-radius: 0;
-  }
-
-  .chatinput {
-    width: 90%;
-    height: 28px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-
+    height: 267px;
+}
+.chatinput {
+  width: 74%;
+  height: 33px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
   .backbutton {
     width: 50%;
     height: 30%;
@@ -1058,12 +1090,12 @@ dd {
     position: relative;
     bottom: 0;
   }
-
   .senddbbuton {
-    width: 20px;
-    height: 20px;
-  }
-
+    display: flex;
+    position: relative;
+    left: -32px;
+    bottom: 64px;
+}
   .backbutton,
   .back-button {
     background-color: #ffd401;
@@ -1085,19 +1117,69 @@ dd {
     color: rgb(0, 0, 0);
     font-family: gluten;
     font-size: x-large;
-  }
+    position: relative;
+    left: 40px;
+    top: unset;
+}
+#boton-regresar {
+  display: flex;
+  background-color: rgb(34, 77, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  margin-left: 70px;
+  font-family: "Itim";
+  font-size: x-large;
+  position: relative;
+  top: 43px;
+  left: 35%;
+  width: 33%;
+  height: 13%;
+  text-align: center;
+}
 
-  .footer {
-    width: 100%;
-    background-color: #7b3d87;
-    color: #fff;
-    font-size: 11px;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: -66%;
-  }
 
+.contenedor-api-key h3 {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  position: relative;
+  padding: 15px;
+  background-color: #4a9f2d;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: -22px;
+}
+.contenedor-api-key input {
+  display: block;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+  margin: 10px;
+  position: relative;
+  left: 30%;
+  font-family: gluten;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+  top: -4px;
+}
+.footer {
+  width: 100%;
+  background-color: #7b3d87;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+}
   #limpiar {
     background-color: #254805;
     border-radius: 10px;
@@ -1109,7 +1191,29 @@ dd {
     left: 20%;
     display: flex;
   }
-
+  #chatContenido {
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #fff;
+    width: 90%;
+    position: relative;
+    top: -9%;
+}
+  .chat-messages {
+    display: flex;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 20px;
+    height: 253px;
+    justify-content: flex-start;
+    align-items: self-start;
+}
   /*pantalla de error*/
   #error404 {
     display: flex;
@@ -1262,7 +1366,9 @@ dd {
     top: 20%;
   }
 
+
   #facts {
+    display: block;
     background-color: rgb(34, 77, 0);
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -1302,8 +1408,31 @@ dd {
     font-weight: bold;
     margin: 0px 0px 0px 10px;
     position: relative;
-    top: 5%;
+    right: 7%;
+  }
 
+  #api-key-btn {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 0px 0px 0px 10px;
+    position: relative;
+    top: 10px;
+    display: flex;
+    left: 35%;
+  }
+
+  select {
+    margin-right: 10px;
+    padding: 5px;
+    border: 3px solid #227000;
+    border-radius: 5px;
+    background-color: #e2f3d5;
+    width: 70%;
   }
 
   #check {
@@ -1406,29 +1535,40 @@ dd {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
+    position: relative;
+    top: 7px;
+}
   #caja {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     margin-top: 0px;
     border-radius: 15px;
-  }
-
-  #detalles {
-    display: flex;
-    flex-direction: column;
-    order: -1;
-    justify-content: center;
-    align-items: center;
-    width: 100.7%;
-    background-color: #61994a;
-    background-image: none;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-
+    height: 95vh;
+    position: relative;
+}
+#detalles {
+  display: flex;
+  flex-direction: column;
+  order: -1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #61994a;
+  background-image: none;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  position: relative;
+  top: 0%;
+}
+.chatUser {
+  display: inline-flex;
+  background-color: #4a9f2dba;
+  padding: 12px;
+  border-radius: 11px;
+  align-self: flex-end;
+  position: relative;
+}
   .profile {
     display: none;
   }
@@ -1439,23 +1579,28 @@ dd {
 
   .uno {
     font-size: 8px;
-    margin: 0 10px 0 10px;
-  }
-
-  #text-chat {
-    width: 100%;
-    height: fit-content;
-    font-family: gluten;
-    background-color: #61994a;
-    font-size: 14px;
-    text-align: center;
-    margin: 0;
-  }
-
+    /* margin: 0 10px 0 10px; */
+    position: relative;
+    top: auto;
+}
+#text-chat {
+  width: 104%;
+  height: fit-content;
+  font-family: gluten;
+  /* background-color: #61994a; */
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  bottom: -11px;
+}
   #icono-chat {
-    width: 100%;
-    height: 40px;
-  }
+    width: 15%;
+    height: 38px;
+    position: relative;
+    left: 3%;
+    top: -76%;
+}
 
   #icono-chat img {
     position: relative;
@@ -1466,30 +1611,29 @@ dd {
     border-radius: 50%;
     padding: 0;
   }
-
   #chat-magic {
     display: flex;
-    width: 100%;
+    width: 80%;
     background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
     background-color: rgba(255, 255, 255, 0.461);
     background-blend-mode: overlay;
     position: relative;
-    margin: 0;
+    margin: 5px;
     border-radius: 0;
-
-  }
-
-  .chatinput {
-    width: 90%;
-    height: 28px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-
+    height: 267px;
+}
+.chatinput {
+  width: 74%;
+  height: 33px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
   .backbutton {
     width: 50%;
     height: 30%;
@@ -1512,12 +1656,12 @@ dd {
     position: relative;
     bottom: 0;
   }
-
   .senddbbuton {
-    width: 20px;
-    height: 20px;
-  }
-
+    display: flex;
+    position: relative;
+    left: -32px;
+    bottom: 64px;
+}
   .backbutton,
   .back-button {
     background-color: #ffd401;
@@ -1539,19 +1683,69 @@ dd {
     color: rgb(0, 0, 0);
     font-family: gluten;
     font-size: x-large;
-  }
+    position: relative;
+    left: 40px;
+    top: unset;
+}
+#boton-regresar {
+  display: flex;
+  background-color: rgb(34, 77, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  margin-left: 70px;
+  font-family: "Itim";
+  font-size: x-large;
+  position: relative;
+  top: 43px;
+  left: 35%;
+  width: 33%;
+  height: 13%;
+  text-align: center;
+}
 
-  .footer {
-    width: 100%;
-    background-color: #7b3d87;
-    color: #fff;
-    font-size: 11px;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: -66%;
-  }
 
+.contenedor-api-key h3 {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  position: relative;
+  padding: 15px;
+  background-color: #4a9f2d;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: -22px;
+}
+.contenedor-api-key input {
+  display: block;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+  margin: 10px;
+  position: relative;
+  left: 30%;
+  font-family: gluten;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+  top: -4px;
+}
+.footer {
+  width: 100%;
+  background-color: #7b3d87;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+}
   #limpiar {
     background-color: #254805;
     border-radius: 10px;
@@ -1560,11 +1754,104 @@ dd {
     cursor: pointer;
     position: relative;
     top: 35%;
-    right: 50%;
+    left: 20%;
+    display: flex;
+  }
+  #chatContenido {
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #fff;
+    width: 90%;
+    position: relative;
+    top: -9%;
+}
+  .chat-messages {
+    display: flex;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 20px;
+    height: 253px;
+    justify-content: flex-start;
+    align-items: self-start;
+}
+  /*pantalla de error*/
+  #error404 {
+    display: flex;
+    flex-direction: column;
+    background-color: #95dd78;
+    width: 88%;
+    position: relative;
+    height: 550px;
+  }
 
+  .div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doh {
+    display: flex;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-left: 0;
+    padding: auto;
+    justify-content: center;
+  }
+
+  .manito {
+    display: flex;
+    flex-direction: column;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    height: 45%;
+    position: absolute;
+    left: 1%;
+    bottom: -120px;
+  }
+
+  .p {
+    display: flex;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    margin-left: 5px;
+    padding: 5px;
+  }
+
+  .donut {
+    display: flex;
+    justify-content: left;
+    margin-left: 10px;
+    height: 530px;
+    width: 0;
+  }
+
+  .volverInicio {
+    background-color: rgb(34 77 0 / 15%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 60%;
+    display: flex;
+    position: relative;
+    left: 25%;
   }
 }
-
 @media (min-width: 522px) and (max-width: 750px) {
   * {
     padding: 0;
@@ -1644,7 +1931,9 @@ dd {
     top: 20%;
   }
 
+
   #facts {
+    display: block;
     background-color: rgb(34, 77, 0);
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -1683,6 +1972,32 @@ dd {
     color: rgb(255, 255, 255);
     font-weight: bold;
     margin: 0px 0px 0px 10px;
+    position: relative;
+    right: 7%;
+  }
+
+  #api-key-btn {
+    background-color: #254805;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 0px 0px 0px 10px;
+    position: relative;
+    top: 10px;
+    display: flex;
+    left: 35%;
+  }
+
+  select {
+    margin-right: 10px;
+    padding: 5px;
+    border: 3px solid #227000;
+    border-radius: 5px;
+    background-color: #e2f3d5;
+    width: 70%;
   }
 
   #check {
@@ -1760,7 +2075,7 @@ dd {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .dl {
@@ -1785,29 +2100,40 @@ dd {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
+    position: relative;
+    top: 7px;
+}
   #caja {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     margin-top: 0px;
     border-radius: 15px;
-  }
-
-  #detalles {
-    display: flex;
-    flex-direction: column;
-    order: -1;
-    justify-content: center;
-    align-items: center;
-    width: 100.7%;
-    background-color: #61994a;
-    background-image: none;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-
+    height: 95vh;
+    position: relative;
+}
+#detalles {
+  display: flex;
+  flex-direction: column;
+  order: -1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #61994a;
+  background-image: none;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  position: relative;
+  top: 0%;
+}
+.chatUser {
+  display: inline-flex;
+  background-color: #4a9f2dba;
+  padding: 12px;
+  border-radius: 11px;
+  align-self: flex-end;
+  position: relative;
+}
   .profile {
     display: none;
   }
@@ -1818,23 +2144,28 @@ dd {
 
   .uno {
     font-size: 8px;
-    margin: 0 10px 0 10px;
-  }
-
-  #text-chat {
-    width: 100%;
-    height: fit-content;
-    font-family: gluten;
-    background-color: #61994a;
-    font-size: 14px;
-    text-align: center;
-    margin: 0;
-  }
-
+    /* margin: 0 10px 0 10px; */
+    position: relative;
+    top: auto;
+}
+#text-chat {
+  width: 104%;
+  height: fit-content;
+  font-family: gluten;
+  /* background-color: #61994a; */
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  bottom: -11px;
+}
   #icono-chat {
-    width: 100%;
-    height: 40px;
-  }
+    width: 15%;
+    height: 38px;
+    position: relative;
+    left: 3%;
+    top: -76%;
+}
 
   #icono-chat img {
     position: relative;
@@ -1845,29 +2176,29 @@ dd {
     border-radius: 50%;
     padding: 0;
   }
-
   #chat-magic {
     display: flex;
-    width: 100%;
+    width: 80%;
     background-image: url(https://raw.githubusercontent.com/Daniipuff/DEV012-dataverse-chat/main/Recursos%20visuales/clouds%20simpsons.jpg);
     background-color: rgba(255, 255, 255, 0.461);
     background-blend-mode: overlay;
     position: relative;
-    margin: 0;
+    margin: 5px;
     border-radius: 0;
-  }
-
-  .chatinput {
-    width: 90%;
-    height: 28px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-
+    height: 267px;
+}
+.chatinput {
+  width: 74%;
+  height: 33px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
   .backbutton {
     width: 50%;
     height: 30%;
@@ -1890,12 +2221,12 @@ dd {
     position: relative;
     bottom: 0;
   }
-
   .senddbbuton {
-    width: 20px;
-    height: 20px;
-  }
-
+    display: flex;
+    position: relative;
+    left: -32px;
+    bottom: 64px;
+}
   .backbutton,
   .back-button {
     background-color: #ffd401;
@@ -1917,19 +2248,69 @@ dd {
     color: rgb(0, 0, 0);
     font-family: gluten;
     font-size: x-large;
-  }
+    position: relative;
+    left: 40px;
+    top: unset;
+}
+#boton-regresar {
+  display: flex;
+  background-color: rgb(34, 77, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+  margin-left: 70px;
+  font-family: "Itim";
+  font-size: x-large;
+  position: relative;
+  top: 43px;
+  left: 35%;
+  width: 33%;
+  height: 13%;
+  text-align: center;
+}
 
-  .footer {
-    width: 100%;
-    background-color: #7b3d87;
-    color: #fff;
-    font-size: 11px;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: -66%;
-  }
 
+.contenedor-api-key h3 {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  position: relative;
+  padding: 15px;
+  background-color: #4a9f2d;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: -22px;
+}
+.contenedor-api-key input {
+  display: block;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+  margin: 10px;
+  position: relative;
+  left: 30%;
+  font-family: gluten;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+  top: -4px;
+}
+.footer {
+  width: 100%;
+  background-color: #7b3d87;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+}
   #limpiar {
     background-color: #254805;
     border-radius: 10px;
@@ -1938,10 +2319,103 @@ dd {
     cursor: pointer;
     position: relative;
     top: 35%;
-    right: 50%;
+    left: 20%;
+    display: flex;
+  }
+  #chatContenido {
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #fff;
+    width: 90%;
+    position: relative;
+    top: -9%;
+}
+  .chat-messages {
+    display: flex;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 20px;
+    height: 253px;
+    justify-content: flex-start;
+    align-items: self-start;
+}
+  /*pantalla de error*/
+  #error404 {
+    display: flex;
+    flex-direction: column;
+    background-color: #95dd78;
+    width: 88%;
+    position: relative;
+    height: 550px;
+  }
+
+  .div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doh {
+    display: flex;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-left: 0;
+    padding: auto;
+    justify-content: center;
+  }
+
+  .manito {
+    display: flex;
+    flex-direction: column;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    height: 45%;
+    position: absolute;
+    left: 1%;
+    bottom: -120px;
+  }
+
+  .p {
+    display: flex;
+    font-family: Be Vietnam Pro;
+    color: #FFFFFF;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    margin-left: 5px;
+    padding: 5px;
+  }
+
+  .donut {
+    display: flex;
+    justify-content: left;
+    margin-left: 10px;
+    height: 530px;
+    width: 0;
+  }
+
+  .volverInicio {
+    background-color: rgb(34 77 0 / 15%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 60%;
+    display: flex;
+    position: relative;
+    left: 25%;
   }
 }
-
-@media (min-width: 750px) and (max-width: 850px) {}
-
-@media (min-width: 850px) and (max-width: 3543px) {}
+@media (min-width: 750px) and (max-width: 850px) { }
+@media (min-width: 850px) and (max-width: 3543px) { }
