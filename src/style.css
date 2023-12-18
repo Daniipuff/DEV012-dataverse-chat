@@ -311,6 +311,15 @@ dd {
   font-size: 24px;
   margin: 0;
 }
+.chatUser{   
+  display: flex;
+  background-color: #4a9f2dba;
+  padding: 12px;
+  border-radius: 11px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
 
 .chat-input {
   margin-top: 20px;
@@ -517,6 +526,7 @@ dd {
   border-radius: 11px;
   position: relative;
   left: 0;
+  margin-bottom: 10px;
 
 }
 .chatUser2 {
@@ -663,7 +673,7 @@ dd {
   border-radius: 11px;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 10px; /* Ajusta este margen según sea necesario */
+  margin-top: 10px; 
 }
 
 .chatUser2 {
