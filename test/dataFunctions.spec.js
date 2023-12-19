@@ -1,9 +1,6 @@
-import { filterData,sortData,computeStats,generoFacts } from '../src/dataFunctions.js';
-//import { data as fakeData } from './data.js';
+import { filterData, sortData, computeStats, generoFacts } from '../src/lib/dataFunctions.js';
 
-//console.log(fakeData);
 
-//const filterData = require('./dataFunctions');
 
 describe('Filtros', () => {
   it('la aplicacion filtra solo el apellido', () => {

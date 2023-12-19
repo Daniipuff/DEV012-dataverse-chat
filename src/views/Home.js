@@ -6,7 +6,7 @@ import { navigateTo } from ".././router.js";
 import data from "../data/dataset.js";
 
 export const Home = () => {
-  let homeView = document.createElement("div");
+  const homeView = document.createElement("div");
   homeView.setAttribute("id", "homeView");
   homeView.innerHTML = `
         <section class="frontis"></section>
@@ -78,7 +78,7 @@ export const Home = () => {
     const claveSeleccionada = familia.value;
     const ordenSeleccionado = ordena.value;
     const arregloDeFiltros = soloUnFiltro(
-      data,
+      datalist,
       claveSeleccionada,
       ordenSeleccionado,
       parrafo_genero

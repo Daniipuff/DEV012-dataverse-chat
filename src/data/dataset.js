@@ -349,7 +349,6 @@ export default [
   {
     "id": "024",
     "genero": "m",
-    "lastname": "wiggum",
     "name": "Clancy Wiggum",
     "lastname": "wiggum",
     "shortDescription": "Jefe de Policía de Springfield y padre de Ralph Wiggum.",

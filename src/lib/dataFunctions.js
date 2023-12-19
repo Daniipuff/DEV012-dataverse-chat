@@ -19,7 +19,7 @@ export function soloUnFiltro(data,apellidos,orden,parrafoG) {//checa si hemos se
     
   } return datosFiltrados;
   
-};
+}
 
 export const filterData = (data, filterBy) => {
   const apellidosFamilias = data.filter(filtro1 => filtro1.lastname === filterBy);

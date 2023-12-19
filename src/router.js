@@ -10,12 +10,35 @@ export const setRoutes = (newRoutesValue) => {
   ROUTES = newRoutesValue;
   // assign ROUTES
 }
-const queryStringToObject = (queryString) => {//Esta funcion es opcional
-  //Partes de URL
-  // convert query string to URLSearchParams
-  // convert URLSearchParams to an object
-  // return the object
-}
+const queryStringToObject = (queryString) => {
+  // Si la cadena de consulta está vacía, devuelve un objeto vacío
+  if (!queryString) {
+    return {};
+  }
+  // Corta el signo de interrogación "?" al principio de la cadena de consulta, si está presente
+  const queryStringWithoutQuestionMark = queryString.startsWith('?')
+    ? queryString.slice(1)
+    : queryString;
+  // Convierte la cadena de consulta en un objeto usando URLSearchParams
+  const urlSearchParams = new URLSearchParams(queryStringWithoutQuestionMark);
+  // Inicializa un objeto vacío para almacenar los pares clave-valor
+  const resultObject = {};
+  // Itera sobre cada par clave-valor en URLSearchParams y agrega al objeto resultante
+  for (const [key, value] of urlSearchParams.entries()) {
+    // Puedes realizar algún procesamiento adicional aquí si es necesario
+    // Agrega el par clave-valor al objeto resultante
+    resultObject[key] = value;
+  }
+  // Devuelve el objeto resultante
+  return resultObject;
+};
+
+// Ejemplo de uso:
+const ejemploURL = "https://ejemplo.com/ruta?param1=valor1&param2=valor2";
+const queryObject = queryStringToObject(new URL(ejemploURL).search);
+
+console.log(queryObject);
+
 // RENDERVIEW función que se encarga de limpiar el contenido actual
 // del elemento raíz, buscar la vista correspondiente a la ruta proporcionada
 // en ROUTES, y renderizar esa vista en el DOM. Si la ruta no se encuentra,
