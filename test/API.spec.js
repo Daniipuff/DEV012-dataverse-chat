@@ -1,26 +1,29 @@
-import dataset from '../src/data/dataset.js';
+global.fetch = require('node-fetch');
 import { apiKeyChat } from '../src/lib/API.js';
-
-//se crea el componente
-const OpenAIChat = jest.fn().mockResolvedValueOnce( {choices: [{message: 'foo'}] });
-
-// hacer implementación falsa de fetch
-dataset.fetch = jest.fn(() => Promise.resolve({
-  json: OpenAIChat
-}));
-
-
-describe('Endpoint de openIA', () =>
-{
+// Mocking node-fetch
+jest.mock('node-fetch', () => jest.fn());
+// Mock LocalStorage
+beforeAll(() => {
+  global.localStorage = {
+    getItem: jest.fn().mockReturnValue('13034'),
+    setItem: localStorage.setItem('apiKey', '13034')
+  };
+});
+// Mock persona
+const mockPersona = { name: 'testPersona' };
+describe('Endpoint de openIA', () => {
   it('La API es llamada con los datos adecuados', () => {
-
-    OpenAIChat.mockResolvedValueOnce({ choices: [{ message: 'foo' }] });
-
-    const messages = [{role: 'user', content: 'foo'}];
-
-    apiKeyChat('13034', messages);
-
-    expect(dataset.fetch).toBeCalledWith('https://api.openai.com/v1/chat/completions', {
+    // Mocking the fetch response
+    const mockJsonPromise = Promise.resolve({ choices: [{ message: 'foo' }] });
+    const mockFetchPromise = Promise.resolve({
+      ok: true,
+      status: 200,
+      json: () => mockJsonPromise,
+    });
+    global.fetch.mockImplementationOnce(() => mockFetchPromise);
+    const input = 'foo';
+    apiKeyChat(input, mockPersona);
+    expect(global.fetch).toBeCalledWith('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer 13034`,
@@ -28,13 +31,14 @@ describe('Endpoint de openIA', () =>
       },
       body: JSON.stringify({
         'model': 'gpt-3.5-turbo',
-        messages,
+        messages: [
+          { role: "system", content: `respondeme como si fueras + ${mockPersona.name}` },
+          { role: "user", content: input }
+        ],
       })
     });
   });
-
-  it('El edpoint responde de manera correcta', () => {
-
+  it('El endpoint responde de manera correcta', () => {
     const respuesta = {
       "choices": [
         {
@@ -42,15 +46,20 @@ describe('Endpoint de openIA', () =>
             "role": "assistant",
             "content": "¡Hola!"
           }
-        }]
+        }
+      ]
     };
-
-    OpenAIChat.mockResolvedValueOnce(respuesta);
-
-
+    // Mocking the fetch response with a status code
+    const mockJsonPromise = Promise.resolve(respuesta);
+    const mockFetchPromise = Promise.resolve({
+      ok: true,
+      status: 200,
+      json: () => mockJsonPromise,
+    });
+    global.fetch.mockImplementationOnce(() => mockFetchPromise);
     return apiKeyChat('12345', [{ role: 'user', content: 'foo' }])
       .then((resolved) => {
-        expect(resolved).toBe(respuesta);
+        expect(resolved).toEqual(respuesta);
       });
   });
-})
+});
