@@ -71,14 +71,14 @@ export const Home = () => {
   ordena.addEventListener("change", filtros);
 
   function filtros() {
-    const datalist = renderItems(data);
+    //const datalist = renderItems(data);
     dataview.innerHTML = "";
     parrafo_estadistica.innerHTML = "Facts";
     parrafo_genero.innerHTML = "";
     const claveSeleccionada = familia.value;
     const ordenSeleccionado = ordena.value;
     const arregloDeFiltros = soloUnFiltro(
-      datalist,
+      data,
       claveSeleccionada,
       ordenSeleccionado,
       parrafo_genero
