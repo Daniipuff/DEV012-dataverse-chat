@@ -1644,17 +1644,20 @@ dd {
   padding: 10px;
   margin: 5px;
 }
-  .backbutton {
-    width: 50%;
-    height: 30%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #61994a;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
+.backbutton {
+  background-color: #ffd401;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: gluten;
+  font-size: x-large;
+  position: relative;
+  left: 34%;
+  width: 16%;
+  height: 35px;
+  position: relative;
+  top: 70px;
+}
   .sendbutton {
     margin-top: 10px;
     background-color: transparent;
@@ -1672,18 +1675,18 @@ dd {
     left: -32px;
     bottom: 64px;
 }
-  .backbutton,
-  .back-button {
-    background-color: #ffd401;
-    border-radius: 10px;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-family: gluten;
-    font-size: 12px;
-    position: relative;
-    width: 25%;
-    margin: 5px 40px 0 0;
-  }
+.backbutton, .back-button {
+  background-color: #ffd401;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: gluten;
+  font-size: 12px;
+  position: relative;
+  width: 25%;
+  margin: 5px 40px 0 0;
+  top: 200%;
+}
 
   .boton-aceptar {
     background-color: #ffd401;
@@ -2210,16 +2213,17 @@ dd {
   margin: 5px;
 }
   .backbutton {
-    width: 50%;
-    height: 30%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #61994a;
-    border: none;
-    border-radius: 4px;
+    background-color: #ffd401;
+    border-radius: 10px;
     cursor: pointer;
-  }
-
+    color: rgb(0, 0, 0);
+    font-family: gluten;
+    font-size: 12px;
+    position: relative;
+    width: 25%;
+    margin: 5px 40px 0 0;
+    top: 200%;
+}
   .sendbutton {
     margin-top: 10px;
     background-color: transparent;
@@ -2238,7 +2242,7 @@ dd {
     bottom: 64px;
 }
   .backbutton,
-  .back-button {
+  .back-button  {
     background-color: #ffd401;
     border-radius: 10px;
     cursor: pointer;
@@ -2248,8 +2252,8 @@ dd {
     position: relative;
     width: 25%;
     margin: 5px 40px 0 0;
-  }
-
+    top: 200%;
+}
   .boton-aceptar {
     background-color: #ffd401;
     border-radius: 10px;

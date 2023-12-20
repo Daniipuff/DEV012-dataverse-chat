@@ -1,206 +1,71 @@
-# The Simpsons - Dataverse Chat
+  # The Simpsons - Dataverse Chat
+  ## Índice
+  * [1. Introducción](#1-introducción)
+  * [2. Resumen del proyecto](#2-resumen-del-proyecto)
+  * [3. Historias de usuario](#-historias-de-usuario)
+  * [4. Prototipo de baja y alta fidelidad](#3-prototipo-de-alta-y-baja-fidelidad)
+  * [5. Funcionalidades](#4-funcionalidades)
+  * [6. Conclusión](#8-conclusión)
+  * [7. Desarrolladoras web](#9-desarrolladoras-web)
+  ***
+  ## 1. Introducción
+    ![Introducción](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/historias.jpg)
 
-## Índice
+  En la era digital actual, las aplicaciones web se han convertido en nuestras compañeras cotidianas, desempeñando roles diversos, desde facilitar nuestras tareas diarias hasta brindar entretenimiento interactivo. En este contexto, surge un proyecto fascinante que combina nuestra fascinación por Los Simpsons con la innovación tecnológica: Los Simpsons Dataverse Chat.
 
-* [1. Introducción](#1-introducción)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Historias de usuario](#-historias-de-usuario)
-* [4. Prototipo de baja y alta fidelidad](#3-prototipo-de-alta-y-baja-fidelidad)
-* [5. Funcionalidades](#4-funcionalidades)
-* [6. Consideraciones técnicas](#5-consideraciones-técnicas)
-* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
-* [8. Conclusión](#8-conclusión)
+  Esta aplicación, concebida y desarrollada por nosotras, el equipo de talentosas desarrolladoras, eleva la experiencia de explorar datos al siguiente nivel al permitir a las usuarias no solo visualizar y analizar información detallada sobre los personajes de Los Simpsons, sino también interactuar con ellos de manera única y entretenida.
 
+  ## 2. Resumen del proyecto
+  En este proyecto agregamos inteligencia artificial para que los usuarios puedan chatear con sus personajes favoritos de Los Simpsons, en este proyecto utilizaremos la aplicación desarrollada en Dataverse.
+  Nuestra aplicación será realizada con formato de Single Page Application (SPA), manteniendo las funcionalidades de visualizar, filtrar, ordenar y calcular alguna estadística, y ahora adicionando una nueva vista para
+  consultar información detallada de cada personaje de Los Simpsons y agregando
+  la posibilidad de interactuar con un personaje o todos ellos a través de un sistema de chat impulsado por la
+  [API de OpenAI](https://openai.com/product).
+  ### Objetivos logrados
+  * Desarrollo de una Single Page Application (SPA): Hemos creado una aplicación de página única que proporciona una experiencia de usuario fluida y eficiente, permitiendo a los usuarios explorar de manera intuitiva la información detallada de los personajes de Los Simpsons.
+  * Aplicación de Conceptos de Responsividad: La aplicación ha sido diseñada y desarrollada considerando principios de responsividad, asegurando que la interfaz se adapte de manera óptima a una variedad de dispositivos, desde computadoras de escritorio hasta dispositivos móviles.
+  * Implementación de un Router para la Navegación: Hemos incorporado un sistema de router que facilita la navegación entre las diversas vistas de la aplicación. Esto garantiza una experiencia de usuario coherente y sin interrupciones al explorar diferentes secciones de la aplicación.
+  * Integración Exitosa de una API Externa: Logramos la integración exitosa de la API de OpenAI, permitiendo a los usuarios interactuar de manera única y divertida con los personajes de Los Simpsons a través de un sistema de chat impulsado por inteligencia artificial.
+  * Comprensión de la Asincronía en JavaScript: Hemos abordado eficientemente la asincronía en JavaScript, lo que resulta crucial al interactuar con APIs externas y al proporcionar una experiencia de usuario receptiva.
+  * Creación de una Suite de Pruebas Unitarias: Hemos desarrollado una suite de pruebas unitarias que nos permite evaluar de manera efectiva el código asíncrono, asegurando la estabilidad y confiabilidad de la aplicación en todas las situaciones.
 
-***
+  ## 3. Historias de usuario
+  Las Historias de Usuario son el resultado del proceso de investigación de los usuarias, un paso importante antes de comenzar con el código.
+  ![Historias de usuario](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/historias.jpg)
 
-## 1. Introducción
+  ## 4. Prototipo de alta y baja fidelidad
+  Al momento de comenzar con el código es importante haber hecho e iterado bocetos simples (sketches) usando papel y lápiz. Estos son llamados prototipos de baja fidelidad, de esta forma se comienza la arquitectura del proyecto.
+  ![Prototipo de baja fidelidad: Desktop](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/bf1.jpg)
+  ![Prototipo de baja fidelidad: Movil](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/bj2.jpg)
 
-Las aplicaciones web son parte de nuestro día a día, desde las redes sociales hasta las herramientas de trabajo, las usamos todo el tiempo. Y en estos momentos se a abierto la puerta a algo asombroso: la interacción con inteligencia artificial.
+  Lo siguiente fue diseñar nuestra Interfaz de Usuarios (UI - User Interface). Esta oportunidad  utilizamos Figma para diseñar el prototipo de alta fidelidad, osea como nos gustaría que se viera el diseño final siguiendo los fundamentos de visual design.
 
-## 2. Resumen del proyecto
+  ![Prototipo de alta fidelidad: Desktop](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/af1.jpg)
+  ![Prototipo de alta fidelidad: Desktop](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/af2.jpg)
+  ![Prototipo de alta fidelidad: Movil](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/af3.jpg)
 
-En este proyecto agregamos inteligencia artificial para que los usuarios puedan chatear con sus personajes favoritos de Los Simpsons, en este proyecto utilizaremos la aplicación desarrollada en Dataverse.
-Nuestra aplicación será realizada con formato de Single Page Application (SPA), manteniendo las funcionalidades de visualizar, filtrar, ordenar y calcular alguna estadística, y ahora adicionando una nueva vista para
-consultar información detallada de cada personaje de Los Simpsons y agregando
-la posibilidad de interactuar con un personaje o todos ellos a través de un sistema de chat impulsado por la
-[API de OpenAI](https://openai.com/product).
+  ## 5. Funcionalidades
+  Los Simpsons Dataverse Chat, desarrollado por nosotras, es una Single Page Application (SPA) que permitirá a las usuarias visualizar la información, filtrarla, ordenarla y calcular estadísticas, siguiendo el modelo establecido en Dataverse. Además, les brinda la posibilidad de acceder a una página detallada para cada personaje, facilitando la interacción individual con cada uno de ellos.
 
-### Objetivos 
+  A continuación, detallamos las funcionalidades clave del proyecto:
 
-* Desarrollar una [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-* Aplicar los conceptos de responsividad en el desarrollo de las vistas
-* Implementar un router para la navegación entre las diferentes
-  vistas de la aplicación
-* Integrar una API externa
-* Entender la asincronía en JavaScript
-* Crear una suite de pruebas unitarias que permitan testear código asíncrono
+      • La aplicación, diseñada por nosotras, es responsive, adaptándose de manera óptima a diferentes dispositivos para proporcionar una experiencia de usuario fluida.
 
-## 3. Historias de usuario
+      • Implementamos la aplicación como una SPA con múltiples vistas, permitiendo una navegación intuitiva y eficiente entre las secciones de la aplicación.
 
-Las Historias de Usuario son el resultado del proceso de investigación de los usuarias, un paso importante antes de comenzar con el código.
+      • Los usuarios podrán visualizar, filtrar, ordenar y realizar cálculos estadísticos sobre la información detallada de los personajes de Los Simpsons, manteniendo las funcionalidades presentes en Dataverse.
 
-![Historias de usuario](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+      • Al hacer clic en una tarjeta de personaje, la aplicación redirigirá a una vista específica con su propia URL. Esta página detallada mostrará información exhaustiva sobre ese personaje en particular, brindando una experiencia más inmersiva.
 
+      • Para potenciar la interactividad, la aplicación permitirá a las usuarias ingresar su API Key. Esto posibilitará la interacción con la API de Open AI, lo que permitirá a las usuarias chatear tanto de manera grupal como individual con los personajes de Los Simpsons, añadiendo un componente lúdico y entretenido a la experiencia.
 
-## 4. Prototipo de alta y baja fidelidad
+## 7. Conclusión
+  En resumen, Los Simpsons Dataverse Chat es un proyecto que fusiona la exploración de datos con la interacción a través de la inteligencia artificial. Hemos logrado nuestros objetivos al permitir a los usuarios visualizar, filtrar, ordenar y realizar cálculos estadísticos sobre la información de los personajes de Los Simpsons. La implementación de una Single Page Application (SPA) garantiza una experiencia de usuario fluida y receptiva.
 
- Al momento de comenzar con el código es importante haber hecho e iterado bocetos simples (sketches) usando papel y lápiz. Estos son llamados prototipos de baja fidelidad, de esta forma se comienza la arquitectura del proyecto.
+  Nosotras, como desarrolladoras, hemos puesto especial atención en el diseño visual, desde los prototipos de baja fidelidad hasta los de alta fidelidad, cuidando meticulosamente cada detalle. Las historias de usuario han sido cruciales para comprender las necesidades de nuestras usuarias, y hemos aplicado nuestras habilidades técnicas en áreas como la gestión de la asincronía en JavaScript y la implementación de pruebas unitarias para el código asíncrono.
 
- ![Prototipo de baja fidelidad: Desktop](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
-![Prototipo de baja fidelidad: Movil](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+  La introducción de la capacidad de interactuar con los personajes mediante un sistema de chat basado en la API de OpenAI añade un componente único y atractivo a la experiencia. En conjunto, Los Simpsons Dataverse Chat representa una combinación exitosa de tecnología, creatividad y atención a las necesidades del usuario. Estamos emocionadas de presentar esta aplicación que ofrece una experiencia completa y entretenida para los amantes de Los Simpsons y las entusiastas de la exploración de datos.
+## 8. Desarrolladoras web
 
-Lo siguiente fue diseñar nuestra Interfaz de Usuarios (UI - User Interface). Esta oportunidad  utilizamos Figma para diseñar el prototipo de alta fidelidad, osea como nos gustaría que se viera el diseño final siguiendo los fundamentos de visual design.
-
-![Prototipo de alta fidelidad: Desktop](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
-![Prototipo de alta fidelidad: Desktop](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
-![Prototipo de alta fidelidad: Movil](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
-
-
-## 5. Funcionalidades
-
-Los Simpsons Dataverse Chat es una Single Page Application (SPA) que permitira al usuario **visualizar la información, filtrarla, ordenarla y calcular alguna estadística**, tal como se hizo en Dataverse. Además, permite  acceder a una página que muestre el detalle de cada personaje para interactuar con cada uno de ellos.
-
-A continuación, detallamos las funcionalidades del proyecto:
-
-* La aplicación es _responsive_
-* La aplicación es una SPA con múltiples vistas
-* La aplicación permite visualizar,
-  filtrar, ordenar y calcular estadística de la data.
-* Al hacer clic en una tarjeta de personaje, la aplicación redirigirse a una vista **con su propia URL**   que muestra la información detallada sobre ese personaje en particular.
-* La aplicación debe permitir al usuario ingresar su API Key para
-  interactuar con la API de Open AI permitiendo al usuario
-  interactuar con los personajes través de chat grupal e individual.
-  
-## 6. Consideraciones técnicas
-
- La lógica de este proyecto está realizado sólo con vanilla JavaScript, HTML y CSS.
-
- Boilerplate:
-
-### `src/components`
-
-Esta carpeta contendrá archivos JavaScript que representan componentes reutilizables de la aplicación. Estos componentes pueden son elementos de la interfaz de usuario que se utilizan en varias partes de la aplicación. 
-
-### `src/data`
-
-En esta carpeta están los datos del proyecto.
-
-### `src/lib`
-
-En esta carpeta, se encuentran módulos que contienen funcionalidades no relacionadas
-al DOM. Aquí se encuentra el archivo
-`dataFunctions.js` que contiene las funciones que de filtros,
-orden y cálculos agregados. También archivos con
-las funciones que interactúan con la API de inteligencia artificial y utilidades destinadas
-a almacenar datos en el local storage.
-
-### `src/views`
-
-Esta carpeta contiene archivos de las diferentes páginas y vistas de la aplicación.
-
-### `src/index.html`
-
-En este archivo HTML se encuentra la estructura básica y un elemento DOM `<div id='root'></div>` donde son renderizadas las diferentes vistas de la aplicación.
-
-### `src/index.js`
-
-Es el punto de partida para la Single Page Application SPA. 
-
-### `src/router.js`
-
-En este archivo se maneja el enrutamiento de la aplicación.
-
-### `src/style.css`
-
-CSS donde se agregan los estilos de la aplicación.
-
-### `src/test`
-
-Esta carpeta contiene los tests de las funciones y componentes. 
-
-## 7. Objetivos de aprendizaje
-
-Además de las funcionalidades que definimos en la sección de
-[Funcionalidades](#4-funcionalidades), tu proyecto debe cumplir con los
-siguientes requisitos:
-
-### Definición del producto
-
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuaria.
-
-### Historias de usuaria
-
-Una vez que entiendas las necesidades de tus usuarias, escribe las [Historias
-de Usuaria](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que la usuaria necesita hacer/ver. Las **Historias de Usuaria** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarias.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-Usa tus historias de usuaria para planificar tus sprints dividiendo
-cada historia en tareas.
-
-En la medida de lo posible, termina una Historia de Usuaria antes de pasar
-a la siguiente (cumpliendo con la Definición de Terminado y los Criterios
-de Aceptación).
-
-### Diseño de la Interfaz de Usuaria
-
-#### Prototipo de baja fidelidad
-
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
-
-Recuerda pedir feedback de tu prototipo a tus compañeras y/o coaches.
-
-#### Prototipo de alta fidelidad
-
-Lo siguiente es diseñar tu Interfaz de Usuaria (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
-Recuerda pedir feedback de tu prototipo a tus compañeras y/o coaches.
-
-### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarias,
-y con base en los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
-
-### Implementación de la Interfaz de Usuaria (HTML/CSS/JS)
-
-Luego de diseñar tu interfaz de usuaria deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar.
-
-Revisa [las funcionalidades](#4-funcionalidades) que el proyecto pide del interfaz.
-
-### Pruebas unitarias
-
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-Te recomendamos usar
-el framework [Jest](https://jestjs.io/) para ejecutar las pruebas unitarias.
-Consultar su documentación.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/dataFunctions.js` que contenga tus funciones y
-está detallado en la sección de [Consideraciones técnicas](#5-consideraciones-técnicas).
-
-## 8. Conclusión
+| [<img src="https://avatars.githubusercontent.com/u/133843650?s=96&v=4" width=115><br><sub>Daniela Bustamante</sub>](https://github.com/Daniipuff) |  [<img src="https://avatars.githubusercontent.com/u/143117858?v=4" width=115><br><sub>Paulina Cabrera</sub>](https://github.com/Paulinakbrr) |
+| :---: | :---: |
