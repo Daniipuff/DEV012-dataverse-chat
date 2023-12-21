@@ -9,7 +9,7 @@
   * [7. Desarrolladoras web](#9-desarrolladoras-web)
   ***
   ## 1. Introducción
-    ![Introducción](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/historias.jpg)
+  [Introducción](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/PROUECTOFINAL.png)
 
   En la era digital actual, las aplicaciones web se han convertido en nuestras compañeras cotidianas, desempeñando roles diversos, desde facilitar nuestras tareas diarias hasta brindar entretenimiento interactivo. En este contexto, surge un proyecto fascinante que combina nuestra fascinación por Los Simpsons con la innovación tecnológica: Los Simpsons Dataverse Chat.
 
@@ -35,13 +35,18 @@
 
   ## 4. Prototipo de alta y baja fidelidad
   Al momento de comenzar con el código es importante haber hecho e iterado bocetos simples (sketches) usando papel y lápiz. Estos son llamados prototipos de baja fidelidad, de esta forma se comienza la arquitectura del proyecto.
+  * Prototipo de baja fidelidad: Desktop
   ![Prototipo de baja fidelidad: Desktop](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/bf1.jpg)
+  * Prototipo de baja fidelidad: Movil  
   ![Prototipo de baja fidelidad: Movil](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/bj2.jpg)
 
   Lo siguiente fue diseñar nuestra Interfaz de Usuarios (UI - User Interface). Esta oportunidad  utilizamos Figma para diseñar el prototipo de alta fidelidad, osea como nos gustaría que se viera el diseño final siguiendo los fundamentos de visual design.
-
+  
+  * Prototipo de alta fidelidad: Desktop
   ![Prototipo de alta fidelidad: Desktop](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/af1.jpg)
+  * Prototipo de alta fidelidad: Desktop
   ![Prototipo de alta fidelidad: Desktop](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/af2.jpg)
+  * Prototipo de alta fidelidad: Movil
   ![Prototipo de alta fidelidad: Movil](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/af3.jpg)
 
   ## 5. Funcionalidades
@@ -49,15 +54,15 @@
 
   A continuación, detallamos las funcionalidades clave del proyecto:
 
-      • La aplicación, diseñada por nosotras, es responsive, adaptándose de manera óptima a diferentes dispositivos para proporcionar una experiencia de usuario fluida.
+  * La aplicación, diseñada por nosotras, es responsive, adaptándose de manera óptima a diferentes dispositivos para proporcionar una experiencia de usuario fluida.
 
-      • Implementamos la aplicación como una SPA con múltiples vistas, permitiendo una navegación intuitiva y eficiente entre las secciones de la aplicación.
+  * Implementamos la aplicación como una SPA con múltiples vistas, permitiendo una navegación intuitiva y eficiente entre las secciones de la aplicación.
 
-      • Los usuarios podrán visualizar, filtrar, ordenar y realizar cálculos estadísticos sobre la información detallada de los personajes de Los Simpsons, manteniendo las funcionalidades presentes en Dataverse.
+  * Los usuarios podrán visualizar, filtrar, ordenar y realizar cálculos estadísticos sobre la información detallada de los personajes de Los Simpsons, manteniendo las funcionalidades presentes en Dataverse.
 
-      • Al hacer clic en una tarjeta de personaje, la aplicación redirigirá a una vista específica con su propia URL. Esta página detallada mostrará información exhaustiva sobre ese personaje en particular, brindando una experiencia más inmersiva.
+  * Al hacer clic en una tarjeta de personaje, la aplicación redirigirá a una vista específica con su propia URL. Esta página detallada mostrará información exhaustiva sobre ese personaje en particular, brindando una experiencia más inmersiva.
 
-      • Para potenciar la interactividad, la aplicación permitirá a las usuarias ingresar su API Key. Esto posibilitará la interacción con la API de Open AI, lo que permitirá a las usuarias chatear tanto de manera grupal como individual con los personajes de Los Simpsons, añadiendo un componente lúdico y entretenido a la experiencia.
+  * Para potenciar la interactividad, la aplicación permitirá a las usuarias ingresar su API Key. Esto posibilitará la interacción con la API de Open AI, lo que permitirá a las usuarias chatear tanto de manera grupal como individual con los personajes de Los Simpsons, añadiendo un componente lúdico y entretenido a la experiencia.
 
 ## 7. Conclusión
   En resumen, Los Simpsons Dataverse Chat es un proyecto que fusiona la exploración de datos con la interacción a través de la inteligencia artificial. Hemos logrado nuestros objetivos al permitir a los usuarios visualizar, filtrar, ordenar y realizar cálculos estadísticos sobre la información de los personajes de Los Simpsons. La implementación de una Single Page Application (SPA) garantiza una experiencia de usuario fluida y receptiva.
