@@ -9,7 +9,7 @@
   * [7. Desarrolladoras web](#9-desarrolladoras-web)
   ***
   ## 1. Introducción
-  [Introducción](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/PROUECTOFINAL.png)
+  ![Historias de usuario](https://github.com/Daniipuff/DEV012-dataverse-chat/blob/main/Recursos%20visuales/PROUECTOFINAL.png)
 
   En la era digital actual, las aplicaciones web se han convertido en nuestras compañeras cotidianas, desempeñando roles diversos, desde facilitar nuestras tareas diarias hasta brindar entretenimiento interactivo. En este contexto, surge un proyecto fascinante que combina nuestra fascinación por Los Simpsons con la innovación tecnológica: Los Simpsons Dataverse Chat.
 
